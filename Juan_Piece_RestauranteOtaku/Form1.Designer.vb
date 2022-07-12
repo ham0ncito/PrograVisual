@@ -24,15 +24,15 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.pMenu = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pHeading = New System.Windows.Forms.Panel()
-        Me.lblUsuario = New System.Windows.Forms.Label()
         Me.lblHora = New System.Windows.Forms.Label()
+        Me.lblUsuario = New System.Windows.Forms.Label()
         Me.pMenu.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pHeading.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,36 +48,39 @@ Partial Class Form1
         Me.pMenu.Size = New System.Drawing.Size(221, 620)
         Me.pMenu.TabIndex = 0
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label1.Location = New System.Drawing.Point(92, 562)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(57, 18)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Usuario"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(11, 544)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(66, 48)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice_PhotoRoom
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(221, 163)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.UserIcono
-        Me.PictureBox2.Location = New System.Drawing.Point(11, 541)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 1
-        Me.PictureBox2.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(146, 554)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 18)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Label1"
         '
         'pHeading
         '
@@ -89,16 +92,6 @@ Partial Class Form1
         Me.pHeading.Size = New System.Drawing.Size(872, 123)
         Me.pHeading.TabIndex = 1
         '
-        'lblUsuario
-        '
-        Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Font = New System.Drawing.Font("Garamond", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblUsuario.Location = New System.Drawing.Point(26, 32)
-        Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(393, 54)
-        Me.lblUsuario.TabIndex = 0
-        Me.lblUsuario.Text = "Bienvenido Usuario"
-        '
         'lblHora
         '
         Me.lblHora.AutoSize = True
@@ -108,6 +101,16 @@ Partial Class Form1
         Me.lblHora.Size = New System.Drawing.Size(173, 36)
         Me.lblHora.TabIndex = 1
         Me.lblHora.Text = "Fecha Y Hora"
+        '
+        'lblUsuario
+        '
+        Me.lblUsuario.AutoSize = True
+        Me.lblUsuario.Font = New System.Drawing.Font("Garamond", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblUsuario.Location = New System.Drawing.Point(26, 32)
+        Me.lblUsuario.Name = "lblUsuario"
+        Me.lblUsuario.Size = New System.Drawing.Size(393, 54)
+        Me.lblUsuario.TabIndex = 0
+        Me.lblUsuario.Text = "Bienvenido Usuario"
         '
         'Form1
         '
@@ -125,8 +128,8 @@ Partial Class Form1
         Me.Text = "Pagina de Inicio"
         Me.pMenu.ResumeLayout(False)
         Me.pMenu.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pHeading.ResumeLayout(False)
         Me.pHeading.PerformLayout()
         Me.ResumeLayout(False)

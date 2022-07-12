@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\source\\PrograVisual\\Juan_Piece_RestauranteOtaku\\Juan_Piece_RestauranteOtaku.vbproj": {}
+    "C:\\Users\\HP\\source\\PrograVisual\\PrograVisual\\Juan_Piece_RestauranteOtaku\\Juan_Piece_RestauranteOtaku.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\source\\PrograVisual\\Juan_Piece_RestauranteOtaku\\Juan_Piece_RestauranteOtaku.vbproj": {
+    "C:\\Users\\HP\\source\\PrograVisual\\PrograVisual\\Juan_Piece_RestauranteOtaku\\Juan_Piece_RestauranteOtaku.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\source\\PrograVisual\\Juan_Piece_RestauranteOtaku\\Juan_Piece_RestauranteOtaku.vbproj",
+        "projectUniqueName": "C:\\Users\\HP\\source\\PrograVisual\\PrograVisual\\Juan_Piece_RestauranteOtaku\\Juan_Piece_RestauranteOtaku.vbproj",
         "projectName": "Juan_Piece_RestauranteOtaku",
-        "projectPath": "C:\\Users\\HP\\source\\PrograVisual\\Juan_Piece_RestauranteOtaku\\Juan_Piece_RestauranteOtaku.vbproj",
+        "projectPath": "C:\\Users\\HP\\source\\PrograVisual\\PrograVisual\\Juan_Piece_RestauranteOtaku\\Juan_Piece_RestauranteOtaku.vbproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\source\\PrograVisual\\Juan_Piece_RestauranteOtaku\\obj\\",
+        "outputPath": "C:\\Users\\HP\\source\\PrograVisual\\PrograVisual\\Juan_Piece_RestauranteOtaku\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
