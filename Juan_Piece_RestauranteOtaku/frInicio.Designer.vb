@@ -67,6 +67,7 @@ Partial Class frInicio
         '
         'btnCerrarSesion
         '
+        Me.btnCerrarSesion.BackColor = System.Drawing.SystemColors.Control
         Me.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnCerrarSesion.Font = New System.Drawing.Font("Garamond", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnCerrarSesion.Location = New System.Drawing.Point(0, 415)
@@ -74,10 +75,11 @@ Partial Class frInicio
         Me.btnCerrarSesion.Size = New System.Drawing.Size(221, 84)
         Me.btnCerrarSesion.TabIndex = 6
         Me.btnCerrarSesion.Text = "Cerrar Sesion"
-        Me.btnCerrarSesion.UseVisualStyleBackColor = True
+        Me.btnCerrarSesion.UseVisualStyleBackColor = False
         '
         'btnPlatillos
         '
+        Me.btnPlatillos.BackColor = System.Drawing.SystemColors.Control
         Me.btnPlatillos.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnPlatillos.Font = New System.Drawing.Font("Garamond", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnPlatillos.Location = New System.Drawing.Point(0, 331)
@@ -85,10 +87,11 @@ Partial Class frInicio
         Me.btnPlatillos.Size = New System.Drawing.Size(221, 84)
         Me.btnPlatillos.TabIndex = 5
         Me.btnPlatillos.Text = "Platillos"
-        Me.btnPlatillos.UseVisualStyleBackColor = True
+        Me.btnPlatillos.UseVisualStyleBackColor = False
         '
         'btnFactura
         '
+        Me.btnFactura.BackColor = System.Drawing.SystemColors.Control
         Me.btnFactura.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnFactura.Font = New System.Drawing.Font("Garamond", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnFactura.Location = New System.Drawing.Point(0, 247)
@@ -96,10 +99,11 @@ Partial Class frInicio
         Me.btnFactura.Size = New System.Drawing.Size(221, 84)
         Me.btnFactura.TabIndex = 4
         Me.btnFactura.Text = "Factura"
-        Me.btnFactura.UseVisualStyleBackColor = True
+        Me.btnFactura.UseVisualStyleBackColor = False
         '
         'btnPedidos
         '
+        Me.btnPedidos.BackColor = System.Drawing.SystemColors.Control
         Me.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnPedidos.Font = New System.Drawing.Font("Garamond", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnPedidos.Location = New System.Drawing.Point(0, 163)
@@ -107,7 +111,7 @@ Partial Class frInicio
         Me.btnPedidos.Size = New System.Drawing.Size(221, 84)
         Me.btnPedidos.TabIndex = 3
         Me.btnPedidos.Text = "Pedidos"
-        Me.btnPedidos.UseVisualStyleBackColor = True
+        Me.btnPedidos.UseVisualStyleBackColor = False
         '
         'lblNombreUsuario
         '
