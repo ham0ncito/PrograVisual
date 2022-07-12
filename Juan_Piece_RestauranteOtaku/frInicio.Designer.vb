@@ -98,7 +98,7 @@ Partial Class frInicio
         Me.btnFactura.Name = "btnFactura"
         Me.btnFactura.Size = New System.Drawing.Size(221, 84)
         Me.btnFactura.TabIndex = 4
-        Me.btnFactura.Text = "Factura"
+        Me.btnFactura.Text = "Facturar"
         Me.btnFactura.UseVisualStyleBackColor = False
         '
         'btnPedidos
