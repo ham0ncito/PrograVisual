@@ -24,11 +24,11 @@ Partial Class frLogin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frLogin))
         Me.gbDatos = New System.Windows.Forms.GroupBox()
-        Me.btnLogOut = New System.Windows.Forms.Button()
-        Me.lblNombreUsuario = New System.Windows.Forms.Label()
-        Me.lblContrasena = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lblContrasena = New System.Windows.Forms.Label()
+        Me.lblNombreUsuario = New System.Windows.Forms.Label()
+        Me.btnLogOut = New System.Windows.Forms.Button()
         Me.btnRecuperar = New System.Windows.Forms.Button()
         Me.btnlog = New System.Windows.Forms.Button()
         Me.pBotones = New System.Windows.Forms.Panel()
@@ -52,25 +52,20 @@ Partial Class frLogin
         Me.gbDatos.TabStop = False
         Me.gbDatos.Text = "Ingrese sus datos para continuar"
         '
-        'btnLogOut
+        'TextBox2
         '
-        Me.btnLogOut.BackColor = System.Drawing.Color.Transparent
-        Me.btnLogOut.Dock = System.Windows.Forms.DockStyle.Left
-        Me.btnLogOut.Location = New System.Drawing.Point(226, 0)
-        Me.btnLogOut.Name = "btnLogOut"
-        Me.btnLogOut.Size = New System.Drawing.Size(113, 59)
-        Me.btnLogOut.TabIndex = 1
-        Me.btnLogOut.Text = "Log Me Out"
-        Me.btnLogOut.UseVisualStyleBackColor = False
+        Me.TextBox2.Location = New System.Drawing.Point(158, 86)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(56)
+        Me.TextBox2.Size = New System.Drawing.Size(215, 25)
+        Me.TextBox2.TabIndex = 3
         '
-        'lblNombreUsuario
+        'TextBox1
         '
-        Me.lblNombreUsuario.AutoSize = True
-        Me.lblNombreUsuario.Location = New System.Drawing.Point(25, 38)
-        Me.lblNombreUsuario.Name = "lblNombreUsuario"
-        Me.lblNombreUsuario.Size = New System.Drawing.Size(71, 18)
-        Me.lblNombreUsuario.TabIndex = 0
-        Me.lblNombreUsuario.Text = "Username"
+        Me.TextBox1.Location = New System.Drawing.Point(158, 38)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(215, 25)
+        Me.TextBox1.TabIndex = 2
         '
         'lblContrasena
         '
@@ -81,24 +76,29 @@ Partial Class frLogin
         Me.lblContrasena.TabIndex = 1
         Me.lblContrasena.Text = "Contraseña"
         '
-        'TextBox1
+        'lblNombreUsuario
         '
-        Me.TextBox1.Location = New System.Drawing.Point(158, 38)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(215, 25)
-        Me.TextBox1.TabIndex = 2
+        Me.lblNombreUsuario.AutoSize = True
+        Me.lblNombreUsuario.Location = New System.Drawing.Point(25, 38)
+        Me.lblNombreUsuario.Name = "lblNombreUsuario"
+        Me.lblNombreUsuario.Size = New System.Drawing.Size(71, 18)
+        Me.lblNombreUsuario.TabIndex = 0
+        Me.lblNombreUsuario.Text = "Username"
         '
-        'TextBox2
+        'btnLogOut
         '
-        Me.TextBox2.Location = New System.Drawing.Point(158, 86)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(56)
-        Me.TextBox2.Size = New System.Drawing.Size(215, 25)
-        Me.TextBox2.TabIndex = 3
+        Me.btnLogOut.BackColor = System.Drawing.Color.LightGray
+        Me.btnLogOut.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnLogOut.Location = New System.Drawing.Point(226, 0)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(113, 59)
+        Me.btnLogOut.TabIndex = 1
+        Me.btnLogOut.Text = "Log Me Out"
+        Me.btnLogOut.UseVisualStyleBackColor = False
         '
         'btnRecuperar
         '
-        Me.btnRecuperar.BackColor = System.Drawing.Color.Transparent
+        Me.btnRecuperar.BackColor = System.Drawing.Color.LightGray
         Me.btnRecuperar.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnRecuperar.Location = New System.Drawing.Point(0, 0)
         Me.btnRecuperar.Name = "btnRecuperar"
@@ -109,7 +109,7 @@ Partial Class frLogin
         '
         'btnlog
         '
-        Me.btnlog.BackColor = System.Drawing.Color.Transparent
+        Me.btnlog.BackColor = System.Drawing.Color.LightGray
         Me.btnlog.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnlog.Location = New System.Drawing.Point(113, 0)
         Me.btnlog.Name = "btnlog"
@@ -150,8 +150,9 @@ Partial Class frLogin
         Me.Controls.Add(Me.gbDatos)
         Me.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Juan Piece Login"
         Me.gbDatos.ResumeLayout(False)
         Me.gbDatos.PerformLayout()
