@@ -121,7 +121,6 @@ Partial Class frLogin
         'pBotones
         '
         Me.pBotones.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(14, Byte), Integer))
-        Me.pBotones.BackgroundImage = CType(resources.GetObject("pBotones.BackgroundImage"), System.Drawing.Image)
         Me.pBotones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pBotones.Location = New System.Drawing.Point(0, -3)
         Me.pBotones.Name = "pBotones"

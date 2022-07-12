@@ -123,7 +123,6 @@ Partial Class frInicio
         'pcUsuario
         '
         Me.pcUsuario.BackColor = System.Drawing.Color.Transparent
-        Me.pcUsuario.Image = CType(resources.GetObject("pcUsuario.Image"), System.Drawing.Image)
         Me.pcUsuario.Location = New System.Drawing.Point(11, 547)
         Me.pcUsuario.Name = "pcUsuario"
         Me.pcUsuario.Size = New System.Drawing.Size(66, 48)
@@ -135,7 +134,6 @@ Partial Class frInicio
         '
         Me.pcLogo.BackColor = System.Drawing.Color.Transparent
         Me.pcLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pcLogo.Image = CType(resources.GetObject("pcLogo.Image"), System.Drawing.Image)
         Me.pcLogo.Location = New System.Drawing.Point(0, 0)
         Me.pcLogo.Name = "pcLogo"
         Me.pcLogo.Size = New System.Drawing.Size(221, 163)
@@ -176,7 +174,6 @@ Partial Class frInicio
         'PcAnuncio
         '
         Me.PcAnuncio.BackColor = System.Drawing.Color.Transparent
-        Me.PcAnuncio.Image = CType(resources.GetObject("PcAnuncio.Image"), System.Drawing.Image)
         Me.PcAnuncio.Location = New System.Drawing.Point(229, 131)
         Me.PcAnuncio.Name = "PcAnuncio"
         Me.PcAnuncio.Size = New System.Drawing.Size(344, 369)
@@ -187,7 +184,6 @@ Partial Class frInicio
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(579, 131)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(224, 369)
@@ -198,7 +194,6 @@ Partial Class frInicio
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(798, 131)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(293, 369)
@@ -218,7 +213,7 @@ Partial Class frInicio
         '
         Me.timer.Enabled = True
         '
-        'Form1
+        'frInicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -233,7 +228,7 @@ Partial Class frInicio
         Me.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Form1"
+        Me.Name = "frInicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pagina de Inicio"
         Me.pMenu.ResumeLayout(False)
