@@ -14,6 +14,12 @@
     End Sub
 
     Private Sub btnPlatillos_Click(sender As Object, e As EventArgs) Handles btnPlatillos.Click
+        Dim frPlatillos As New frPlatillos()
+        frPlatillos.Show()
+    End Sub
 
+    Private Sub btnPedidos_Click(sender As Object, e As EventArgs) Handles btnPedidos.Click
+        Dim frPedidos As New frPedidos()
+        frPedidos.Show()
     End Sub
 End Class
