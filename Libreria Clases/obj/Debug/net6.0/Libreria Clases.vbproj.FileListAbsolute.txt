@@ -1,0 +1,12 @@
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\bin\Debug\net6.0\Libreria Clases.deps.json
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\bin\Debug\net6.0\Libreria Clases.dll
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\bin\Debug\net6.0\Libreria Clases.pdb
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\Libreria Clases.vbproj.AssemblyReference.cache
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\Libreria Clases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\Libreria Clases.AssemblyInfoInputs.cache
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\Libreria Clases.AssemblyInfo.vb
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\Libreria Clases.vbproj.CoreCompileInputs.cache
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\Libreria Clases.dll
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\refint\Libreria Clases.dll
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\Libreria Clases.pdb
+C:\Users\HP\source\PrograVisual\PrograVisual\Libreria Clases\obj\Debug\net6.0\ref\Libreria Clases.dll
