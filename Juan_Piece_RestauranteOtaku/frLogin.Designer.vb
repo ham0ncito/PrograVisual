@@ -152,7 +152,7 @@ Partial Class frLogin
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frLogin"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Juan Piece Login"
         Me.gbDatos.ResumeLayout(False)
         Me.gbDatos.PerformLayout()
