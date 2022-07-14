@@ -12,4 +12,8 @@
 
         frCerrarSesion.Show()
     End Sub
+
+    Private Sub btnPlatillos_Click(sender As Object, e As EventArgs) Handles btnPlatillos.Click
+
+    End Sub
 End Class

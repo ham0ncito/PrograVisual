@@ -4,10 +4,19 @@
     <Compile Update="frCerrarSesion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frFacturar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frInicio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frPedidos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frPlatillos.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
