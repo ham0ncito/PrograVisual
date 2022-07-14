@@ -24,8 +24,8 @@ Partial Class frLogin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frLogin))
         Me.gbDatos = New System.Windows.Forms.GroupBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtContrasena = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblContrasena = New System.Windows.Forms.Label()
         Me.lblNombreUsuario = New System.Windows.Forms.Label()
         Me.btnLogOut = New System.Windows.Forms.Button()
@@ -39,12 +39,12 @@ Partial Class frLogin
         '
         'gbDatos
         '
-        Me.gbDatos.BackColor = System.Drawing.Color.Transparent
-        Me.gbDatos.Controls.Add(Me.TextBox2)
-        Me.gbDatos.Controls.Add(Me.TextBox1)
+        Me.gbDatos.BackColor = System.Drawing.SystemColors.Control
+        Me.gbDatos.Controls.Add(Me.txtContrasena)
+        Me.gbDatos.Controls.Add(Me.txtUsername)
         Me.gbDatos.Controls.Add(Me.lblContrasena)
         Me.gbDatos.Controls.Add(Me.lblNombreUsuario)
-        Me.gbDatos.ForeColor = System.Drawing.Color.White
+        Me.gbDatos.ForeColor = System.Drawing.Color.Black
         Me.gbDatos.Location = New System.Drawing.Point(155, 75)
         Me.gbDatos.Name = "gbDatos"
         Me.gbDatos.Size = New System.Drawing.Size(422, 142)
@@ -52,20 +52,20 @@ Partial Class frLogin
         Me.gbDatos.TabStop = False
         Me.gbDatos.Text = "Ingrese sus datos para continuar"
         '
-        'TextBox2
+        'txtContrasena
         '
-        Me.TextBox2.Location = New System.Drawing.Point(158, 86)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(215, 25)
-        Me.TextBox2.TabIndex = 3
+        Me.txtContrasena.Location = New System.Drawing.Point(158, 86)
+        Me.txtContrasena.Name = "txtContrasena"
+        Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContrasena.Size = New System.Drawing.Size(215, 25)
+        Me.txtContrasena.TabIndex = 3
         '
-        'TextBox1
+        'txtUsername
         '
-        Me.TextBox1.Location = New System.Drawing.Point(158, 38)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(215, 25)
-        Me.TextBox1.TabIndex = 2
+        Me.txtUsername.Location = New System.Drawing.Point(158, 38)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(215, 25)
+        Me.txtUsername.TabIndex = 2
         '
         'lblContrasena
         '
@@ -142,7 +142,7 @@ Partial Class frLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.SlateGray
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(580, 330)
         Me.Controls.Add(Me.Panel1)
@@ -165,8 +165,8 @@ Partial Class frLogin
     Friend WithEvents btnLogOut As Button
     Friend WithEvents lblNombreUsuario As Label
     Friend WithEvents lblContrasena As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtContrasena As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents btnRecuperar As Button
     Friend WithEvents btnlog As Button
     Friend WithEvents pBotones As Panel

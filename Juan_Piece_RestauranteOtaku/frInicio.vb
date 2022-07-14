@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
+        Dim frCerrarSesion As New frCerrarSesion()
 
+        frCerrarSesion.Show()
     End Sub
 End Class

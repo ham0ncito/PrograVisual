@@ -35,3 +35,4 @@ C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Deb
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\ref\Juan_Piece_RestauranteOtaku.dll
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frInicio.resources
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frLogin.resources
+C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frCerrarSesion.resources
