@@ -160,20 +160,20 @@ Partial Class frInicio
         'lblHora
         '
         Me.lblHora.AutoSize = True
-        Me.lblHora.Font = New System.Drawing.Font("Garamond", 24.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.lblHora.Location = New System.Drawing.Point(496, 45)
+        Me.lblHora.Font = New System.Drawing.Font("Garamond", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.lblHora.Location = New System.Drawing.Point(8, 81)
         Me.lblHora.Name = "lblHora"
-        Me.lblHora.Size = New System.Drawing.Size(173, 36)
+        Me.lblHora.Size = New System.Drawing.Size(133, 27)
         Me.lblHora.TabIndex = 1
         Me.lblHora.Text = "Fecha Y Hora"
         '
         'lblUsuario
         '
         Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Font = New System.Drawing.Font("Garamond", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblUsuario.Location = New System.Drawing.Point(26, 32)
+        Me.lblUsuario.Font = New System.Drawing.Font("Garamond", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblUsuario.Location = New System.Drawing.Point(8, 7)
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(393, 54)
+        Me.lblUsuario.Size = New System.Drawing.Size(260, 36)
         Me.lblUsuario.TabIndex = 0
         Me.lblUsuario.Text = "Bienvenido Usuario"
         '
