@@ -22,8 +22,10 @@ Partial Class frLogin
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frLogin))
         Me.gbDatos = New System.Windows.Forms.GroupBox()
+        Me.cbmostrar = New System.Windows.Forms.CheckBox()
         Me.txtContrasena = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblContrasena = New System.Windows.Forms.Label()
@@ -33,13 +35,16 @@ Partial Class frLogin
         Me.btnlog = New System.Windows.Forms.Button()
         Me.pBotones = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.gbDatos.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbDatos
         '
         Me.gbDatos.BackColor = System.Drawing.SystemColors.Control
+        Me.gbDatos.Controls.Add(Me.cbmostrar)
         Me.gbDatos.Controls.Add(Me.txtContrasena)
         Me.gbDatos.Controls.Add(Me.txtUsername)
         Me.gbDatos.Controls.Add(Me.lblContrasena)
@@ -47,16 +52,26 @@ Partial Class frLogin
         Me.gbDatos.ForeColor = System.Drawing.Color.Black
         Me.gbDatos.Location = New System.Drawing.Point(155, 75)
         Me.gbDatos.Name = "gbDatos"
-        Me.gbDatos.Size = New System.Drawing.Size(422, 142)
+        Me.gbDatos.Size = New System.Drawing.Size(422, 154)
         Me.gbDatos.TabIndex = 0
         Me.gbDatos.TabStop = False
         Me.gbDatos.Text = "Ingrese sus datos para continuar"
+        '
+        'cbmostrar
+        '
+        Me.cbmostrar.AutoSize = True
+        Me.cbmostrar.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cbmostrar.Location = New System.Drawing.Point(25, 126)
+        Me.cbmostrar.Name = "cbmostrar"
+        Me.cbmostrar.Size = New System.Drawing.Size(76, 22)
+        Me.cbmostrar.TabIndex = 4
+        Me.cbmostrar.Text = "Mostrar"
+        Me.cbmostrar.UseVisualStyleBackColor = True
         '
         'txtContrasena
         '
         Me.txtContrasena.Location = New System.Drawing.Point(158, 86)
         Me.txtContrasena.Name = "txtContrasena"
-        Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtContrasena.Size = New System.Drawing.Size(215, 25)
         Me.txtContrasena.TabIndex = 3
         '
@@ -138,6 +153,10 @@ Partial Class frLogin
         Me.Panel1.Size = New System.Drawing.Size(339, 59)
         Me.Panel1.TabIndex = 5
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'frLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -157,6 +176,7 @@ Partial Class frLogin
         Me.gbDatos.ResumeLayout(False)
         Me.gbDatos.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -171,4 +191,6 @@ Partial Class frLogin
     Friend WithEvents btnlog As Button
     Friend WithEvents pBotones As Panel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents cbmostrar As CheckBox
 End Class
