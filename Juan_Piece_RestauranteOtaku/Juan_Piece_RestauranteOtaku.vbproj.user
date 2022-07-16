@@ -19,5 +19,8 @@
     <Compile Update="frPlatillos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Platillos.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

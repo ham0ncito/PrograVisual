@@ -22,4 +22,16 @@
         Dim frPedidos As New frPedidos()
         frPedidos.Show()
     End Sub
+
+    Private Sub frInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub pMenu_Paint(sender As Object, e As PaintEventArgs) Handles pMenu.Paint
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
+    End Sub
 End Class
