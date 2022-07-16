@@ -3,6 +3,7 @@
     Private _nombreProducto As String
     Private _precioProducto As String
     Private _descripcionProducto As String
+    Private _precioHoraFeliz As String
     Private _imagen As String
 
     Public Property NombreProducto As String
@@ -41,9 +42,20 @@
         End Set
     End Property
 
+    Public Property PrecioHoraFeliz As String
+        Get
+            Return lblHoraFeliz.Text
+        End Get
+        Set(value As String)
+            lblHoraFeliz.Text = value
+        End Set
+    End Property
+
     Private Sub Platillos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
+    End Sub
 End Class

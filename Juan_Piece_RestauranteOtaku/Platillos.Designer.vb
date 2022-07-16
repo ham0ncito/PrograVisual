@@ -23,20 +23,22 @@ Partial Class Platillos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.lblPrecio = New System.Windows.Forms.Label()
         Me.lblNombreProducto = New System.Windows.Forms.Label()
         Me.pcbImagenPlatillo = New System.Windows.Forms.PictureBox()
-        Me.lblDescripcion = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblHoraFeliz = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
-        CType(Me.pcbImagenPlatillo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcbImagenPlatillo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Silver
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.lblHoraFeliz)
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.lblDescripcion)
         Me.Panel2.Controls.Add(Me.lblPrecio)
@@ -47,12 +49,32 @@ Partial Class Platillos
         Me.Panel2.Size = New System.Drawing.Size(292, 265)
         Me.Panel2.TabIndex = 2
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.toppng_com_five_star_rating_623x124
+        Me.PictureBox1.Location = New System.Drawing.Point(16, 105)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
+        'lblDescripcion
+        '
+        Me.lblDescripcion.AutoSize = True
+        Me.lblDescripcion.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.lblDescripcion.Location = New System.Drawing.Point(16, 158)
+        Me.lblDescripcion.Name = "lblDescripcion"
+        Me.lblDescripcion.Size = New System.Drawing.Size(83, 21)
+        Me.lblDescripcion.TabIndex = 2
+        Me.lblDescripcion.Text = "Descripcion"
+        '
         'lblPrecio
         '
         Me.lblPrecio.AutoSize = True
         Me.lblPrecio.Font = New System.Drawing.Font("Garamond", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblPrecio.ForeColor = System.Drawing.Color.Brown
-        Me.lblPrecio.Location = New System.Drawing.Point(16, 80)
+        Me.lblPrecio.Location = New System.Drawing.Point(16, 54)
         Me.lblPrecio.Name = "lblPrecio"
         Me.lblPrecio.Size = New System.Drawing.Size(154, 24)
         Me.lblPrecio.TabIndex = 1
@@ -63,7 +85,7 @@ Partial Class Platillos
         Me.lblNombreProducto.AutoSize = True
         Me.lblNombreProducto.Font = New System.Drawing.Font("Garamond", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblNombreProducto.ForeColor = System.Drawing.Color.OrangeRed
-        Me.lblNombreProducto.Location = New System.Drawing.Point(16, 43)
+        Me.lblNombreProducto.Location = New System.Drawing.Point(16, 30)
         Me.lblNombreProducto.Name = "lblNombreProducto"
         Me.lblNombreProducto.Size = New System.Drawing.Size(204, 24)
         Me.lblNombreProducto.TabIndex = 0
@@ -81,25 +103,16 @@ Partial Class Platillos
         Me.pcbImagenPlatillo.TabIndex = 0
         Me.pcbImagenPlatillo.TabStop = False
         '
-        'lblDescripcion
+        'lblHoraFeliz
         '
-        Me.lblDescripcion.AutoSize = True
-        Me.lblDescripcion.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.lblDescripcion.Location = New System.Drawing.Point(16, 169)
-        Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(83, 21)
-        Me.lblDescripcion.TabIndex = 2
-        Me.lblDescripcion.Text = "Descripcion"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.toppng_com_five_star_rating_623x124
-        Me.PictureBox1.Location = New System.Drawing.Point(16, 107)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
+        Me.lblHoraFeliz.AutoSize = True
+        Me.lblHoraFeliz.Font = New System.Drawing.Font("Garamond", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblHoraFeliz.ForeColor = System.Drawing.Color.Brown
+        Me.lblHoraFeliz.Location = New System.Drawing.Point(16, 78)
+        Me.lblHoraFeliz.Name = "lblHoraFeliz"
+        Me.lblHoraFeliz.Size = New System.Drawing.Size(167, 24)
+        Me.lblHoraFeliz.TabIndex = 4
+        Me.lblHoraFeliz.Text = "Precio Hora Feliz"
         '
         'Platillos
         '
@@ -115,8 +128,8 @@ Partial Class Platillos
         Me.Size = New System.Drawing.Size(462, 265)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.pcbImagenPlatillo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcbImagenPlatillo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -126,4 +139,5 @@ Partial Class Platillos
     Friend WithEvents pcbImagenPlatillo As PictureBox
     Friend WithEvents lblDescripcion As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblHoraFeliz As Label
 End Class

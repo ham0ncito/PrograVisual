@@ -414,6 +414,7 @@
       },
       "Libreria Clases/1.0.0": {
         "dependencies": {
+          "Microsoft.Data.SqlClient": "4.1.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {

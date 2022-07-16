@@ -259,6 +259,8 @@ Partial Class frInicio
         '
         'FlowLayoutPanel1
         '
+        Me.FlowLayoutPanel1.AllowDrop = True
+        Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(221, 508)

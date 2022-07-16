@@ -25,6 +25,12 @@
 
     Private Sub frInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        agregarControles()
+    End Sub
+
+    Private Sub agregarControles()
+        Dim control As New CLDBPlatillos()
+        control.LlenarFlowLayout(FlowLayoutPanel1)
     End Sub
 
     Private Sub pMenu_Paint(sender As Object, e As PaintEventArgs) Handles pMenu.Paint
@@ -39,7 +45,5 @@
 
     End Sub
 
-    Private Sub Platillos1_Load(sender As Object, e As EventArgs) Handles Platillos1.Load
 
-    End Sub
 End Class

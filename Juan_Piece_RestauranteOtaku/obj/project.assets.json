@@ -666,6 +666,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.Data.SqlClient": "4.1.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
