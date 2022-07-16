@@ -34,4 +34,12 @@
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
 
     End Sub
+
+    Private Sub FlowLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) Handles FlowLayoutPanel1.Paint
+
+    End Sub
+
+    Private Sub Platillos1_Load(sender As Object, e As EventArgs) Handles Platillos1.Load
+
+    End Sub
 End Class

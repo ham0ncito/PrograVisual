@@ -63,9 +63,39 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property _9cfd1b_586b76124cac4d118656288c8e63a1f2_mv2_PhotoRoom() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("9cfd1b_586b76124cac4d118656288c8e63a1f2_mv2-PhotoRoom", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property Copy_of_Happy_Hour() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Copy of Happy Hour", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property fee12db2b0320572b129bc0ae71e05f5() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fee12db2b0320572b129bc0ae71e05f5", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property five_star_rating_11549726812abjskp8qz8() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("five-star-rating-11549726812abjskp8qz8", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -146,6 +176,16 @@ Namespace My.Resources
         Public ReadOnly Property ramen_de_pollo_receta_facil_f_1_PhotoRoom__1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ramen-de-pollo-receta-facil-f-1-PhotoRoom (1)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property toppng_com_five_star_rating_623x124() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("toppng.com-five-star-rating-623x124", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
