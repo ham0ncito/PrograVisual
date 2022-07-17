@@ -18,6 +18,8 @@ Public Class ClVentas
             btn.Text = lector(0).ToString
 
         End While
+        con.Close()
+        con.Dispose()
 
     End Sub
     Public Sub llenarDataGrid(datagid As DataGridView, text As String)
@@ -37,7 +39,8 @@ Public Class ClVentas
             Else
                 MessageBox.Show("No hay productos de esa categoria", "Inventario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
             End If
-
+            con.Close()
+            con.Dispose()
             Exit Try
 
         Catch ex As Exception
