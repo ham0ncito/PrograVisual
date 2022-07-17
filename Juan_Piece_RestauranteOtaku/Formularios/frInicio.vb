@@ -9,18 +9,20 @@
 
     Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
         Dim frCerrarSesion As New frCerrarSesion()
-
+        AddOwnedForm(frCerrarSesion)
         frCerrarSesion.Show()
     End Sub
 
     Private Sub btnPlatillos_Click(sender As Object, e As EventArgs) Handles btnPlatillos.Click
         Dim frPlatillos As New frPlatillos()
+        AddOwnedForm(frPlatillos)
         frPlatillos.Show()
     End Sub
 
     Private Sub btnPedidos_Click(sender As Object, e As EventArgs) Handles btnPedidos.Click
-        Dim frPedidos As New frPedidos()
-        frPedidos.Show()
+        Dim frInventari As New frInventario()
+        AddOwnedForm(frInventari)
+        frInventari.Show()
     End Sub
 
     Private Sub frInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
