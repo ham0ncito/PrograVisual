@@ -7,6 +7,10 @@ Public Class frFacturar
     End Sub
 
     Private Sub btnFuerte_Click(sender As Object, e As EventArgs) Handles btnFuerte.Click
-        ventas.llenarDataGrid(DataGridView1, Me.btnFuerte.Text)
+        ventas.llenarDataGrid(dgFacturar, "Plato Fuerte")
+    End Sub
+
+    Private Sub btnEntradas_Click(sender As Object, e As EventArgs) Handles btnEntradas.Click
+        ventas.llenarDataGrid(dgFacturar, btnEntradas.Text)
     End Sub
 End Class

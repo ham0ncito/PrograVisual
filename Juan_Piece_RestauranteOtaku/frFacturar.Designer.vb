@@ -41,17 +41,12 @@ Partial Class frFacturar
         Me.btnFuerte = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.lblCategorias = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.dgFacturar = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelIzquierdo.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -271,47 +266,24 @@ Partial Class frFacturar
         Me.lblCategorias.TabIndex = 0
         Me.lblCategorias.Text = "Categorias"
         '
-        'DataGridView1
+        'dgFacturar
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.DataGridView1.Location = New System.Drawing.Point(197, 116)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(546, 376)
-        Me.DataGridView1.TabIndex = 2
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Nombre Platillo"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Precio Estandar"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Precio Hora Feliz"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Descripcion"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Imagen"
-        Me.Column5.Name = "Column5"
+        Me.dgFacturar.AllowDrop = True
+        Me.dgFacturar.BackgroundColor = System.Drawing.Color.DimGray
+        Me.dgFacturar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgFacturar.GridColor = System.Drawing.Color.Black
+        Me.dgFacturar.Location = New System.Drawing.Point(197, 116)
+        Me.dgFacturar.Name = "dgFacturar"
+        Me.dgFacturar.RowTemplate.Height = 25
+        Me.dgFacturar.Size = New System.Drawing.Size(546, 376)
+        Me.dgFacturar.TabIndex = 2
         '
         'frFacturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1370, 749)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgFacturar)
         Me.Controls.Add(Me.panelIzquierdo)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -323,7 +295,7 @@ Partial Class frFacturar
         Me.panelIzquierdo.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -352,4 +324,5 @@ Partial Class frFacturar
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewImageColumn
+    Friend WithEvents dgFacturar As DataGridView
 End Class

@@ -5,6 +5,8 @@ Imports System.Data
 Imports System.IO
 
 Public Class CLDBPlatillos
+    Inherits Conexion
+
     Dim platilloInt As Int16
     Dim nombrePlatillo As String
     Dim precioProductoE As Double
@@ -66,7 +68,7 @@ Public Class CLDBPlatillos
         End Set
     End Property
 
-    Dim con As New SqlConnection("Data Source=localhost;Initial Catalog=JuanPieceDb; Integrated Security=true;")
+
 
     Public Function LlenarFlowLayout(FlowLayoutPanel)
         Try

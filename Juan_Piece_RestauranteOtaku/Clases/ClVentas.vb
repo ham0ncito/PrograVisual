@@ -1,7 +1,9 @@
 ﻿Imports System.Data.SqlClient
+Imports Libreria_Clases
 
 Public Class ClVentas
-    Dim con As New SqlConnection("Data Source=localhost;Initial Catalog=JuanPieceDb; Integrated Security=true;")
+    Inherits Conexion
+
     Public Sub llenarPanel(Panel)
         con.Open()
         Dim sql As String = "exec nombreTipo"
@@ -18,20 +20,22 @@ Public Class ClVentas
         End While
 
     End Sub
-    Public Sub llenarDataGrid(datagid, text)
+    Public Sub llenarDataGrid(datagid As DataGridView, text As String)
+        datagid.Rows.Clear()
+        datagid.Rows.Clear()
+        datagid.DefaultCellStyle.ForeColor = Color.Black
         Try
 
-            datagid.Rows.Clear()
+
             Dim sql As String = "exec busquedaPlatillos '" + text + "';"
             Dim cmd As New SqlCommand(sql, con)
-            Try
-                Dim da As New SqlDataAdapter(cmd)
-                Dim ds As New DataSet
-                da.Fill(ds)
-                datagid.DataSource = ds.Tables(text)
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
+            cmd.CommandType = CommandType.Text
+            Dim da = New SqlDataAdapter(cmd)
+            Dim ds = New DataSet()
+            da.Fill(ds, "Platillos")
+            datagid.DataSource = ds.Tables("Platillos")
+            Exit Try
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
