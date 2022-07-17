@@ -204,7 +204,7 @@ Partial Class frInicio
         Me.PcAnuncio.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__3_
         Me.PcAnuncio.Location = New System.Drawing.Point(0, 0)
         Me.PcAnuncio.Name = "PcAnuncio"
-        Me.PcAnuncio.Size = New System.Drawing.Size(352, 385)
+        Me.PcAnuncio.Size = New System.Drawing.Size(352, 364)
         Me.PcAnuncio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PcAnuncio.TabIndex = 2
         Me.PcAnuncio.TabStop = False
@@ -216,7 +216,7 @@ Partial Class frInicio
         Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.Happy_Hour
         Me.PictureBox1.Location = New System.Drawing.Point(352, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(201, 385)
+        Me.PictureBox1.Size = New System.Drawing.Size(201, 364)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -228,7 +228,7 @@ Partial Class frInicio
         Me.PictureBox2.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.RAMEN
         Me.PictureBox2.Location = New System.Drawing.Point(553, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(300, 385)
+        Me.PictureBox2.Size = New System.Drawing.Size(300, 364)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
@@ -250,8 +250,9 @@ Partial Class frInicio
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label1.Font = New System.Drawing.Font("Garamond", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(3, 1)
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(233, 33)
         Me.Label1.TabIndex = 0
@@ -263,9 +264,9 @@ Partial Class frInicio
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(221, 508)
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(221, 487)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1149, 203)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1149, 224)
         Me.FlowLayoutPanel1.TabIndex = 6
         '
         'PictureBox3
@@ -275,7 +276,7 @@ Partial Class frInicio
         Me.PictureBox3.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__5___1_
         Me.PictureBox3.Location = New System.Drawing.Point(853, 0)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(288, 385)
+        Me.PictureBox3.Size = New System.Drawing.Size(288, 364)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 7
         Me.PictureBox3.TabStop = False
@@ -290,7 +291,7 @@ Partial Class frInicio
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(221, 123)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1149, 385)
+        Me.Panel3.Size = New System.Drawing.Size(1149, 364)
         Me.Panel3.TabIndex = 7
         '
         'frInicio
