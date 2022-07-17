@@ -21,19 +21,23 @@ Public Class ClVentas
 
     End Sub
     Public Sub llenarDataGrid(datagid As DataGridView, text As String)
-        datagid.Rows.Clear()
-        datagid.Rows.Clear()
+        datagid.Columns.Clear()
+        datagid.AlternatingRowsDefaultCellStyle.BackColor = Color.Goldenrod
         datagid.DefaultCellStyle.ForeColor = Color.Black
         Try
-
-
             Dim sql As String = "exec busquedaPlatillos '" + text + "';"
             Dim cmd As New SqlCommand(sql, con)
             cmd.CommandType = CommandType.Text
             Dim da = New SqlDataAdapter(cmd)
             Dim ds = New DataSet()
             da.Fill(ds, "Platillos")
-            datagid.DataSource = ds.Tables("Platillos")
+            If (ds.Tables("Platillos").Rows.Count > 0) Then
+
+                datagid.DataSource = ds.Tables("Platillos")
+            Else
+                MessageBox.Show("No hay productos de esa categoria", "Inventario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+            End If
+
             Exit Try
 
         Catch ex As Exception
