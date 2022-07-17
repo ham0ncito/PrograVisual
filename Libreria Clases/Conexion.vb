@@ -16,4 +16,14 @@ Public Class Conexion
         Dim con As New SqlConnection("Data Source =localhost; Catalog=JuanPieceDB")
         Return con
     End Function
+
+    Private Function comando(cmd, objeto)
+        con.Open()
+        Dim lector As SqlDataReader = cmd.ExecuteDataReader()
+        If (lector.Read()) Then
+            objeto.Text = lector(0).ToString
+        End If
+        con.Close()
+    End Function
+
 End Class

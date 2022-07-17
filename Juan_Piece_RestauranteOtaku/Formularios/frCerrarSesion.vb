@@ -8,6 +8,10 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        Dim sesion As New ClCerrarSesion
+        sesion.VerificarCerrarSesion(frInicio.lblUsuario.Text, txtcontrasena.Text)
+        frInicio.Close()
+        Dim fr As New frLogin()
+        fr.Show()
     End Sub
 End Class

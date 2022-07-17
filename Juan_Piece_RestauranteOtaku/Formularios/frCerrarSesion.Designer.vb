@@ -28,7 +28,7 @@ Partial Class frCerrarSesion
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtcontrasena = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
@@ -68,7 +68,7 @@ Partial Class frCerrarSesion
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtcontrasena)
         Me.GroupBox1.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.Location = New System.Drawing.Point(147, 71)
         Me.GroupBox1.Name = "GroupBox1"
@@ -86,13 +86,13 @@ Partial Class frCerrarSesion
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Contraseña"
         '
-        'TextBox1
+        'txtcontrasena
         '
-        Me.TextBox1.Location = New System.Drawing.Point(102, 82)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox1.Size = New System.Drawing.Size(197, 25)
-        Me.TextBox1.TabIndex = 0
+        Me.txtcontrasena.Location = New System.Drawing.Point(102, 82)
+        Me.txtcontrasena.Name = "txtcontrasena"
+        Me.txtcontrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtcontrasena.Size = New System.Drawing.Size(197, 25)
+        Me.txtcontrasena.TabIndex = 0
         '
         'Button1
         '
@@ -146,6 +146,6 @@ Partial Class frCerrarSesion
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtcontrasena As TextBox
     Friend WithEvents Label2 As Label
 End Class
