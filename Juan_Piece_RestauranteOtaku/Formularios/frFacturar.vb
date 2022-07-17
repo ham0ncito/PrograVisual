@@ -42,4 +42,20 @@ Public Class frFacturar
     Private Sub dgFacturar_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgFacturar.RowEnter
         ''pcImagen.Image = dgFacturar.CurrentRow.Cells()
     End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
+    End Sub
+
+    Private Sub lblHora_Click(sender As Object, e As EventArgs) Handles lblHora.Click
+
+    End Sub
+
+    Private Sub Tiempo_Tick(sender As Object, e As EventArgs) Handles Tiempo.Tick
+        lblHora.Text = Now()
+    End Sub
+
+    Private Sub dgFacturar_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFacturar.CellContentClick
+
+    End Sub
 End Class
