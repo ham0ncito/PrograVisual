@@ -15,7 +15,25 @@ Public Class ClVentas
             btn.Dock = DockStyle.Top
             btn.Text = lector(0).ToString
 
-
         End While
+
+    End Sub
+    Public Sub llenarDataGrid(datagid, text)
+        Try
+
+            datagid.Rows.Clear()
+            Dim sql As String = "exec busquedaPlatillos '" + text + "';"
+            Dim cmd As New SqlCommand(sql, con)
+            Try
+                Dim da As New SqlDataAdapter(cmd)
+                Dim ds As New DataSet
+                da.Fill(ds)
+                datagid.DataSource = ds.Tables(text)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class
