@@ -42,11 +42,13 @@ Partial Class frFacturar
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.lblCategorias = New System.Windows.Forms.Label()
         Me.dgFacturar = New System.Windows.Forms.DataGridView()
+        Me.pcImagen = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelIzquierdo.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -278,11 +280,20 @@ Partial Class frFacturar
         Me.dgFacturar.Size = New System.Drawing.Size(546, 376)
         Me.dgFacturar.TabIndex = 2
         '
+        'pcImagen
+        '
+        Me.pcImagen.Location = New System.Drawing.Point(197, 512)
+        Me.pcImagen.Name = "pcImagen"
+        Me.pcImagen.Size = New System.Drawing.Size(171, 174)
+        Me.pcImagen.TabIndex = 3
+        Me.pcImagen.TabStop = False
+        '
         'frFacturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.Controls.Add(Me.pcImagen)
         Me.Controls.Add(Me.dgFacturar)
         Me.Controls.Add(Me.panelIzquierdo)
         Me.Controls.Add(Me.Panel1)
@@ -296,6 +307,7 @@ Partial Class frFacturar
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -325,4 +337,5 @@ Partial Class frFacturar
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewImageColumn
     Friend WithEvents dgFacturar As DataGridView
+    Friend WithEvents pcImagen As PictureBox
 End Class

@@ -37,4 +37,8 @@ Public Class frFacturar
     Private Sub btnOtros_Click(sender As Object, e As EventArgs) Handles btnOtros.Click
         ventas.llenarDataGrid(dgFacturar, btnOtros.Text)
     End Sub
+
+    Private Sub dgFacturar_RowEnter(sender As Object, e As DataGridViewCellEventArgs) Handles dgFacturar.RowEnter
+        ''pcImagen.Image = dgFacturar.CurrentRow.Cells()
+    End Sub
 End Class
