@@ -57,6 +57,7 @@ Partial Class frFacturar
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.dgDetalle = New System.Windows.Forms.DataGridView()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.Imprimir = New System.Drawing.Printing.PrintDocument()
         Me.Panel1.SuspendLayout()
@@ -68,6 +69,8 @@ Partial Class frFacturar
         CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.dgDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -336,13 +339,15 @@ Partial Class frFacturar
         'dgFacturar
         '
         Me.dgFacturar.AllowDrop = True
+        Me.dgFacturar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgFacturar.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.dgFacturar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgFacturar.GridColor = System.Drawing.Color.Black
-        Me.dgFacturar.Location = New System.Drawing.Point(197, 116)
+        Me.dgFacturar.Location = New System.Drawing.Point(171, 111)
         Me.dgFacturar.Name = "dgFacturar"
+        Me.dgFacturar.ReadOnly = True
         Me.dgFacturar.RowTemplate.Height = 25
-        Me.dgFacturar.Size = New System.Drawing.Size(587, 297)
+        Me.dgFacturar.Size = New System.Drawing.Size(617, 317)
         Me.dgFacturar.TabIndex = 2
         '
         'GroupBox1
@@ -355,9 +360,9 @@ Partial Class frFacturar
         Me.GroupBox1.Controls.Add(Me.lblNombre)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.PictureBox2)
-        Me.GroupBox1.Location = New System.Drawing.Point(197, 419)
+        Me.GroupBox1.Location = New System.Drawing.Point(171, 447)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(587, 239)
+        Me.GroupBox1.Size = New System.Drawing.Size(618, 239)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Facturar venta"
@@ -439,12 +444,26 @@ Partial Class frFacturar
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.dgDetalle)
         Me.GroupBox2.Location = New System.Drawing.Point(804, 111)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(534, 547)
+        Me.GroupBox2.Size = New System.Drawing.Size(534, 575)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detalle Venta"
+        '
+        'dgDetalle
+        '
+        Me.dgDetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgDetalle.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgDetalle.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.dgDetalle.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.dgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgDetalle.Location = New System.Drawing.Point(20, 33)
+        Me.dgDetalle.Name = "dgDetalle"
+        Me.dgDetalle.RowTemplate.Height = 25
+        Me.dgDetalle.Size = New System.Drawing.Size(496, 303)
+        Me.dgDetalle.TabIndex = 0
         '
         'Tiempo
         '
@@ -477,6 +496,8 @@ Partial Class frFacturar
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.dgDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -499,7 +520,7 @@ Partial Class frFacturar
     Friend WithEvents btnSushi As Button
     Friend WithEvents btnPasteles As Button
     Friend WithEvents btnOtros As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgDetalle As DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn

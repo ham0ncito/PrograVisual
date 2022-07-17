@@ -39,8 +39,8 @@ Public Class ClVentas
             Else
                 MessageBox.Show("No hay productos de esa categoria", "Inventario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
             End If
-            con.Close()
-            con.Dispose()
+
+
             Exit Try
 
         Catch ex As Exception
