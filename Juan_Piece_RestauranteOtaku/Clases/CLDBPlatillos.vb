@@ -78,8 +78,8 @@ Public Class CLDBPlatillos
             While (lector.Read)
                 NombrePlatillo1 = lector.GetString(1)
                 PlatilloInt1 = lector.GetInt32(0)
-                PrecioProductoE1 = lector.GetDecimal(2)
-                PrecioProductoH1 = lector.GetDecimal(4)
+                PrecioProductoE1 = "L. " + lector.GetDecimal(2)
+                PrecioProductoH1 = "L. " + lector.GetDecimal(4)
                 DescripcionProducto1 = lector.GetString(5)
                 Bytes1 = lector.GetValue(10)
 

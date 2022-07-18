@@ -109,7 +109,7 @@ Partial Class Platillos
         Me.pcbImagenPlatillo.Location = New System.Drawing.Point(0, 0)
         Me.pcbImagenPlatillo.Name = "pcbImagenPlatillo"
         Me.pcbImagenPlatillo.Size = New System.Drawing.Size(138, 252)
-        Me.pcbImagenPlatillo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pcbImagenPlatillo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pcbImagenPlatillo.TabIndex = 0
         Me.pcbImagenPlatillo.TabStop = False
         '
