@@ -12,7 +12,7 @@ Public Class CLDBPlatillos
     Dim precioProductoE As Double
     Dim precioProductoH As Double
     Dim descripcionProducto As String
-    Dim imagen() As Byte
+    Dim bytes As Byte()
 
     Public Property PlatilloInt1 As Short
         Get
@@ -59,16 +59,14 @@ Public Class CLDBPlatillos
         End Set
     End Property
 
-    Public Property Imagen1 As Byte()
+    Public Property Bytes1 As Byte()
         Get
-            Return imagen
+            Return bytes
         End Get
         Set(value As Byte())
-            imagen = value
+            bytes = value
         End Set
     End Property
-
-
 
     Public Function LlenarFlowLayout(FlowLayoutPanel)
         Try
@@ -83,15 +81,16 @@ Public Class CLDBPlatillos
                 PrecioProductoE1 = lector.GetDecimal(2)
                 PrecioProductoH1 = lector.GetDecimal(4)
                 DescripcionProducto1 = lector.GetString(5)
-                'Imagen1 = lector.GetByte(10)
+                Bytes1 = lector.GetValue(10)
 
                 Dim nuevoPlatillo As New Platillos
                 nuevoPlatillo.NombreProducto = NombrePlatillo1
                 nuevoPlatillo.PrecioProducto = PrecioProductoE1
                 nuevoPlatillo.PrecioHoraFeliz = PrecioProductoH1
                 nuevoPlatillo.DescripcionProducto = DescripcionProducto1
-                'Dim ms As New MemoryStream(Imagen1)
-                'nuevoPlatillo.Imagen = Image.FromStream(ms)
+                Using ms As New MemoryStream(bytes)
+                    nuevoPlatillo.pcbImagenPlatillo.Image = Image.FromStream(ms)
+                End Using
 
                 FlowLayoutPanel.Controls.Add(nuevoPlatillo)
 

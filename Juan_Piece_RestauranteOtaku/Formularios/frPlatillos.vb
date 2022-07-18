@@ -1,8 +1,11 @@
-﻿Public Class frPlatillos
+﻿Imports System.IO
+
+Public Class frPlatillos
     Private Sub frPlatillos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         Dim clPlatillos As New ClPlatillos
         clPlatillos.LlenarPlatilos(dgPlatillos)
+        visibilidad(False)
     End Sub
 
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
@@ -23,33 +26,55 @@
     End Sub
 
     Private Sub dgPlatillos_Click(sender As Object, e As EventArgs) Handles dgPlatillos.Click
+        visibilidad(True)
+        PlatillosC()
+    End Sub
 
+    Private Sub PlatillosC()
         For Each item As DataGridViewRow In dgPlatillos.SelectedRows
             If (Not (String.IsNullOrEmpty(item.Cells(1).Value.ToString))) Then
                 lblNombre.Text = item.Cells(1).Value.ToString()
-                ''pcImagen.Image = item.Cells(5).
-                lblPrecioN.Text = item.Cells(2).Value.ToString()
-                lblPrecioD.Text = item.Cells(3).Value.ToString()
-                lblPrecioH.Text = item.Cells(4).Value.ToString()
+                Dim bytes As Byte() = item.Cells(6).Value
+                Using ms As New MemoryStream(bytes)
+                    pcImagen.Image = Image.FromStream(ms)
+                End Using
+                lblPrecioN.Text = "L " + item.Cells(2).Value.ToString()
+                lblPrecioD.Text = "L " + item.Cells(3).Value.ToString()
+                lblPrecioH.Text = "L " + item.Cells(4).Value.ToString()
                 lblTipo.Text = item.Cells(5).Value.ToString()
                 lblDescripcion.Text = item.Cells(7).Value.ToString
-                lblPesoOnz.Text = item.Cells(8).Value.ToString()
-                lblPesoGra.Text = item.Cells(9).Value.ToString()
+                lblPesoOnz.Text = item.Cells(8).Value.ToString() + " onz"
+                lblPesoGra.Text = item.Cells(9).Value.ToString() + " g"
             Else
-                limpiar()
+                    visibilidad(False)
             End If
         Next
     End Sub
 
+    Private Sub visibilidad(estado As Boolean)
+        lblDescripcion.Visible = estado
+        lblNombre.Visible = estado
+        lblPesoGra.Visible = estado
+        lblPesoOnz.Visible = estado
+        lblPrecioD.Visible = estado
+        lblPrecioH.Visible = estado
+        lblPrecioN.Visible = estado
+        lblTipo.Visible = estado
+        pcImagen.Visible = estado
+        dgIngredientes.Visible = estado
+    End Sub
+
+
     Private Sub limpiar()
         lblDescripcion.Text = "Descripcion del producto"
         lblNombre.Text = "Nombre del producto"
-        lblPesoGra.Text = "00.00"
-        lblPesoOnz.Text = "00.00"
-        lblPrecioD.Text = "00.00"
-        lblPrecioH.Text = "00.00"
-        lblPrecioN.Text = "00.00"
+        lblPesoGra.Text = "00.00 onz"
+        lblPesoOnz.Text = "00.00 g"
+        lblPrecioD.Text = "L 00.00"
+        lblPrecioH.Text = "L 00.00"
+        lblPrecioN.Text = "L 00.00"
         lblTipo.Text = "Tipo de Platillo"
         pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        dgIngredientes.Columns.Clear()
     End Sub
 End Class
