@@ -72,6 +72,7 @@ Partial Class frFacturar
         Me.dgDetalle = New System.Windows.Forms.DataGridView()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.Imprimir = New System.Drawing.Printing.PrintDocument()
+        Me.ImprimirPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -612,6 +613,16 @@ Partial Class frFacturar
         '
         Me.Tiempo.Enabled = True
         '
+        'ImprimirPreview
+        '
+        Me.ImprimirPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.ImprimirPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.ImprimirPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.ImprimirPreview.Enabled = True
+        Me.ImprimirPreview.Icon = CType(resources.GetObject("ImprimirPreview.Icon"), System.Drawing.Icon)
+        Me.ImprimirPreview.Name = "ImprimirPreview"
+        Me.ImprimirPreview.Visible = False
+        '
         'frFacturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -700,4 +711,5 @@ Partial Class frFacturar
     Friend WithEvents lblSubtotal As Label
     Friend WithEvents lblTotal As Label
     Friend WithEvents btnNuevoCliente As Button
+    Friend WithEvents ImprimirPreview As PrintPreviewDialog
 End Class
