@@ -32,7 +32,7 @@ Partial Class frPlatillos
         Me.btnGenerar = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblHora = New System.Windows.Forms.Label()
-        Me.dgFacturar = New System.Windows.Forms.DataGridView()
+        Me.dgPlatillos = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnAgregarP = New System.Windows.Forms.Button()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
@@ -41,7 +41,7 @@ Partial Class frPlatillos
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgPlatillos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -139,19 +139,19 @@ Partial Class frPlatillos
         Me.lblHora.TabIndex = 0
         Me.lblHora.Text = "hora"
         '
-        'dgFacturar
+        'dgPlatillos
         '
-        Me.dgFacturar.AllowDrop = True
-        Me.dgFacturar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgFacturar.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.dgFacturar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgFacturar.GridColor = System.Drawing.Color.Black
-        Me.dgFacturar.Location = New System.Drawing.Point(21, 111)
-        Me.dgFacturar.Name = "dgFacturar"
-        Me.dgFacturar.ReadOnly = True
-        Me.dgFacturar.RowTemplate.Height = 25
-        Me.dgFacturar.Size = New System.Drawing.Size(767, 575)
-        Me.dgFacturar.TabIndex = 2
+        Me.dgPlatillos.AllowDrop = True
+        Me.dgPlatillos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgPlatillos.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.dgPlatillos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgPlatillos.GridColor = System.Drawing.Color.Black
+        Me.dgPlatillos.Location = New System.Drawing.Point(21, 111)
+        Me.dgPlatillos.Name = "dgPlatillos"
+        Me.dgPlatillos.ReadOnly = True
+        Me.dgPlatillos.RowTemplate.Height = 25
+        Me.dgPlatillos.Size = New System.Drawing.Size(767, 575)
+        Me.dgPlatillos.TabIndex = 2
         '
         'GroupBox2
         '
@@ -194,7 +194,7 @@ Partial Class frPlatillos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.dgFacturar)
+        Me.Controls.Add(Me.dgPlatillos)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frPlatillos"
@@ -204,7 +204,7 @@ Partial Class frPlatillos
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgPlatillos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -222,7 +222,7 @@ Partial Class frPlatillos
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewImageColumn
-    Friend WithEvents dgFacturar As DataGridView
+    Friend WithEvents dgPlatillos As DataGridView
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents lblHora As Label
     Friend WithEvents Tiempo As Timer
