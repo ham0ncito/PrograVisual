@@ -48,13 +48,14 @@ Partial Class frFacturar
         Me.lblCategorias = New System.Windows.Forms.Label()
         Me.dgFacturar = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblPrecio = New System.Windows.Forms.Label()
         Me.lblSubDetalle = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.imagenProducto = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.panel5 = New System.Windows.Forms.Panel()
@@ -70,6 +71,10 @@ Partial Class frFacturar
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblNumeroFactura = New System.Windows.Forms.Label()
         Me.dgDetalle = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.Imprimir = New System.Drawing.Printing.PrintDocument()
         Me.ImprimirPreview = New System.Windows.Forms.PrintPreviewDialog()
@@ -366,13 +371,14 @@ Partial Class frFacturar
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lblPrecio)
         Me.GroupBox1.Controls.Add(Me.lblSubDetalle)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lblNombre)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtCantidad)
         Me.GroupBox1.Controls.Add(Me.imagenProducto)
         Me.GroupBox1.Location = New System.Drawing.Point(171, 447)
         Me.GroupBox1.Name = "GroupBox1"
@@ -380,6 +386,16 @@ Partial Class frFacturar
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Facturar venta"
+        '
+        'lblPrecio
+        '
+        Me.lblPrecio.AutoSize = True
+        Me.lblPrecio.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblPrecio.Location = New System.Drawing.Point(373, 38)
+        Me.lblPrecio.Name = "lblPrecio"
+        Me.lblPrecio.Size = New System.Drawing.Size(133, 18)
+        Me.lblPrecio.TabIndex = 9
+        Me.lblPrecio.Text = "Precio del Producto"
         '
         'lblSubDetalle
         '
@@ -435,24 +451,27 @@ Partial Class frFacturar
         '
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblNombre.Location = New System.Drawing.Point(256, 39)
+        Me.lblNombre.Location = New System.Drawing.Point(190, 38)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(145, 18)
         Me.lblNombre.TabIndex = 2
         Me.lblNombre.Text = "Nombre del Producto"
         '
-        'TextBox1
+        'txtCantidad
         '
-        Me.TextBox1.Location = New System.Drawing.Point(308, 83)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(161, 23)
-        Me.TextBox1.TabIndex = 1
+        Me.txtCantidad.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtCantidad.Location = New System.Drawing.Point(307, 79)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.Size = New System.Drawing.Size(161, 29)
+        Me.txtCantidad.TabIndex = 1
+        Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'imagenProducto
         '
         Me.imagenProducto.Location = New System.Drawing.Point(20, 39)
         Me.imagenProducto.Name = "imagenProducto"
         Me.imagenProducto.Size = New System.Drawing.Size(133, 128)
+        Me.imagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.imagenProducto.TabIndex = 0
         Me.imagenProducto.TabStop = False
         '
@@ -598,16 +617,36 @@ Partial Class frFacturar
         'dgDetalle
         '
         Me.dgDetalle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dgDetalle.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgDetalle.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.dgDetalle.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.dgDetalle.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgDetalle.Location = New System.Drawing.Point(3, 19)
         Me.dgDetalle.Name = "dgDetalle"
         Me.dgDetalle.RowTemplate.Height = 25
         Me.dgDetalle.Size = New System.Drawing.Size(528, 283)
         Me.dgDetalle.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Cantidad"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre Platillo"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Precio"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Subtotal"
+        Me.Column4.Name = "Column4"
         '
         'Tiempo
         '
@@ -686,7 +725,7 @@ Partial Class frFacturar
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents imagenProducto As PictureBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCantidad As TextBox
     Friend WithEvents lblNombre As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
@@ -712,4 +751,5 @@ Partial Class frFacturar
     Friend WithEvents lblTotal As Label
     Friend WithEvents btnNuevoCliente As Button
     Friend WithEvents ImprimirPreview As PrintPreviewDialog
+    Friend WithEvents lblPrecio As Label
 End Class

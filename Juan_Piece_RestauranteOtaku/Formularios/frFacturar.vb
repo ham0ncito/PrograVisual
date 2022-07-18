@@ -63,6 +63,7 @@ Public Class frFacturar
 
     Private Sub dgFacturar_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFacturar.CellClick
         carrito()
+        Precio()
     End Sub
 
     Private Sub carrito()
@@ -71,9 +72,31 @@ Public Class frFacturar
             imagenProducto.Image = Image.FromStream(ms)
         End Using
         lblNombre.Text = dgFacturar.CurrentRow.Cells(0).Value.ToString
+        txtCantidad.Text = "1"
+    End Sub
+
+    Private Sub Sumar(t As TextBox)
+        If (Convert.ToInt32(t.Text) > 0) Then
+            ''lblSubDetalle.Text = Convert.ToInt32(t.Text) *
+        End If
+    End Sub
+
+    Private Sub Precio()
+        Dim HoraFelizInicio As DateTime = DateTime.Parse("10:00:00 PM")
+        Dim HoraFelizFin As DateTime = DateTime.Parse("12:00:00 PM")
+        If DateTime.Now.TimeOfDay >= HoraFelizInicio.TimeOfDay And DateTime.Now.TimeOfDay < HoraFelizFin.TimeOfDay Then
+            lblPrecio.Text = dgFacturar.CurrentRow.Cells(2).Value.ToString
+        Else
+            lblPrecio.Text = dgFacturar.CurrentRow.Cells(1).Value.ToString
+        End If
     End Sub
 
     Private Sub lblNombre_Click(sender As Object, e As EventArgs) Handles lblNombre.Click
 
+    End Sub
+
+    Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
+        Dim total = (Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(lblPrecio.Text))
+        lblSubDetalle.Text = total.ToString
     End Sub
 End Class
