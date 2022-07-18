@@ -232,6 +232,8 @@ Partial Class frPlatillos
         '
         'dgIngredientes
         '
+        Me.dgIngredientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgIngredientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders
         Me.dgIngredientes.BackgroundColor = System.Drawing.Color.White
         Me.dgIngredientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgIngredientes.Location = New System.Drawing.Point(27, 287)
