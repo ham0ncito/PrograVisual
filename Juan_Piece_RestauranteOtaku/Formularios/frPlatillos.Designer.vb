@@ -34,26 +34,26 @@ Partial Class frPlatillos
         Me.lblHora = New System.Windows.Forms.Label()
         Me.dgPlatillos = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblTipo = New System.Windows.Forms.Label()
+        Me.lblPesoOnz = New System.Windows.Forms.Label()
+        Me.lblPrecioH = New System.Windows.Forms.Label()
+        Me.lblPrecioD = New System.Windows.Forms.Label()
+        Me.lblPrecioN = New System.Windows.Forms.Label()
+        Me.dgIngredientes = New System.Windows.Forms.DataGridView()
+        Me.lblDescripcion = New System.Windows.Forms.Label()
+        Me.lblPesoGra = New System.Windows.Forms.Label()
+        Me.lblNombre = New System.Windows.Forms.Label()
         Me.pcImagen = New System.Windows.Forms.PictureBox()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.Imprimir = New System.Drawing.Printing.PrintDocument()
         Me.ImprimirPreview = New System.Windows.Forms.PrintPreviewDialog()
-        Me.lblNombre = New System.Windows.Forms.Label()
-        Me.lblPesoGra = New System.Windows.Forms.Label()
-        Me.lblDescripcion = New System.Windows.Forms.Label()
-        Me.dgIngredientes = New System.Windows.Forms.DataGridView()
-        Me.lblPrecioN = New System.Windows.Forms.Label()
-        Me.lblPrecioD = New System.Windows.Forms.Label()
-        Me.lblPrecioH = New System.Windows.Forms.Label()
-        Me.lblPesoOnz = New System.Windows.Forms.Label()
-        Me.lblTipo = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.dgPlatillos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgIngredientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -183,6 +183,91 @@ Partial Class frPlatillos
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Informacion Platillo"
         '
+        'lblTipo
+        '
+        Me.lblTipo.AutoSize = True
+        Me.lblTipo.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblTipo.Location = New System.Drawing.Point(270, 78)
+        Me.lblTipo.Name = "lblTipo"
+        Me.lblTipo.Size = New System.Drawing.Size(87, 18)
+        Me.lblTipo.TabIndex = 11
+        Me.lblTipo.Text = "Tipo Platillo"
+        '
+        'lblPesoOnz
+        '
+        Me.lblPesoOnz.AutoSize = True
+        Me.lblPesoOnz.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblPesoOnz.Location = New System.Drawing.Point(378, 106)
+        Me.lblPesoOnz.Name = "lblPesoOnz"
+        Me.lblPesoOnz.Size = New System.Drawing.Size(44, 18)
+        Me.lblPesoOnz.TabIndex = 10
+        Me.lblPesoOnz.Text = "00.00"
+        '
+        'lblPrecioH
+        '
+        Me.lblPrecioH.AutoSize = True
+        Me.lblPrecioH.Location = New System.Drawing.Point(447, 246)
+        Me.lblPrecioH.Name = "lblPrecioH"
+        Me.lblPrecioH.Size = New System.Drawing.Size(34, 15)
+        Me.lblPrecioH.TabIndex = 9
+        Me.lblPrecioH.Text = "00.00"
+        '
+        'lblPrecioD
+        '
+        Me.lblPrecioD.AutoSize = True
+        Me.lblPrecioD.Location = New System.Drawing.Point(244, 246)
+        Me.lblPrecioD.Name = "lblPrecioD"
+        Me.lblPrecioD.Size = New System.Drawing.Size(34, 15)
+        Me.lblPrecioD.TabIndex = 8
+        Me.lblPrecioD.Text = "00.00"
+        '
+        'lblPrecioN
+        '
+        Me.lblPrecioN.AutoSize = True
+        Me.lblPrecioN.Location = New System.Drawing.Point(41, 246)
+        Me.lblPrecioN.Name = "lblPrecioN"
+        Me.lblPrecioN.Size = New System.Drawing.Size(34, 15)
+        Me.lblPrecioN.TabIndex = 7
+        Me.lblPrecioN.Text = "00.00"
+        '
+        'dgIngredientes
+        '
+        Me.dgIngredientes.BackgroundColor = System.Drawing.Color.White
+        Me.dgIngredientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgIngredientes.Location = New System.Drawing.Point(27, 287)
+        Me.dgIngredientes.Name = "dgIngredientes"
+        Me.dgIngredientes.RowTemplate.Height = 25
+        Me.dgIngredientes.Size = New System.Drawing.Size(479, 229)
+        Me.dgIngredientes.TabIndex = 6
+        '
+        'lblDescripcion
+        '
+        Me.lblDescripcion.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblDescripcion.Location = New System.Drawing.Point(270, 139)
+        Me.lblDescripcion.Name = "lblDescripcion"
+        Me.lblDescripcion.Size = New System.Drawing.Size(236, 76)
+        Me.lblDescripcion.TabIndex = 5
+        Me.lblDescripcion.Text = "Descripcion"
+        '
+        'lblPesoGra
+        '
+        Me.lblPesoGra.AutoSize = True
+        Me.lblPesoGra.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblPesoGra.Location = New System.Drawing.Point(270, 106)
+        Me.lblPesoGra.Name = "lblPesoGra"
+        Me.lblPesoGra.Size = New System.Drawing.Size(44, 18)
+        Me.lblPesoGra.TabIndex = 4
+        Me.lblPesoGra.Text = "00.00"
+        '
+        'lblNombre
+        '
+        Me.lblNombre.Font = New System.Drawing.Font("Garamond", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblNombre.Location = New System.Drawing.Point(270, 35)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(247, 43)
+        Me.lblNombre.TabIndex = 3
+        Me.lblNombre.Text = "Nombre Del Producto"
+        '
         'pcImagen
         '
         Me.pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
@@ -207,91 +292,6 @@ Partial Class frPlatillos
         Me.ImprimirPreview.Name = "ImprimirPreview"
         Me.ImprimirPreview.Visible = False
         '
-        'lblNombre
-        '
-        Me.lblNombre.Font = New System.Drawing.Font("Garamond", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblNombre.Location = New System.Drawing.Point(270, 35)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(247, 43)
-        Me.lblNombre.TabIndex = 3
-        Me.lblNombre.Text = "Nombre Del Producto"
-        '
-        'lblPesoGra
-        '
-        Me.lblPesoGra.AutoSize = True
-        Me.lblPesoGra.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblPesoGra.Location = New System.Drawing.Point(270, 106)
-        Me.lblPesoGra.Name = "lblPesoGra"
-        Me.lblPesoGra.Size = New System.Drawing.Size(44, 18)
-        Me.lblPesoGra.TabIndex = 4
-        Me.lblPesoGra.Text = "00.00"
-        '
-        'lblDescripcion
-        '
-        Me.lblDescripcion.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblDescripcion.Location = New System.Drawing.Point(270, 139)
-        Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(236, 76)
-        Me.lblDescripcion.TabIndex = 5
-        Me.lblDescripcion.Text = "Descripcion"
-        '
-        'dgIngredientes
-        '
-        Me.dgIngredientes.BackgroundColor = System.Drawing.Color.White
-        Me.dgIngredientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgIngredientes.Location = New System.Drawing.Point(27, 287)
-        Me.dgIngredientes.Name = "dgIngredientes"
-        Me.dgIngredientes.RowTemplate.Height = 25
-        Me.dgIngredientes.Size = New System.Drawing.Size(479, 229)
-        Me.dgIngredientes.TabIndex = 6
-        '
-        'lblPrecioN
-        '
-        Me.lblPrecioN.AutoSize = True
-        Me.lblPrecioN.Location = New System.Drawing.Point(41, 246)
-        Me.lblPrecioN.Name = "lblPrecioN"
-        Me.lblPrecioN.Size = New System.Drawing.Size(34, 15)
-        Me.lblPrecioN.TabIndex = 7
-        Me.lblPrecioN.Text = "00.00"
-        '
-        'lblPrecioD
-        '
-        Me.lblPrecioD.AutoSize = True
-        Me.lblPrecioD.Location = New System.Drawing.Point(244, 246)
-        Me.lblPrecioD.Name = "lblPrecioD"
-        Me.lblPrecioD.Size = New System.Drawing.Size(34, 15)
-        Me.lblPrecioD.TabIndex = 8
-        Me.lblPrecioD.Text = "00.00"
-        '
-        'lblPrecioH
-        '
-        Me.lblPrecioH.AutoSize = True
-        Me.lblPrecioH.Location = New System.Drawing.Point(447, 246)
-        Me.lblPrecioH.Name = "lblPrecioH"
-        Me.lblPrecioH.Size = New System.Drawing.Size(34, 15)
-        Me.lblPrecioH.TabIndex = 9
-        Me.lblPrecioH.Text = "00.00"
-        '
-        'lblPesoOnz
-        '
-        Me.lblPesoOnz.AutoSize = True
-        Me.lblPesoOnz.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblPesoOnz.Location = New System.Drawing.Point(378, 106)
-        Me.lblPesoOnz.Name = "lblPesoOnz"
-        Me.lblPesoOnz.Size = New System.Drawing.Size(44, 18)
-        Me.lblPesoOnz.TabIndex = 10
-        Me.lblPesoOnz.Text = "00.00"
-        '
-        'lblTipo
-        '
-        Me.lblTipo.AutoSize = True
-        Me.lblTipo.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblTipo.Location = New System.Drawing.Point(270, 78)
-        Me.lblTipo.Name = "lblTipo"
-        Me.lblTipo.Size = New System.Drawing.Size(87, 18)
-        Me.lblTipo.TabIndex = 11
-        Me.lblTipo.Text = "Tipo Platillo"
-        '
         'frPlatillos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -311,8 +311,8 @@ Partial Class frPlatillos
         CType(Me.dgPlatillos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgIngredientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
