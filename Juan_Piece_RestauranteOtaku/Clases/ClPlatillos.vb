@@ -41,4 +41,25 @@ Public Class ClPlatillos
         End Try
     End Sub
 
+    Public Sub datosDgIngredientes(id, dgIngredientes)
+        Try
+            dgIngredientes.Columns.Clear()
+            con.Open()
+            Dim sql As String = "exec todosIngredientes '" + id + "';"
+            Dim cmd As New SqlCommand(sql, con)
+            cmd.CommandType = CommandType.Text
+            Dim da = New SqlDataAdapter(cmd)
+            Dim ds = New DataSet()
+            da.Fill(ds, "Ingredientes")
+            If (ds.Tables("Ingredientes").Rows.Count > 0) Then
+                dgIngredientes.DataSource = ds.Tables("Ingredientes")
+            Else
+                MessageBox.Show("Este producto no tiene ingredientes agregados", "Inventario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+            End If
+            con.Close()
+            Exit Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class

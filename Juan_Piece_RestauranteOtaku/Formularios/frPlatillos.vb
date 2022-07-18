@@ -1,9 +1,10 @@
 ﻿Imports System.IO
+Imports Libreria_Clases
 
 Public Class frPlatillos
+    Dim clPlatillos As New ClPlatillos
     Private Sub frPlatillos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
-        Dim clPlatillos As New ClPlatillos
         clPlatillos.LlenarPlatilos(dgPlatillos)
         visibilidad(False)
     End Sub
@@ -28,6 +29,8 @@ Public Class frPlatillos
     Private Sub dgPlatillos_Click(sender As Object, e As EventArgs) Handles dgPlatillos.Click
         visibilidad(True)
         PlatillosC()
+        clPlatillos.datosDgIngredientes(dgPlatillos.CurrentRow.Cells(0).Value.ToString, dgIngredientes)
+
     End Sub
 
     Private Sub PlatillosC()
@@ -46,7 +49,7 @@ Public Class frPlatillos
                 lblPesoOnz.Text = item.Cells(8).Value.ToString() + " onz"
                 lblPesoGra.Text = item.Cells(9).Value.ToString() + " g"
             Else
-                    visibilidad(False)
+                visibilidad(False)
             End If
         Next
     End Sub
@@ -77,4 +80,6 @@ Public Class frPlatillos
         pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
         dgIngredientes.Columns.Clear()
     End Sub
+
+
 End Class
