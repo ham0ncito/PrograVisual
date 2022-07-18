@@ -64,8 +64,13 @@ Public Class frFacturar
     Private Sub dgFacturar_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFacturar.CellClick
         carrito()
         Precio()
+        Subttotal()
     End Sub
 
+    Private Sub Subttotal()
+        Dim total = (Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(lblPrecio.Text))
+        lblSubDetalle.Text = total.ToString
+    End Sub
     Private Sub carrito()
         Dim bytes As Byte() = dgFacturar.CurrentRow.Cells(4).Value
         Using ms As New MemoryStream(bytes)
@@ -96,7 +101,32 @@ Public Class frFacturar
     End Sub
 
     Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
-        Dim total = (Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(lblPrecio.Text))
-        lblSubDetalle.Text = total.ToString
+        Try
+            Subttotal()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        CancelarDetalle()
+    End Sub
+
+    Private Sub CancelarDetalle()
+        Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        lblNombre.Text = "Nombre del Producto"
+        lblPrecio.Text = "0"
+        txtCantidad.Text = "0"
+
+    End Sub
+    Private Sub AgregarCarrto()
+        If (StrComp(lblNombre.Text, "Precio del Producto") = 0) Then
+        Else
+            dgDetalle.Rows.Add(txtCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
+        End If
+    End Sub
+
+    Private Sub btnCarrito_Click(sender As Object, e As EventArgs) Handles btnCarrito.Click
+        AgregarCarrto()
     End Sub
 End Class

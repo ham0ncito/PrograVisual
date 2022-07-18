@@ -51,8 +51,8 @@ Partial Class frFacturar
         Me.lblPrecio = New System.Windows.Forms.Label()
         Me.lblSubDetalle = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnCarrito = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -374,8 +374,8 @@ Partial Class frFacturar
         Me.GroupBox1.Controls.Add(Me.lblPrecio)
         Me.GroupBox1.Controls.Add(Me.lblSubDetalle)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnCancelar)
+        Me.GroupBox1.Controls.Add(Me.btnCarrito)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lblNombre)
         Me.GroupBox1.Controls.Add(Me.txtCantidad)
@@ -393,9 +393,9 @@ Partial Class frFacturar
         Me.lblPrecio.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblPrecio.Location = New System.Drawing.Point(373, 38)
         Me.lblPrecio.Name = "lblPrecio"
-        Me.lblPrecio.Size = New System.Drawing.Size(133, 18)
+        Me.lblPrecio.Size = New System.Drawing.Size(16, 18)
         Me.lblPrecio.TabIndex = 9
-        Me.lblPrecio.Text = "Precio del Producto"
+        Me.lblPrecio.Text = "0"
         '
         'lblSubDetalle
         '
@@ -417,25 +417,25 @@ Partial Class frFacturar
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Subtotal"
         '
-        'Button2
+        'btnCancelar
         '
-        Me.Button2.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(350, 178)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(136, 44)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancelar.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCancelar.Location = New System.Drawing.Point(350, 178)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(136, 44)
+        Me.btnCancelar.TabIndex = 6
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnCarrito
         '
-        Me.Button1.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(190, 178)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 44)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Agregar al carrito"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCarrito.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCarrito.Location = New System.Drawing.Point(190, 178)
+        Me.btnCarrito.Name = "btnCarrito"
+        Me.btnCarrito.Size = New System.Drawing.Size(136, 44)
+        Me.btnCarrito.TabIndex = 5
+        Me.btnCarrito.Text = "Agregar al carrito"
+        Me.btnCarrito.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -464,10 +464,12 @@ Partial Class frFacturar
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(161, 29)
         Me.txtCantidad.TabIndex = 1
+        Me.txtCantidad.Text = "0"
         Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'imagenProducto
         '
+        Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
         Me.imagenProducto.Location = New System.Drawing.Point(20, 39)
         Me.imagenProducto.Name = "imagenProducto"
         Me.imagenProducto.Size = New System.Drawing.Size(133, 128)
@@ -728,8 +730,8 @@ Partial Class frFacturar
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents lblNombre As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnCarrito As Button
+    Friend WithEvents btnCancelar As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents lblSubDetalle As Label
     Friend WithEvents lblHora As Label
