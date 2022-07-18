@@ -1,4 +1,6 @@
 ﻿
+Imports System.IO
+
 Public Class frFacturar
     Dim ventas As New ClVentas
 
@@ -56,6 +58,22 @@ Public Class frFacturar
     End Sub
 
     Private Sub dgFacturar_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFacturar.CellContentClick
+
+    End Sub
+
+    Private Sub dgFacturar_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFacturar.CellClick
+        carrito()
+    End Sub
+
+    Private Sub carrito()
+        Dim bytes As Byte() = dgFacturar.CurrentRow.Cells(4).Value
+        Using ms As New MemoryStream(bytes)
+            imagenProducto.Image = Image.FromStream(ms)
+        End Using
+        lblNombre.Text = dgFacturar.CurrentRow.Cells(0).Value.ToString
+    End Sub
+
+    Private Sub lblNombre_Click(sender As Object, e As EventArgs) Handles lblNombre.Click
 
     End Sub
 End Class

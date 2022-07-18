@@ -55,7 +55,7 @@ Partial Class frFacturar
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.imagenProducto = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.panel5 = New System.Windows.Forms.Panel()
         Me.btnNuevoCliente = New System.Windows.Forms.Button()
@@ -81,7 +81,7 @@ Partial Class frFacturar
         Me.Panel4.SuspendLayout()
         CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imagenProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.panel5.SuspendLayout()
         CType(Me.dgDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -373,7 +373,7 @@ Partial Class frFacturar
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lblNombre)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.PictureBox2)
+        Me.GroupBox1.Controls.Add(Me.imagenProducto)
         Me.GroupBox1.Location = New System.Drawing.Point(171, 447)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(618, 239)
@@ -448,13 +448,13 @@ Partial Class frFacturar
         Me.TextBox1.Size = New System.Drawing.Size(161, 23)
         Me.TextBox1.TabIndex = 1
         '
-        'PictureBox2
+        'imagenProducto
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(20, 39)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(133, 128)
-        Me.PictureBox2.TabIndex = 0
-        Me.PictureBox2.TabStop = False
+        Me.imagenProducto.Location = New System.Drawing.Point(20, 39)
+        Me.imagenProducto.Name = "imagenProducto"
+        Me.imagenProducto.Size = New System.Drawing.Size(133, 128)
+        Me.imagenProducto.TabIndex = 0
+        Me.imagenProducto.TabStop = False
         '
         'GroupBox2
         '
@@ -649,7 +649,7 @@ Partial Class frFacturar
         CType(Me.dgFacturar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imagenProducto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.panel5.ResumeLayout(False)
         Me.panel5.PerformLayout()
@@ -685,7 +685,7 @@ Partial Class frFacturar
     Friend WithEvents dgFacturar As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents imagenProducto As PictureBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents lblNombre As Label
     Friend WithEvents Label1 As Label
