@@ -107,7 +107,7 @@ Partial Class frFacturar
         Me.btnSalir.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnSalir.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnSalir.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnSalir.Location = New System.Drawing.Point(912, 0)
+        Me.btnSalir.Location = New System.Drawing.Point(1024, 0)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(143, 90)
         Me.btnSalir.TabIndex = 5
@@ -119,7 +119,7 @@ Partial Class frFacturar
         Me.btnFactura.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnFactura.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnFactura.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnFactura.Location = New System.Drawing.Point(769, 0)
+        Me.btnFactura.Location = New System.Drawing.Point(881, 0)
         Me.btnFactura.Name = "btnFactura"
         Me.btnFactura.Size = New System.Drawing.Size(143, 90)
         Me.btnFactura.TabIndex = 4
@@ -130,7 +130,7 @@ Partial Class frFacturar
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(565, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(677, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(204, 90)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -142,7 +142,7 @@ Partial Class frFacturar
         Me.btnCancelarVenta.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnCancelarVenta.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnCancelarVenta.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnCancelarVenta.Location = New System.Drawing.Point(422, 0)
+        Me.btnCancelarVenta.Location = New System.Drawing.Point(534, 0)
         Me.btnCancelarVenta.Name = "btnCancelarVenta"
         Me.btnCancelarVenta.Size = New System.Drawing.Size(143, 90)
         Me.btnCancelarVenta.TabIndex = 2
@@ -154,7 +154,7 @@ Partial Class frFacturar
         Me.btnGenerar.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnGenerar.Dock = System.Windows.Forms.DockStyle.Left
         Me.btnGenerar.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnGenerar.Location = New System.Drawing.Point(279, 0)
+        Me.btnGenerar.Location = New System.Drawing.Point(391, 0)
         Me.btnGenerar.Name = "btnGenerar"
         Me.btnGenerar.Size = New System.Drawing.Size(143, 90)
         Me.btnGenerar.TabIndex = 1
@@ -167,7 +167,7 @@ Partial Class frFacturar
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(279, 90)
+        Me.Panel2.Size = New System.Drawing.Size(391, 90)
         Me.Panel2.TabIndex = 0
         '
         'lblHora
