@@ -6,6 +6,8 @@ Public Class frFacturar
 
     Private Sub frFacturar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        ventas.total(lblDiarioVenta, "exec totalDiario")
+        ventas.total(lblNumeroFactura, "exec nuevaFactura")
 
     End Sub
 

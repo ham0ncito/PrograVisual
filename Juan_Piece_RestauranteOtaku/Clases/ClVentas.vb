@@ -19,7 +19,7 @@ Public Class ClVentas
 
         End While
         con.Close()
-        con.Dispose()
+
 
     End Sub
     Public Sub llenarDataGrid(datagid As DataGridView, text As String)
@@ -40,7 +40,7 @@ Public Class ClVentas
                 MessageBox.Show("No hay productos de esa categoria", "Inventario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
             End If
 
-
+            con.Close()
             Exit Try
 
         Catch ex As Exception
@@ -48,7 +48,21 @@ Public Class ClVentas
         End Try
     End Sub
 
-    Public Sub totalDiario()
+    Public Sub total(contenedor, consulta)
+        Try
+            con.Open()
+            Dim sql As String = consulta
+            Dim comando As New SqlCommand(sql, con)
+            comando.CommandType = CommandType.Text
+            Dim lector As SqlDataReader = comando.ExecuteReader()
+            If (lector.Read()) Then
+                contenedor.Text = lector.GetValue(0)
+            End If
+            con.Close()
+            Exit Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
     End Sub
 
