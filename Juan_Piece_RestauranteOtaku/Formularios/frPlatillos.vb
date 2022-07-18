@@ -28,6 +28,13 @@
             If (Not (String.IsNullOrEmpty(item.Cells(1).Value.ToString))) Then
                 lblNombre.Text = item.Cells(1).Value.ToString()
                 ''pcImagen.Image = item.Cells(5).
+                lblPrecioN.Text = item.Cells(2).Value.ToString()
+                lblPrecioD.Text = item.Cells(3).Value.ToString()
+                lblPrecioH.Text = item.Cells(4).Value.ToString()
+                lblTipo.Text = item.Cells(5).Value.ToString()
+                lblDescripcion.Text = item.Cells(7).Value.ToString
+                lblPesoOnz.Text = item.Cells(8).Value.ToString()
+                lblPesoGra.Text = item.Cells(9).Value.ToString()
             Else
                 limpiar()
             End If
