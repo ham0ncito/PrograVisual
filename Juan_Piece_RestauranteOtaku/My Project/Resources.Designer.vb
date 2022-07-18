@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property _149px_Picture_icon_BLACK_svg() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("149px-Picture_icon_BLACK.svg", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property _9cfd1b_586b76124cac4d118656288c8e63a1f2_mv2_PhotoRoom() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("9cfd1b_586b76124cac4d118656288c8e63a1f2_mv2-PhotoRoom", resourceCulture)

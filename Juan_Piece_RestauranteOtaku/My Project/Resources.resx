@@ -133,6 +133,9 @@
   <data name="fee12db2b0320572b129bc0ae71e05f5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\..\Downloads\fee12db2b0320572b129bc0ae71e05f5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="9cfd1b_586b76124cac4d118656288c8e63a1f2_mv2-PhotoRoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Downloads\9cfd1b_586b76124cac4d118656288c8e63a1f2_mv2-PhotoRoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="five-star-rating-11549726812abjskp8qz8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\..\Desktop\five-star-rating-11549726812abjskp8qz8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,7 +160,7 @@
   <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\Login.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="9cfd1b_586b76124cac4d118656288c8e63a1f2_mv2-PhotoRoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\..\..\..\..\Downloads\9cfd1b_586b76124cac4d118656288c8e63a1f2_mv2-PhotoRoom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="149px-Picture_icon_BLACK.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Desktop\149px-Picture_icon_BLACK.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
