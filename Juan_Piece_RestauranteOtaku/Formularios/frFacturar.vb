@@ -6,8 +6,9 @@ Public Class frFacturar
 
     Private Sub frFacturar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
-        ventas.total(lblDiarioVenta, "exec totalDiario")
-        ventas.total(lblNumeroFactura, "exec nuevaFactura")
+        ventas.busquedaLabel(lblDiarioVenta, "exec totalDiario")
+        ventas.busquedaLabel(lblNumeroFactura, "exec nuevaFactura")
+        ventas.Clientes(cmbNombres, "exec nombresCliente")
 
     End Sub
 
@@ -70,8 +71,13 @@ Public Class frFacturar
     End Sub
 
     Private Sub Subttotal()
-        Dim total = (Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(lblPrecio.Text))
-        lblSubDetalle.Text = total.ToString
+        Try
+            Dim total = (Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(lblPrecio.Text))
+            lblSubDetalle.Text = total.ToString
+            Exit Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
     Private Sub carrito()
         Try
@@ -149,5 +155,16 @@ Public Class frFacturar
         Next
         lblSubtotal.Text = total.ToString
         lblTotal.Text = Convert.ToString(total + total * 0.15)
+    End Sub
+
+    Private Sub cmbNombres_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbNombres.SelectedIndexChanged
+        buscarId()
+    End Sub
+    Private Sub buscarId()
+        Try
+            ventas.busquedaLabel(lblCodigo, "exec buscarId '" + cmbNombres.Text + "'; ")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class

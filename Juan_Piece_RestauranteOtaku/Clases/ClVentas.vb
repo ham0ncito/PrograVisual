@@ -48,7 +48,7 @@ Public Class ClVentas
         End Try
     End Sub
 
-    Public Sub total(contenedor, consulta)
+    Public Sub busquedaLabel(contenedor, consulta)
         Try
             con.Open()
             Dim sql As String = consulta
@@ -66,8 +66,22 @@ Public Class ClVentas
 
     End Sub
 
-    Public Sub Clientes()
-
+    Public Sub Clientes(cbbox, consulta)
+        Try
+            cbbox.Items.Clear()
+            con.Open()
+            Dim sql As String = consulta
+            Dim comando As New SqlCommand(sql, con)
+            comando.CommandType = CommandType.Text
+            Dim lector As SqlDataReader = comando.ExecuteReader()
+            While lector.Read()
+                cbbox.Items.Add(lector.GetString(0))
+            End While
+            con.Close()
+            Exit Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
 End Class

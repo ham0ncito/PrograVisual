@@ -66,7 +66,7 @@ Partial Class frFacturar
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbNombres = New System.Windows.Forms.ComboBox()
         Me.lblCliente = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblNumeroFactura = New System.Windows.Forms.Label()
@@ -498,7 +498,7 @@ Partial Class frFacturar
         Me.panel5.Controls.Add(Me.Label6)
         Me.panel5.Controls.Add(Me.lblCodigo)
         Me.panel5.Controls.Add(Me.Label5)
-        Me.panel5.Controls.Add(Me.ComboBox1)
+        Me.panel5.Controls.Add(Me.cmbNombres)
         Me.panel5.Controls.Add(Me.lblCliente)
         Me.panel5.Controls.Add(Me.Label4)
         Me.panel5.Controls.Add(Me.lblNumeroFactura)
@@ -578,13 +578,13 @@ Partial Class frFacturar
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Codigo Cliente"
         '
-        'ComboBox1
+        'cmbNombres
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(143, 60)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(195, 23)
-        Me.ComboBox1.TabIndex = 3
+        Me.cmbNombres.FormattingEnabled = True
+        Me.cmbNombres.Location = New System.Drawing.Point(143, 60)
+        Me.cmbNombres.Name = "cmbNombres"
+        Me.cmbNombres.Size = New System.Drawing.Size(195, 23)
+        Me.cmbNombres.TabIndex = 3
         '
         'lblCliente
         '
@@ -745,7 +745,7 @@ Partial Class frFacturar
     Friend WithEvents Label4 As Label
     Friend WithEvents lblCliente As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbNombres As ComboBox
     Friend WithEvents lblCodigo As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
