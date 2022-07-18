@@ -72,12 +72,17 @@ Public Class frFacturar
         lblSubDetalle.Text = total.ToString
     End Sub
     Private Sub carrito()
-        Dim bytes As Byte() = dgFacturar.CurrentRow.Cells(4).Value
-        Using ms As New MemoryStream(bytes)
-            imagenProducto.Image = Image.FromStream(ms)
-        End Using
-        lblNombre.Text = dgFacturar.CurrentRow.Cells(0).Value.ToString
-        txtCantidad.Text = "1"
+        Try
+            Dim bytes As Byte() = dgFacturar.CurrentRow.Cells(4).Value
+            Using ms As New MemoryStream(bytes)
+                imagenProducto.Image = Image.FromStream(ms)
+            End Using
+            lblNombre.Text = dgFacturar.CurrentRow.Cells(0).Value.ToString
+            txtCantidad.Text = "1"
+            Exit Try
+        Catch x As Exception
+            MessageBox.Show(x.Message)
+        End Try
     End Sub
 
     Private Sub Sumar(t As TextBox)
@@ -120,7 +125,8 @@ Public Class frFacturar
 
     End Sub
     Private Sub AgregarCarrto()
-        If (StrComp(lblNombre.Text, "Precio del Producto") = 0) Then
+        If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
+            MessageBox.Show("Detalle vacio, agregue productos", "No hay productos")
         Else
             dgDetalle.Rows.Add(txtCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
         End If
@@ -128,5 +134,18 @@ Public Class frFacturar
 
     Private Sub btnCarrito_Click(sender As Object, e As EventArgs) Handles btnCarrito.Click
         AgregarCarrto()
+    End Sub
+
+    Private Sub dgDetalle_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dgDetalle.RowsAdded
+        DataGridSuma()
+    End Sub
+
+    Private Sub DataGridSuma()
+        Dim total = 0
+        For Each item As DataGridViewRow In dgDetalle.Rows
+            total += Convert.ToDouble(item.Cells(3).Value)
+        Next
+        lblSubtotal.Text = total.ToString
+        lblTotal.Text = Convert.ToString(total + total * 0.15)
     End Sub
 End Class

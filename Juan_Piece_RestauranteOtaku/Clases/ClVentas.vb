@@ -47,4 +47,13 @@ Public Class ClVentas
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Public Sub totalDiario()
+
+    End Sub
+
+    Public Sub Clientes()
+
+    End Sub
+
 End Class
