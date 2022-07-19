@@ -745,7 +745,6 @@ Partial Class frFacturar
     Friend WithEvents Label4 As Label
     Friend WithEvents lblCliente As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents cmbNombres As ComboBox
     Friend WithEvents lblCodigo As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
@@ -754,4 +753,5 @@ Partial Class frFacturar
     Friend WithEvents btnNuevoCliente As Button
     Friend WithEvents ImprimirPreview As PrintPreviewDialog
     Friend WithEvents lblPrecio As Label
+    Public WithEvents cmbNombres As ComboBox
 End Class

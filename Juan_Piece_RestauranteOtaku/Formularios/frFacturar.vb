@@ -6,11 +6,15 @@ Public Class frFacturar
 
     Private Sub frFacturar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        dato()
+    End Sub
+
+    Public Sub dato()
         ventas.busquedaLabel(lblDiarioVenta, "exec totalDiario")
         ventas.busquedaLabel(lblNumeroFactura, "exec nuevaFactura")
         ventas.Clientes(cmbNombres, "exec nombresCliente")
-
     End Sub
+
 
     Private Sub btnFuerte_Click(sender As Object, e As EventArgs) Handles btnFuerte.Click
         ventas.llenarDataGrid(dgFacturar, "Plato Fuerte")
@@ -187,6 +191,7 @@ Public Class frFacturar
     Private Sub btnNuevoCliente_Click(sender As Object, e As EventArgs) Handles btnNuevoCliente.Click
         Dim frCliente As New frNuevoCliente()
         AddOwnedForm(frCliente)
+
         frCliente.Show()
     End Sub
 

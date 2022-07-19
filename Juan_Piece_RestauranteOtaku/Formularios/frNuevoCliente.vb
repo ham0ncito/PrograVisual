@@ -11,6 +11,7 @@
             ErrorProvider1.SetError(btnAgCliente, "")
             agregarCliente()
             limpiar()
+            frFacturar.dato()
         End If
     End Sub
 
