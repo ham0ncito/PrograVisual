@@ -167,4 +167,14 @@ Public Class frFacturar
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Private Sub btnNuevoCliente_Click(sender As Object, e As EventArgs) Handles btnNuevoCliente.Click
+        Dim frCliente As New frNuevoCliente()
+        AddOwnedForm(frCliente)
+        frCliente.Show()
+    End Sub
+
+    Private Sub NuevoCliente()
+
+    End Sub
 End Class
