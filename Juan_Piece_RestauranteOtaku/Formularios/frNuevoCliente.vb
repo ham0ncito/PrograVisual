@@ -8,8 +8,14 @@
         If (String.IsNullOrEmpty(txtDirec.Text) And String.IsNullOrEmpty(txtNombre.Text) And String.IsNullOrEmpty(txtTelefono.Text)) Then
             ErrorProvider1.SetError(btnAgCliente, "Ingrese todos los datos para continuar")
         Else
-            ErrorProvider1.SetError(btnAgCliente, "Ingrese todos los datos para continuar")
+            ErrorProvider1.SetError(btnAgCliente, "")
+            agregarCliente()
         End If
+    End Sub
+
+    Public Sub agregarCliente()
+        Dim cClientes As New ClClientes
+        cClientes.agCliente(txtNombre.Text, txtTelefono.Text, txtDirec.Text)
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
