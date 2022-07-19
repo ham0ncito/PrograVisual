@@ -55,7 +55,7 @@ Public Class ClVentas
             Dim comando As New SqlCommand(sql, con)
             comando.CommandType = CommandType.Text
             Dim lector As SqlDataReader = comando.ExecuteReader()
-            If (lector.Read()) Then
+            If (lector.Read() And Not (lector.IsDBNull(0))) Then
                 contenedor.Text = lector.GetValue(0)
             End If
             con.Close()
