@@ -105,7 +105,7 @@ Partial Class Platillos
         '
         Me.pcbImagenPlatillo.BackColor = System.Drawing.SystemColors.ControlDark
         Me.pcbImagenPlatillo.Dock = System.Windows.Forms.DockStyle.Left
-        Me.pcbImagenPlatillo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.ramen_de_pollo_receta_facil_f_1_PhotoRoom__1_
+        Me.pcbImagenPlatillo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
         Me.pcbImagenPlatillo.Location = New System.Drawing.Point(0, 0)
         Me.pcbImagenPlatillo.Name = "pcbImagenPlatillo"
         Me.pcbImagenPlatillo.Size = New System.Drawing.Size(138, 252)
