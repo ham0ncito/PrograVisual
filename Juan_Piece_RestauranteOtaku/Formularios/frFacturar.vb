@@ -70,6 +70,22 @@ Public Class frFacturar
         Subttotal()
     End Sub
 
+    Private Sub GenerarFactura()
+
+    End Sub
+
+    Private Sub Facturar()
+
+    End Sub
+
+    Private Sub CancelarFactura()
+
+    End Sub
+
+    Private Sub VerFactura()
+
+    End Sub
+
     Private Sub Subttotal()
         Try
             Dim total = (Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(lblPrecio.Text))
@@ -174,7 +190,4 @@ Public Class frFacturar
         frCliente.Show()
     End Sub
 
-    Private Sub NuevoCliente()
-
-    End Sub
 End Class

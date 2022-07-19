@@ -10,6 +10,7 @@ Public Class ClClientes
             Dim cmd As New SqlCommand(sql, con)
             cmd.CommandType = CommandType.Text
             cmd.ExecuteNonQuery()
+            MessageBox.Show("Registro agregado", "Nuevo Cliente")
             Exit Try
         Catch ex As Exception
             MessageBox.Show(ex.Message)

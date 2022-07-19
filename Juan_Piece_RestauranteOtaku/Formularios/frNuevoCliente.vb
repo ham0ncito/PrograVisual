@@ -10,6 +10,7 @@
         Else
             ErrorProvider1.SetError(btnAgCliente, "")
             agregarCliente()
+            limpiar()
         End If
     End Sub
 
