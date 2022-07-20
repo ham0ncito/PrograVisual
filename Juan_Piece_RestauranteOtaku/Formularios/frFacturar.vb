@@ -1,18 +1,27 @@
 ﻿
+Imports System.Drawing.Printing
 Imports System.IO
 
 Public Class frFacturar
     Dim ventas As New ClVentas
 
     Private Sub frFacturar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        dato()
+        Try
+            Me.WindowState = FormWindowState.Maximized
+            dato()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Public Sub dato()
-        ventas.busquedaLabel(lblDiarioVenta, "exec totalDiario")
-        ventas.busquedaLabel(lblNumeroFactura, "exec nuevaFactura")
-        ventas.Clientes(cmbNombres, "exec nombresCliente")
+        Try
+            ventas.busquedaLabel(lblDiarioVenta, "exec totalDiario")
+            ventas.busquedaLabel(lblNumeroFactura, "exec nuevaFactura")
+            ventas.Clientes(cmbNombres, "exec nombresCliente")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
 
@@ -69,9 +78,13 @@ Public Class frFacturar
     End Sub
 
     Private Sub dgFacturar_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFacturar.CellClick
-        carrito()
-        Precio()
-        Subttotal()
+        Try
+            carrito()
+            subPrecio()
+            Subttotal()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub GenerarFactura()
@@ -119,14 +132,18 @@ Public Class frFacturar
         End If
     End Sub
 
-    Private Sub Precio()
-        Dim HoraFelizInicio As DateTime = DateTime.Parse("10:00:00 PM")
-        Dim HoraFelizFin As DateTime = DateTime.Parse("12:00:00 PM")
-        If DateTime.Now.TimeOfDay >= HoraFelizInicio.TimeOfDay And DateTime.Now.TimeOfDay < HoraFelizFin.TimeOfDay Then
-            lblPrecio.Text = dgFacturar.CurrentRow.Cells(2).Value.ToString
-        Else
-            lblPrecio.Text = dgFacturar.CurrentRow.Cells(1).Value.ToString
-        End If
+    Private Sub subPrecio()
+        Try
+            Dim HoraFelizInicio As DateTime = DateTime.Parse("10:00:00 PM")
+            Dim HoraFelizFin As DateTime = DateTime.Parse("12:00:00 PM")
+            If DateTime.Now.TimeOfDay >= HoraFelizInicio.TimeOfDay And DateTime.Now.TimeOfDay < HoraFelizFin.TimeOfDay Then
+                lblPrecio.Text = dgFacturar.CurrentRow.Cells(2).Value.ToString
+            Else
+                lblPrecio.Text = dgFacturar.CurrentRow.Cells(1).Value.ToString
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub lblNombre_Click(sender As Object, e As EventArgs) Handles lblNombre.Click
@@ -146,18 +163,54 @@ Public Class frFacturar
     End Sub
 
     Private Sub CancelarDetalle()
-        Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
-        lblNombre.Text = "Nombre del Producto"
-        lblPrecio.Text = "0"
-        txtCantidad.Text = "0"
+        Try
+            Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+            lblNombre.Text = "Nombre del Producto"
+            lblPrecio.Text = "0"
+            txtCantidad.Text = "0"
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
     End Sub
+
+    Private Sub limpiarDataVenta()
+        Try
+            CancelarDetalle()
+            dgDetalle.Columns.Clear()
+            cmbNombres.Text = ""
+            infoDgvDetalleVenta()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub infoDgvDetalleVenta()
+        Try
+            If (dgDetalle.Columns.Count = 0) Then
+
+                dgDetalle.ColumnCount = 4
+                dgDetalle.Columns(0).Name = "Cantidad"
+                dgDetalle.Columns(1).Name = "Nombre"
+                dgDetalle.Columns(2).Name = "Precio"
+                dgDetalle.Columns(3).Name = "Total"
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
     Private Sub AgregarCarrto()
-        If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
-            MessageBox.Show("Detalle vacio, agregue productos", "No hay productos")
-        Else
-            dgDetalle.Rows.Add(txtCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
-        End If
+        Try
+            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
+                MessageBox.Show("Detalle vacio, agregue productos", "No hay productos")
+            Else
+                dgDetalle.Rows.Add(txtCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub btnCarrito_Click(sender As Object, e As EventArgs) Handles btnCarrito.Click
@@ -165,16 +218,24 @@ Public Class frFacturar
     End Sub
 
     Private Sub dgDetalle_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dgDetalle.RowsAdded
-        DataGridSuma()
+        Try
+            DataGridSuma()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub DataGridSuma()
-        Dim total = 0
-        For Each item As DataGridViewRow In dgDetalle.Rows
-            total += Convert.ToDouble(item.Cells(3).Value)
-        Next
-        lblSubtotal.Text = total.ToString
-        lblTotal.Text = Convert.ToString(total + total * 0.15)
+        Try
+            Dim total = 0
+            For Each item As DataGridViewRow In dgDetalle.Rows
+                total += Convert.ToDouble(item.Cells(3).Value)
+            Next
+            lblSubtotal.Text = total.ToString
+            lblTotal.Text = Convert.ToString(total + total * 0.15)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub cmbNombres_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbNombres.SelectedIndexChanged
@@ -189,10 +250,66 @@ Public Class frFacturar
     End Sub
 
     Private Sub btnNuevoCliente_Click(sender As Object, e As EventArgs) Handles btnNuevoCliente.Click
-        Dim frCliente As New frNuevoCliente()
-        AddOwnedForm(frCliente)
+        Try
+            Dim frCliente As New frNuevoCliente()
+            AddOwnedForm(frCliente)
 
-        frCliente.Show()
+            frCliente.Show()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
+    Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
+        Try
+            Dim ps As New PrinterSettings()
+            MessageBox.Show("Factura " + lblNumeroFactura.Text + " en impresion", "Venta realizada")
+            Imprimir.PrinterSettings = ps
+            MostrarFactura()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnCancelarVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarVenta.Click
+        Try
+            limpiarDataVenta()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub btnFactura_Click(sender As Object, e As EventArgs) Handles btnFactura.Click
+
+    End Sub
+
+    Private Sub Imprimir_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles Imprimir.PrintPage
+        Dim fuente = New Font("Arial", 12)
+        Dim Titulo = New Font("Arial", 24, FontStyle.Bold)
+        Dim ubicacion = 420
+        e.Graphics.DrawImage(PictureBox1.Image, 350, 60, 150, 150)
+        e.Graphics.DrawString(" Restaurante Juan Piece  ", Titulo, Brushes.Black, New RectangleF(250, 220, 600, 60))
+        e.Graphics.DrawString(" Boulevard Morazan  3 Calle  2 Avenida  96751362 ", fuente, Brushes.Black, New RectangleF(230, 280, 1000, 100))
+        e.Graphics.DrawString(String.Concat("   " + lblHora.Text + "   "), fuente, Brushes.Black, New RectangleF(280, 300, 1000, 100))
+        e.Graphics.DrawString(String.Concat("Factura #  " + lblNumeroFactura.Text), fuente, Brushes.Black, New RectangleF(360, 320, 1000, 100))
+        e.Graphics.DrawString(String.Concat("Cliente  " + cmbNombres.Text), fuente, Brushes.Black, New RectangleF(200, 380, 1000, 100))
+        e.Graphics.DrawString("Listado de productos: ", fuente, Brushes.Black, New RectangleF(200, 420, 1000, 100))
+        For Each fila As DataGridViewRow In dgDetalle.Rows
+
+            e.Graphics.DrawString(fila.Cells(0).Value + "      " + fila.Cells(1).Value + "       " + fila.Cells(2).Value + "       " + fila.Cells(3).Value, fuente, Brushes.Black, New RectangleF(200, (ubicacion = ubicacion + 20), 1000, 100))
+        Next
+        e.Graphics.DrawString("Su subtotal es de : " + lblSubDetalle.Text, fuente, Brushes.Black, New RectangleF(200, (ubicacion = ubicacion + 40), 1000, 100))
+        e.Graphics.DrawString("Gracias por confiar en nosotros", fuente, Brushes.Black, New RectangleF(320, (ubicacion = ubicacion + 40), 1000, 100))
+
+    End Sub
+
+    Private Sub ImprimirPreview_Load(sender As Object, e As EventArgs) Handles ImprimirPreview.Load
+
+    End Sub
+
+    Private Sub MostrarFactura()
+
+        ImprimirPreview.Document = Imprimir
+        ImprimirPreview.Show()
+    End Sub
 End Class
