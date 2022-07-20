@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Crystal.Reports.Essentials" Version="13.0.20.2399" />
+    <PackageReference Include="CrystalDecisions.CrystalReports.Engine" Version="1.0.0" />
+    <PackageReference Include="CrystalReports.Engine" Version="13.0.4001" />
+    <PackageReference Include="CrystalReports.ReportAppServer.DataSetConversion" Version="13.0.4001" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>

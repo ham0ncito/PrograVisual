@@ -48,6 +48,22 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Crystal.Reports.Essentials": {
+              "target": "Package",
+              "version": "[13.0.20.2399, )"
+            },
+            "CrystalDecisions.CrystalReports.Engine": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "CrystalReports.Engine": {
+              "target": "Package",
+              "version": "[13.0.4001, )"
+            },
+            "CrystalReports.ReportAppServer.DataSetConversion": {
+              "target": "Package",
+              "version": "[13.0.4001, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[4.1.0, )"
