@@ -288,10 +288,10 @@ Public Class frFacturar
         Dim Titulo = New Font("Arial", 24, FontStyle.Bold)
         Dim ubicacion = 460
         e.Graphics.DrawImage(PictureBox1.Image, 350, 60, 150, 150)
-        e.Graphics.DrawString(" Restaurante Juan Piece  ", Titulo, Brushes.Black, 250, 220)
-        e.Graphics.DrawString(" Boulevard Morazan  3 Calle  2 Avenida  96751362 ", fuente, Brushes.Black, 260, 300)
-        e.Graphics.DrawString(String.Concat("   " + lblHora.Text + "   "), fuente, Brushes.Black, 300, 320)
-        e.Graphics.DrawString(String.Concat("Factura #  " + lblNumeroFactura.Text), fuente, Brushes.Black, 360, 340)
+        e.Graphics.DrawString(" Restaurante Juan Piece  ", Titulo, Brushes.Black, 260, 220)
+        e.Graphics.DrawString(" Boulevard Morazan  3 Calle  2 Avenida  96751362 ", fuente, Brushes.Black, 230, 300)
+        e.Graphics.DrawString(String.Concat("   " + lblHora.Text + "   "), fuente, Brushes.Black, 260, 320)
+        e.Graphics.DrawString(String.Concat("Factura #  " + lblNumeroFactura.Text), fuente, Brushes.Black, 260, 340)
         e.Graphics.DrawString(String.Concat("Cliente  " + cmbNombres.Text), fuente, Brushes.Black, 200, 380)
         e.Graphics.DrawString("Listado de productos: ", fuente, Brushes.Black, 200, 420)
         For Each fila As DataGridViewRow In dgDetalle.Rows
@@ -300,7 +300,9 @@ Public Class frFacturar
             ubicacion = ubicacion + 20
         Next
         ubicacion = ubicacion + 40
-        e.Graphics.DrawString("Su subtotal es de : " + lblSubDetalle.Text, fuente, Brushes.Black, 200, ubicacion)
+        e.Graphics.DrawString("Su subtotal es de : " + lblSubtotal.Text, fuente, Brushes.Black, 200, ubicacion)
+        ubicacion = ubicacion + 40
+        e.Graphics.DrawString("Su Total es de : " + lblTotal.Text, fuente, Brushes.Black, 200, ubicacion)
         ubicacion = ubicacion + 40
         e.Graphics.DrawString("Gracias por confiar en nosotros", fuente, Brushes.Black, 320, ubicacion)
 
