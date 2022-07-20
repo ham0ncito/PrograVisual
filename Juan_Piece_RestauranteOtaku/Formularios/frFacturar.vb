@@ -286,20 +286,23 @@ Public Class frFacturar
     Private Sub Imprimir_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles Imprimir.PrintPage
         Dim fuente = New Font("Arial", 12)
         Dim Titulo = New Font("Arial", 24, FontStyle.Bold)
-        Dim ubicacion = 420
+        Dim ubicacion = 460
         e.Graphics.DrawImage(PictureBox1.Image, 350, 60, 150, 150)
-        e.Graphics.DrawString(" Restaurante Juan Piece  ", Titulo, Brushes.Black, New RectangleF(250, 220, 600, 60))
-        e.Graphics.DrawString(" Boulevard Morazan  3 Calle  2 Avenida  96751362 ", fuente, Brushes.Black, New RectangleF(230, 280, 1000, 100))
-        e.Graphics.DrawString(String.Concat("   " + lblHora.Text + "   "), fuente, Brushes.Black, New RectangleF(280, 300, 1000, 100))
-        e.Graphics.DrawString(String.Concat("Factura #  " + lblNumeroFactura.Text), fuente, Brushes.Black, New RectangleF(360, 320, 1000, 100))
-        e.Graphics.DrawString(String.Concat("Cliente  " + cmbNombres.Text), fuente, Brushes.Black, New RectangleF(200, 380, 1000, 100))
-        e.Graphics.DrawString("Listado de productos: ", fuente, Brushes.Black, New RectangleF(200, 420, 1000, 100))
+        e.Graphics.DrawString(" Restaurante Juan Piece  ", Titulo, Brushes.Black, 250, 220)
+        e.Graphics.DrawString(" Boulevard Morazan  3 Calle  2 Avenida  96751362 ", fuente, Brushes.Black, 260, 300)
+        e.Graphics.DrawString(String.Concat("   " + lblHora.Text + "   "), fuente, Brushes.Black, 300, 320)
+        e.Graphics.DrawString(String.Concat("Factura #  " + lblNumeroFactura.Text), fuente, Brushes.Black, 360, 340)
+        e.Graphics.DrawString(String.Concat("Cliente  " + cmbNombres.Text), fuente, Brushes.Black, 200, 380)
+        e.Graphics.DrawString("Listado de productos: ", fuente, Brushes.Black, 200, 420)
         For Each fila As DataGridViewRow In dgDetalle.Rows
 
-            e.Graphics.DrawString(fila.Cells(0).Value + "      " + fila.Cells(1).Value + "       " + fila.Cells(2).Value + "       " + fila.Cells(3).Value, fuente, Brushes.Black, New RectangleF(200, (ubicacion = ubicacion + 20), 1000, 100))
+            e.Graphics.DrawString(fila.Cells(0).Value + "      " + fila.Cells(1).Value + "       " + fila.Cells(2).Value + "       " + fila.Cells(3).Value, fuente, Brushes.Black, 200, ubicacion)
+            ubicacion = ubicacion + 20
         Next
-        e.Graphics.DrawString("Su subtotal es de : " + lblSubDetalle.Text, fuente, Brushes.Black, New RectangleF(200, (ubicacion = ubicacion + 40), 1000, 100))
-        e.Graphics.DrawString("Gracias por confiar en nosotros", fuente, Brushes.Black, New RectangleF(320, (ubicacion = ubicacion + 40), 1000, 100))
+        ubicacion = ubicacion + 40
+        e.Graphics.DrawString("Su subtotal es de : " + lblSubDetalle.Text, fuente, Brushes.Black, 200, ubicacion)
+        ubicacion = ubicacion + 40
+        e.Graphics.DrawString("Gracias por confiar en nosotros", fuente, Brushes.Black, 320, ubicacion)
 
     End Sub
 
@@ -310,6 +313,6 @@ Public Class frFacturar
     Private Sub MostrarFactura()
 
         ImprimirPreview.Document = Imprimir
-        ImprimirPreview.Show()
+        ImprimirPreview.ShowDialog()
     End Sub
 End Class
