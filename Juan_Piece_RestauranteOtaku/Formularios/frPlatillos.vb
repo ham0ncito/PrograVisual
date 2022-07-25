@@ -14,7 +14,9 @@ Public Class frPlatillos
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Me.Close()
+        If (MessageBox.Show("Desea Continuar", "Saliendo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes) Then
+            Me.Close()
+        End If
     End Sub
 
     Private Sub Tiempo_Tick(sender As Object, e As EventArgs) Handles Tiempo.Tick
@@ -65,6 +67,12 @@ Public Class frPlatillos
         lblTipo.Visible = estado
         pcImagen.Visible = estado
         dgIngredientes.Visible = estado
+        lblinfo1.Visible = estado
+        lblinfo2.Visible = estado
+        lblinfo3.Visible = estado
+        lblinfo4.Visible = estado
+        lblinfo5.Visible = estado
+
     End Sub
 
 

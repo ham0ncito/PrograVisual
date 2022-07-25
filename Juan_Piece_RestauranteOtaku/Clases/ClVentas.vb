@@ -84,4 +84,26 @@ Public Class ClVentas
         End Try
     End Sub
 
+    Public Sub nuevaVenta(clienteId As String, nuventa As String, empleado As String, datagrid As DataGridView)
+
+        Try
+            con.Open()
+            Dim sql As String = "exec nuevaVenta " + clienteId + ", " + empleado + ";"
+            Dim comando As New SqlCommand(sql, con)
+            comando.CommandType = CommandType.Text
+            comando.ExecuteNonQuery()
+            Try
+                For Each datarow As DataGridViewRow In datagrid.Rows
+                    Dim newsql As String = "exec nuevoDetalleVenta " + nuventa + ", '" + datarow.Cells(1).Value + "', '" + datarow.Cells(0).Value + "','" + datarow.Cells(2).Value + "';"
+
+                    Dim comandoVenta As New SqlCommand(newsql, con)
+                    comandoVenta.ExecuteNonQuery()
+                Next
+            Catch x As Exception
+                MessageBox.Show(x.Message)
+            End Try
+        Catch x As Exception
+                MessageBox.Show(x.Message)
+        End Try
+    End Sub
 End Class

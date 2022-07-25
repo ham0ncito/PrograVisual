@@ -772,9 +772,9 @@ Partial Class frFacturar
     Friend WithEvents lblPrecio As Label
     Public WithEvents cmbNombres As ComboBox
     Public WithEvents dgDetalle As DataGridView
+    Friend WithEvents cmbCantidad As ComboBox
     Friend WithEvents Cantidad As DataGridViewTextBoxColumn
     Friend WithEvents NombrePlatillo As DataGridViewTextBoxColumn
     Friend WithEvents Precio As DataGridViewTextBoxColumn
     Friend WithEvents Subtototal As DataGridViewTextBoxColumn
-    Friend WithEvents cmbCantidad As ComboBox
 End Class

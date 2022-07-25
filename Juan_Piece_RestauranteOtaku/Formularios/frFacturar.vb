@@ -65,7 +65,10 @@ Public Class frFacturar
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Me.Close()
+        If (MessageBox.Show("Desea Continuar", "Saliendo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = DialogResult.Yes) Then
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub lblHora_Click(sender As Object, e As EventArgs) Handles lblHora.Click
@@ -262,10 +265,17 @@ Public Class frFacturar
 
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
         Try
-            Dim ps As New PrinterSettings()
-            MessageBox.Show("Factura " + lblNumeroFactura.Text + " en impresion", "Venta realizada")
-            Imprimir.PrinterSettings = ps
-            MostrarFactura()
+            If (dgDetalle.Rows.Count > 0) And Not (cmbNombres.SelectedItem = "") And Not (lblTotal.Text = "00.00") Then
+                Dim ps As New PrinterSettings()
+                Dim clventa As New ClVentas
+                clventa.nuevaVenta(lblCodigo.Text, lblNumeroFactura.Text, "1", dgDetalle)
+                MessageBox.Show("Factura " + lblNumeroFactura.Text + " en impresion", "Venta realizada")
+                Imprimir.PrinterSettings = ps
+                MostrarFactura()
+            Else
+                MessageBox.Show("Ingrese todos los datos", "Falta Informacion de venta")
+            End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
