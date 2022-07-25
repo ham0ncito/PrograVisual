@@ -210,15 +210,16 @@ Public Class frFacturar
                 MessageBox.Show("Detalle vacio, agregue productos", "No hay productos")
             Else
                 For Each row As DataGridViewRow In dgDetalle.Rows
-                    If (StrComp(lblNombre.Text, row.Cells("NombrePlatillo").Value.ToString() = 0)) Then
+                    If (StrComp(lblNombre.Text, row.Cells("NombrePlatillo").Value.ToString()) = 0) Then
                         existeEnCarrito = True
-                        posicion = row.Index()
+                    ElseIf existeEnCarrito = False Then
+                        posicion = posicion + 1
                     End If
 
                 Next
                 If (existeEnCarrito) Then
                     If (MessageBox.Show("El producto ya fue agregado al carrito de ventas, ¿Desea volver a agregarlo", "Producto ya existe", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes) Then
-                        dgDetalle.Rows(posicion).Cells("Cantidad").Value = cmbCantidad.SelectedValue
+                        dgDetalle.Rows(posicion).Cells("Cantidad").Value = Convert.ToDecimal(cmbCantidad.Text)
                         dgDetalle.Rows(posicion).Cells("Subtotal").Value = Convert.ToDecimal(dgDetalle.Rows(posicion).Cells("Cantidad").Value) * Convert.ToDecimal(dgDetalle.Rows(posicion).Cells("Precio").Value)
 
                     Else
@@ -292,6 +293,7 @@ Public Class frFacturar
                 MessageBox.Show("Factura " + lblNumeroFactura.Text + " en impresion", "Venta realizada")
                 Imprimir.PrinterSettings = ps
                 MostrarFactura()
+                dato()
             Else
                 MessageBox.Show("Ingrese todos los datos", "Falta Informacion de venta")
             End If

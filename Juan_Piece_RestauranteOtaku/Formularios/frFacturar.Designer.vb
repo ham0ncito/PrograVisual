@@ -71,13 +71,13 @@ Partial Class frFacturar
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblNumeroFactura = New System.Windows.Forms.Label()
         Me.dgDetalle = New System.Windows.Forms.DataGridView()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombrePlatillo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Subtototal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.Imprimir = New System.Drawing.Printing.PrintDocument()
         Me.ImprimirPreview = New System.Windows.Forms.PrintPreviewDialog()
+        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombrePlatillo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -634,7 +634,7 @@ Partial Class frFacturar
         Me.dgDetalle.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.dgDetalle.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cantidad, Me.NombrePlatillo, Me.Precio, Me.Subtototal})
+        Me.dgDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Cantidad, Me.NombrePlatillo, Me.Precio, Me.Subtotal})
         Me.dgDetalle.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgDetalle.Location = New System.Drawing.Point(3, 19)
         Me.dgDetalle.Name = "dgDetalle"
@@ -643,6 +643,23 @@ Partial Class frFacturar
         Me.dgDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgDetalle.Size = New System.Drawing.Size(528, 283)
         Me.dgDetalle.TabIndex = 0
+        '
+        'Tiempo
+        '
+        Me.Tiempo.Enabled = True
+        '
+        'Imprimir
+        '
+        '
+        'ImprimirPreview
+        '
+        Me.ImprimirPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.ImprimirPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.ImprimirPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.ImprimirPreview.Enabled = True
+        Me.ImprimirPreview.Icon = CType(resources.GetObject("ImprimirPreview.Icon"), System.Drawing.Icon)
+        Me.ImprimirPreview.Name = "ImprimirPreview"
+        Me.ImprimirPreview.Visible = False
         '
         'Cantidad
         '
@@ -662,28 +679,11 @@ Partial Class frFacturar
         Me.Precio.Name = "Precio"
         Me.Precio.ReadOnly = True
         '
-        'Subtototal
+        'Subtotal
         '
-        Me.Subtototal.HeaderText = "Subtotal"
-        Me.Subtototal.Name = "Subtototal"
-        Me.Subtototal.ReadOnly = True
-        '
-        'Tiempo
-        '
-        Me.Tiempo.Enabled = True
-        '
-        'Imprimir
-        '
-        '
-        'ImprimirPreview
-        '
-        Me.ImprimirPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.ImprimirPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.ImprimirPreview.ClientSize = New System.Drawing.Size(400, 300)
-        Me.ImprimirPreview.Enabled = True
-        Me.ImprimirPreview.Icon = CType(resources.GetObject("ImprimirPreview.Icon"), System.Drawing.Icon)
-        Me.ImprimirPreview.Name = "ImprimirPreview"
-        Me.ImprimirPreview.Visible = False
+        Me.Subtotal.HeaderText = "Subtotal"
+        Me.Subtotal.Name = "Subtotal"
+        Me.Subtotal.ReadOnly = True
         '
         'frFacturar
         '
@@ -779,4 +779,5 @@ Partial Class frFacturar
     Friend WithEvents NombrePlatillo As DataGridViewTextBoxColumn
     Friend WithEvents Precio As DataGridViewTextBoxColumn
     Friend WithEvents Subtototal As DataGridViewTextBoxColumn
+    Friend WithEvents Subtotal As DataGridViewTextBoxColumn
 End Class
