@@ -12,6 +12,7 @@ Public Class frLogin
                 Dim bytes As Byte()
                 Dim sql As String = "Exec usuario @usern = '" + txtUsername.Text + "', @pass = '" + txtContrasena.Text + "';"
                 Dim cmd As New SqlCommand(sql, con)
+
                 cmd.ExecuteNonQuery()
                 Dim dr As SqlDataReader = cmd.ExecuteReader()
                 If (dr.Read) Then
@@ -27,9 +28,10 @@ Public Class frLogin
                     fr.lblUsuario.Text = "Bienvenido/a " + dr.GetString(1)
                     fr.Show()
                 Else
-                    MessageBox.Show("Error al momento de iniciar sesion", "Error de login")
+                    MessageBox.Show("Usuario no existe", "Error de login")
+                    End If
 
-                End If
+
 
             Catch x As SqlException
                 MsgBox(x.Message)

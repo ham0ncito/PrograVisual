@@ -285,6 +285,7 @@ Public Class frFacturar
             AddOwnedForm(frCliente)
 
             frCliente.Show()
+            ventas.Clientes(cmbNombres, "exec nombresCliente")
 
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -301,6 +302,8 @@ Public Class frFacturar
                 Imprimir.PrinterSettings = ps
                 MostrarFactura()
                 dato()
+                limpiarDataVenta()
+                CancelarDetalle()
             Else
                 MessageBox.Show("Ingrese todos los datos", "Falta Informacion de venta")
             End If
