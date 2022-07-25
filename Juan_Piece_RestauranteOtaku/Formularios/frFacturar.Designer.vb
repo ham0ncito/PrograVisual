@@ -71,13 +71,13 @@ Partial Class frFacturar
         Me.Label4 = New System.Windows.Forms.Label()
         Me.lblNumeroFactura = New System.Windows.Forms.Label()
         Me.dgDetalle = New System.Windows.Forms.DataGridView()
-        Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
-        Me.Imprimir = New System.Drawing.Printing.PrintDocument()
-        Me.ImprimirPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombrePlatillo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Subtotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
+        Me.Imprimir = New System.Drawing.Printing.PrintDocument()
+        Me.ImprimirPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -419,9 +419,9 @@ Partial Class frFacturar
         Me.lblSubDetalle.ForeColor = System.Drawing.Color.OrangeRed
         Me.lblSubDetalle.Location = New System.Drawing.Point(307, 125)
         Me.lblSubDetalle.Name = "lblSubDetalle"
-        Me.lblSubDetalle.Size = New System.Drawing.Size(50, 21)
+        Me.lblSubDetalle.Size = New System.Drawing.Size(19, 21)
         Me.lblSubDetalle.TabIndex = 8
-        Me.lblSubDetalle.Text = "00.00"
+        Me.lblSubDetalle.Text = "0"
         '
         'Label2
         '
@@ -644,23 +644,6 @@ Partial Class frFacturar
         Me.dgDetalle.Size = New System.Drawing.Size(528, 283)
         Me.dgDetalle.TabIndex = 0
         '
-        'Tiempo
-        '
-        Me.Tiempo.Enabled = True
-        '
-        'Imprimir
-        '
-        '
-        'ImprimirPreview
-        '
-        Me.ImprimirPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.ImprimirPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.ImprimirPreview.ClientSize = New System.Drawing.Size(400, 300)
-        Me.ImprimirPreview.Enabled = True
-        Me.ImprimirPreview.Icon = CType(resources.GetObject("ImprimirPreview.Icon"), System.Drawing.Icon)
-        Me.ImprimirPreview.Name = "ImprimirPreview"
-        Me.ImprimirPreview.Visible = False
-        '
         'Cantidad
         '
         Me.Cantidad.HeaderText = "Cantidad"
@@ -684,6 +667,23 @@ Partial Class frFacturar
         Me.Subtotal.HeaderText = "Subtotal"
         Me.Subtotal.Name = "Subtotal"
         Me.Subtotal.ReadOnly = True
+        '
+        'Tiempo
+        '
+        Me.Tiempo.Enabled = True
+        '
+        'Imprimir
+        '
+        '
+        'ImprimirPreview
+        '
+        Me.ImprimirPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.ImprimirPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.ImprimirPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.ImprimirPreview.Enabled = True
+        Me.ImprimirPreview.Icon = CType(resources.GetObject("ImprimirPreview.Icon"), System.Drawing.Icon)
+        Me.ImprimirPreview.Name = "ImprimirPreview"
+        Me.ImprimirPreview.Visible = False
         '
         'frFacturar
         '

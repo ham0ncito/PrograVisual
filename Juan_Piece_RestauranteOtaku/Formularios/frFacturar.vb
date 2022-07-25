@@ -168,6 +168,8 @@ Public Class frFacturar
             Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
             lblNombre.Text = "Nombre del Producto"
             lblPrecio.Text = "0"
+            lblSubDetalle.Text = "0"
+
             cmbCantidad.Text = "0"
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -192,9 +194,14 @@ Public Class frFacturar
 
                 dgDetalle.ColumnCount = 4
                 dgDetalle.Columns(0).Name = "Cantidad"
-                dgDetalle.Columns(1).Name = "Nombre Platillo"
+                dgDetalle.Columns(0).HeaderText = "Cantidad"
+                dgDetalle.Columns(1).Name = "NombrePlatillo"
+                dgDetalle.Columns(1).HeaderText = "Nombre Platillo"
                 dgDetalle.Columns(2).Name = "Precio"
-                dgDetalle.Columns(3).Name = "Total"
+                dgDetalle.Columns(2).HeaderText = "Precio"
+                dgDetalle.Columns(3).Name = "Subtotal"
+                dgDetalle.Columns(3).HeaderText = "Subtotal"
+
 
             End If
         Catch ex As Exception
@@ -206,7 +213,7 @@ Public Class frFacturar
         Dim existeEnCarrito = False
         Dim posicion = 0
         Try
-            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) And (Convert.ToInt32(cmbCantidad.SelectedValue) = 0) And (lblSubDetalle.Text = "0") And (StrComp(lblPrecio.Text, "0") = 0) And (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
+            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) And (Convert.ToInt32(cmbCantidad.Text) = 0) And (lblSubDetalle.Text = "0") And (StrComp(lblPrecio.Text, "0") = 0) And (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
                 MessageBox.Show("Detalle vacio, agregue productos", "No hay productos")
             Else
                 For Each row As DataGridViewRow In dgDetalle.Rows
