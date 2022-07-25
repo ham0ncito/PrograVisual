@@ -1,4 +1,8 @@
 ﻿Public Class frNuevoCliente
+
+    Public combobox As ComboBox
+
+
     Private Sub btnAgCliente_Click(sender As Object, e As EventArgs) Handles btnAgCliente.Click
         errorProvider()
 
