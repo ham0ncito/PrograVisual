@@ -110,13 +110,12 @@ Partial Class frInicio
         '
         'lblNombreUsuario
         '
-        Me.lblNombreUsuario.AutoSize = True
         Me.lblNombreUsuario.BackColor = System.Drawing.Color.Transparent
         Me.lblNombreUsuario.Font = New System.Drawing.Font("Garamond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblNombreUsuario.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lblNombreUsuario.Location = New System.Drawing.Point(78, 128)
+        Me.lblNombreUsuario.Location = New System.Drawing.Point(0, 117)
         Me.lblNombreUsuario.Name = "lblNombreUsuario"
-        Me.lblNombreUsuario.Size = New System.Drawing.Size(75, 24)
+        Me.lblNombreUsuario.Size = New System.Drawing.Size(221, 58)
         Me.lblNombreUsuario.TabIndex = 2
         Me.lblNombreUsuario.Text = "Usuario"
         Me.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

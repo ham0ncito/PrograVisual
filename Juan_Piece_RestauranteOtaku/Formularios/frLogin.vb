@@ -27,7 +27,7 @@ Public Class frLogin
                     fr.lblUsuario.Text = "Bienvenido/a " + dr.GetString(1)
                     fr.Show()
                 Else
-                    MessageBox.Show("Error al momento de iniciar sesion", "Erro de login")
+                    MessageBox.Show("Error al momento de iniciar sesion", "Error de login")
 
                 End If
 
