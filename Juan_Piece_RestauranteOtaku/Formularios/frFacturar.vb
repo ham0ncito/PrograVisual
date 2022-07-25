@@ -192,7 +192,7 @@ Public Class frFacturar
 
                 dgDetalle.ColumnCount = 4
                 dgDetalle.Columns(0).Name = "Cantidad"
-                dgDetalle.Columns(1).Name = "Nombre"
+                dgDetalle.Columns(1).Name = "Nombre Platillo"
                 dgDetalle.Columns(2).Name = "Precio"
                 dgDetalle.Columns(3).Name = "Total"
 
@@ -203,11 +203,31 @@ Public Class frFacturar
     End Sub
 
     Private Sub AgregarCarrto()
+        Dim existeEnCarrito = False
+        Dim posicion = 0
         Try
-            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) And (Convert.ToInt32(cmbCantidad.SelectedValue) = 0) And (lblSubDetalle.Text = "00.00") Then
+            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) And (Convert.ToInt32(cmbCantidad.SelectedValue) = 0) And (lblSubDetalle.Text = "0") And (StrComp(lblPrecio.Text, "0") = 0) And (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
                 MessageBox.Show("Detalle vacio, agregue productos", "No hay productos")
             Else
-                dgDetalle.Rows.Add(cmbCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
+                For Each row As DataGridViewRow In dgDetalle.Rows
+                    If (StrComp(lblNombre.Text, row.Cells("NombrePlatillo").Value.ToString() = 0)) Then
+                        existeEnCarrito = True
+                        posicion = row.Index()
+                    End If
+
+                Next
+                If (existeEnCarrito) Then
+                    If (MessageBox.Show("El producto ya fue agregado al carrito de ventas, ¿Desea volver a agregarlo", "Producto ya existe", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes) Then
+                        dgDetalle.Rows(posicion).Cells("Cantidad").Value = cmbCantidad.SelectedValue
+                        dgDetalle.Rows(posicion).Cells("Subtotal").Value = Convert.ToDecimal(dgDetalle.Rows(posicion).Cells("Cantidad").Value) * Convert.ToDecimal(dgDetalle.Rows(posicion).Cells("Precio").Value)
+
+                    Else
+                        MessageBox.Show("Producto no fue agregado")
+                    End If
+                Else
+                        dgDetalle.Rows.Add(cmbCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
+                End If
+
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -265,7 +285,7 @@ Public Class frFacturar
 
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
         Try
-            If (dgDetalle.Rows.Count > 0) And Not (cmbNombres.SelectedItem = "") And Not (lblTotal.Text = "00.00") Then
+            If (dgDetalle.Rows.Count > 0) And Not (cmbNombres.SelectedItem = "") And Not (StrComp(lblTotal.Text, "00.00") = 0) And Not (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
                 Dim ps As New PrinterSettings()
                 Dim clventa As New ClVentas
                 clventa.nuevaVenta(lblCodigo.Text, lblNumeroFactura.Text, "1", dgDetalle)

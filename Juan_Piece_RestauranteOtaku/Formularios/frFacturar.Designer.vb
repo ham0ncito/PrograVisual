@@ -358,6 +358,8 @@ Partial Class frFacturar
         'dgFacturar
         '
         Me.dgFacturar.AllowDrop = True
+        Me.dgFacturar.AllowUserToAddRows = False
+        Me.dgFacturar.AllowUserToDeleteRows = False
         Me.dgFacturar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgFacturar.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.dgFacturar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
