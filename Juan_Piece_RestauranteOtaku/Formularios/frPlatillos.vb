@@ -4,7 +4,7 @@ Imports Libreria_Clases
 Public Class frPlatillos
     Dim clPlatillos As New ClPlatillos
     Private Sub frPlatillos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
+
         clPlatillos.LlenarPlatilos(dgPlatillos)
         visibilidad(False)
     End Sub

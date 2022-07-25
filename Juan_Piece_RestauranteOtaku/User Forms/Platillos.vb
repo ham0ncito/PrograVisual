@@ -58,4 +58,8 @@
     Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
 
     End Sub
+
+    Private Sub lblDescripcion_Click(sender As Object, e As EventArgs) Handles lblDescripcion.Click
+
+    End Sub
 End Class

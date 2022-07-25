@@ -48,6 +48,7 @@ Partial Class frFacturar
         Me.lblCategorias = New System.Windows.Forms.Label()
         Me.dgFacturar = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbCantidad = New System.Windows.Forms.ComboBox()
         Me.lblPrecio = New System.Windows.Forms.Label()
         Me.lblSubDetalle = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,7 +56,6 @@ Partial Class frFacturar
         Me.btnCarrito = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
-        Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.imagenProducto = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.panel5 = New System.Windows.Forms.Panel()
@@ -104,7 +104,7 @@ Partial Class frFacturar
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1370, 90)
+        Me.Panel1.Size = New System.Drawing.Size(1350, 90)
         Me.Panel1.TabIndex = 0
         '
         'btnSalir
@@ -203,7 +203,7 @@ Partial Class frFacturar
         Me.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelIzquierdo.Location = New System.Drawing.Point(0, 90)
         Me.panelIzquierdo.Name = "panelIzquierdo"
-        Me.panelIzquierdo.Size = New System.Drawing.Size(155, 659)
+        Me.panelIzquierdo.Size = New System.Drawing.Size(155, 639)
         Me.panelIzquierdo.TabIndex = 1
         '
         'Panel3
@@ -214,7 +214,7 @@ Partial Class frFacturar
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 514)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(155, 145)
+        Me.Panel3.Size = New System.Drawing.Size(155, 125)
         Me.Panel3.TabIndex = 9
         '
         'lbl
@@ -372,6 +372,7 @@ Partial Class frFacturar
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cmbCantidad)
         Me.GroupBox1.Controls.Add(Me.lblPrecio)
         Me.GroupBox1.Controls.Add(Me.lblSubDetalle)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -379,7 +380,6 @@ Partial Class frFacturar
         Me.GroupBox1.Controls.Add(Me.btnCarrito)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.lblNombre)
-        Me.GroupBox1.Controls.Add(Me.txtCantidad)
         Me.GroupBox1.Controls.Add(Me.imagenProducto)
         Me.GroupBox1.Location = New System.Drawing.Point(171, 447)
         Me.GroupBox1.Name = "GroupBox1"
@@ -388,23 +388,36 @@ Partial Class frFacturar
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Facturar venta"
         '
+        'cmbCantidad
+        '
+        Me.cmbCantidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCantidad.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.cmbCantidad.ForeColor = System.Drawing.Color.OrangeRed
+        Me.cmbCantidad.FormattingEnabled = True
+        Me.cmbCantidad.Location = New System.Drawing.Point(307, 75)
+        Me.cmbCantidad.Name = "cmbCantidad"
+        Me.cmbCantidad.Size = New System.Drawing.Size(179, 33)
+        Me.cmbCantidad.TabIndex = 10
+        '
         'lblPrecio
         '
         Me.lblPrecio.AutoSize = True
-        Me.lblPrecio.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblPrecio.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblPrecio.ForeColor = System.Drawing.Color.OrangeRed
         Me.lblPrecio.Location = New System.Drawing.Point(373, 38)
         Me.lblPrecio.Name = "lblPrecio"
-        Me.lblPrecio.Size = New System.Drawing.Size(16, 18)
+        Me.lblPrecio.Size = New System.Drawing.Size(19, 21)
         Me.lblPrecio.TabIndex = 9
         Me.lblPrecio.Text = "0"
         '
         'lblSubDetalle
         '
         Me.lblSubDetalle.AutoSize = True
-        Me.lblSubDetalle.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblSubDetalle.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblSubDetalle.ForeColor = System.Drawing.Color.OrangeRed
         Me.lblSubDetalle.Location = New System.Drawing.Point(307, 125)
         Me.lblSubDetalle.Name = "lblSubDetalle"
-        Me.lblSubDetalle.Size = New System.Drawing.Size(44, 18)
+        Me.lblSubDetalle.Size = New System.Drawing.Size(50, 21)
         Me.lblSubDetalle.TabIndex = 8
         Me.lblSubDetalle.Text = "00.00"
         '
@@ -457,16 +470,6 @@ Partial Class frFacturar
         Me.lblNombre.Size = New System.Drawing.Size(145, 18)
         Me.lblNombre.TabIndex = 2
         Me.lblNombre.Text = "Nombre del Producto"
-        '
-        'txtCantidad
-        '
-        Me.txtCantidad.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtCantidad.Location = New System.Drawing.Point(307, 79)
-        Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(161, 29)
-        Me.txtCantidad.TabIndex = 1
-        Me.txtCantidad.Text = "0"
-        Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'imagenProducto
         '
@@ -522,20 +525,22 @@ Partial Class frFacturar
         'lblTotal
         '
         Me.lblTotal.AutoSize = True
-        Me.lblTotal.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblTotal.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblTotal.ForeColor = System.Drawing.Color.SaddleBrown
         Me.lblTotal.Location = New System.Drawing.Point(143, 225)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(44, 18)
+        Me.lblTotal.Size = New System.Drawing.Size(50, 21)
         Me.lblTotal.TabIndex = 9
         Me.lblTotal.Text = "00.00"
         '
         'lblSubtotal
         '
         Me.lblSubtotal.AutoSize = True
-        Me.lblSubtotal.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblSubtotal.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblSubtotal.ForeColor = System.Drawing.Color.SaddleBrown
         Me.lblSubtotal.Location = New System.Drawing.Point(143, 183)
         Me.lblSubtotal.Name = "lblSubtotal"
-        Me.lblSubtotal.Size = New System.Drawing.Size(44, 18)
+        Me.lblSubtotal.Size = New System.Drawing.Size(50, 21)
         Me.lblSubtotal.TabIndex = 8
         Me.lblSubtotal.Text = "00.00"
         '
@@ -563,6 +568,7 @@ Partial Class frFacturar
         '
         Me.lblCodigo.AutoSize = True
         Me.lblCodigo.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblCodigo.ForeColor = System.Drawing.Color.OrangeRed
         Me.lblCodigo.Location = New System.Drawing.Point(143, 107)
         Me.lblCodigo.Name = "lblCodigo"
         Me.lblCodigo.Size = New System.Drawing.Size(19, 18)
@@ -611,6 +617,7 @@ Partial Class frFacturar
         '
         Me.lblNumeroFactura.AutoSize = True
         Me.lblNumeroFactura.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblNumeroFactura.ForeColor = System.Drawing.Color.OrangeRed
         Me.lblNumeroFactura.Location = New System.Drawing.Point(143, 23)
         Me.lblNumeroFactura.Name = "lblNumeroFactura"
         Me.lblNumeroFactura.Size = New System.Drawing.Size(19, 18)
@@ -680,7 +687,7 @@ Partial Class frFacturar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dgFacturar)
@@ -738,7 +745,6 @@ Partial Class frFacturar
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents imagenProducto As PictureBox
-    Friend WithEvents txtCantidad As TextBox
     Friend WithEvents lblNombre As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnCarrito As Button
@@ -770,4 +776,5 @@ Partial Class frFacturar
     Friend WithEvents NombrePlatillo As DataGridViewTextBoxColumn
     Friend WithEvents Precio As DataGridViewTextBoxColumn
     Friend WithEvents Subtototal As DataGridViewTextBoxColumn
+    Friend WithEvents cmbCantidad As ComboBox
 End Class

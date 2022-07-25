@@ -26,7 +26,7 @@
     End Sub
 
     Private Sub frInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
+
         agregarControles()
     End Sub
 
@@ -55,5 +55,9 @@
         Dim frfactura As New frFacturar()
         AddOwnedForm(frfactura)
         frfactura.Show()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

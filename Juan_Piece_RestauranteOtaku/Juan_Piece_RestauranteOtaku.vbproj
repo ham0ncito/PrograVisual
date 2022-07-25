@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
-    <StartupObject>Juan_Piece_RestauranteOtaku.frInicio</StartupObject>
+    <StartupObject>Juan_Piece_RestauranteOtaku.frLogin</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <ApplicationIcon>JuanPieceIcono.ico</ApplicationIcon>

@@ -68,7 +68,7 @@ Partial Class frPlatillos
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1370, 90)
+        Me.Panel1.Size = New System.Drawing.Size(1350, 90)
         Me.Panel1.TabIndex = 0
         '
         'btnSalir
@@ -298,7 +298,7 @@ Partial Class frPlatillos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.dgPlatillos)
         Me.Controls.Add(Me.Panel1)

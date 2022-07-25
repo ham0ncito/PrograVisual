@@ -23,7 +23,7 @@ Partial Class frInventario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frFacturar))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frInventario))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnFactura = New System.Windows.Forms.Button()
@@ -99,7 +99,7 @@ Partial Class frInventario
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1370, 90)
+        Me.Panel1.Size = New System.Drawing.Size(1350, 90)
         Me.Panel1.TabIndex = 0
         '
         'btnSalir
@@ -198,7 +198,7 @@ Partial Class frInventario
         Me.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left
         Me.panelIzquierdo.Location = New System.Drawing.Point(0, 90)
         Me.panelIzquierdo.Name = "panelIzquierdo"
-        Me.panelIzquierdo.Size = New System.Drawing.Size(155, 659)
+        Me.panelIzquierdo.Size = New System.Drawing.Size(155, 639)
         Me.panelIzquierdo.TabIndex = 1
         '
         'Panel3
@@ -209,7 +209,7 @@ Partial Class frInventario
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 514)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(155, 145)
+        Me.Panel3.Size = New System.Drawing.Size(155, 125)
         Me.Panel3.TabIndex = 9
         '
         'lbl
@@ -623,18 +623,18 @@ Partial Class frInventario
         Me.ImprimirPreview.Name = "ImprimirPreview"
         Me.ImprimirPreview.Visible = False
         '
-        'frFacturar
+        'frInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dgFacturar)
         Me.Controls.Add(Me.panelIzquierdo)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frFacturar"
+        Me.Name = "frInventario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Facturar"
         Me.Panel1.ResumeLayout(False)

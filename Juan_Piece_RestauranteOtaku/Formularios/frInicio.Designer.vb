@@ -37,25 +37,24 @@ Partial Class frInicio
         Me.lblHora = New System.Windows.Forms.Label()
         Me.lblUsuario = New System.Windows.Forms.Label()
         Me.PcAnuncio = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.timer = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.pMenu.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.pcUsuario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pcLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pHeading.SuspendLayout()
         CType(Me.PcAnuncio, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pMenu
@@ -71,26 +70,27 @@ Partial Class frInicio
         Me.pMenu.Location = New System.Drawing.Point(0, 0)
         Me.pMenu.Margin = New System.Windows.Forms.Padding(4)
         Me.pMenu.Name = "pMenu"
-        Me.pMenu.Size = New System.Drawing.Size(221, 749)
+        Me.pMenu.Size = New System.Drawing.Size(221, 729)
         Me.pMenu.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.pcUsuario)
         Me.Panel2.Controls.Add(Me.lblNombreUsuario)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 642)
+        Me.Panel2.Location = New System.Drawing.Point(0, 551)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(221, 107)
+        Me.Panel2.Size = New System.Drawing.Size(221, 178)
         Me.Panel2.TabIndex = 7
         '
         'pcUsuario
         '
         Me.pcUsuario.BackColor = System.Drawing.Color.Transparent
         Me.pcUsuario.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.user__5___1_
-        Me.pcUsuario.Location = New System.Drawing.Point(12, 30)
+        Me.pcUsuario.Location = New System.Drawing.Point(67, 13)
         Me.pcUsuario.Name = "pcUsuario"
-        Me.pcUsuario.Size = New System.Drawing.Size(66, 48)
+        Me.pcUsuario.Size = New System.Drawing.Size(75, 77)
         Me.pcUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pcUsuario.TabIndex = 1
         Me.pcUsuario.TabStop = False
@@ -99,12 +99,14 @@ Partial Class frInicio
         '
         Me.lblNombreUsuario.AutoSize = True
         Me.lblNombreUsuario.BackColor = System.Drawing.Color.Transparent
+        Me.lblNombreUsuario.Font = New System.Drawing.Font("Garamond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblNombreUsuario.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.lblNombreUsuario.Location = New System.Drawing.Point(84, 60)
+        Me.lblNombreUsuario.Location = New System.Drawing.Point(78, 128)
         Me.lblNombreUsuario.Name = "lblNombreUsuario"
-        Me.lblNombreUsuario.Size = New System.Drawing.Size(57, 18)
+        Me.lblNombreUsuario.Size = New System.Drawing.Size(75, 24)
         Me.lblNombreUsuario.TabIndex = 2
         Me.lblNombreUsuario.Text = "Usuario"
+        Me.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnCerrarSesion
         '
@@ -168,20 +170,20 @@ Partial Class frInicio
         '
         'pHeading
         '
-        Me.pHeading.BackColor = System.Drawing.Color.Gold
+        Me.pHeading.BackColor = System.Drawing.Color.DarkOrange
         Me.pHeading.Controls.Add(Me.lblHora)
         Me.pHeading.Controls.Add(Me.lblUsuario)
         Me.pHeading.Dock = System.Windows.Forms.DockStyle.Top
         Me.pHeading.Location = New System.Drawing.Point(221, 0)
         Me.pHeading.Name = "pHeading"
-        Me.pHeading.Size = New System.Drawing.Size(1149, 123)
+        Me.pHeading.Size = New System.Drawing.Size(1129, 87)
         Me.pHeading.TabIndex = 1
         '
         'lblHora
         '
         Me.lblHora.AutoSize = True
         Me.lblHora.Font = New System.Drawing.Font("Garamond", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.lblHora.Location = New System.Drawing.Point(8, 81)
+        Me.lblHora.Location = New System.Drawing.Point(8, 43)
         Me.lblHora.Name = "lblHora"
         Me.lblHora.Size = New System.Drawing.Size(133, 27)
         Me.lblHora.TabIndex = 1
@@ -200,38 +202,14 @@ Partial Class frInicio
         'PcAnuncio
         '
         Me.PcAnuncio.BackColor = System.Drawing.Color.Transparent
-        Me.PcAnuncio.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PcAnuncio.Dock = System.Windows.Forms.DockStyle.Top
         Me.PcAnuncio.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__3_
         Me.PcAnuncio.Location = New System.Drawing.Point(0, 0)
         Me.PcAnuncio.Name = "PcAnuncio"
-        Me.PcAnuncio.Size = New System.Drawing.Size(352, 364)
+        Me.PcAnuncio.Size = New System.Drawing.Size(351, 326)
         Me.PcAnuncio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PcAnuncio.TabIndex = 2
         Me.PcAnuncio.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.Happy_Hour
-        Me.PictureBox1.Location = New System.Drawing.Point(352, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(201, 364)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox2.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.RAMEN
-        Me.PictureBox2.Location = New System.Drawing.Point(553, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(300, 364)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 4
-        Me.PictureBox2.TabStop = False
         '
         'timer
         '
@@ -239,67 +217,88 @@ Partial Class frInicio
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.BackColor = System.Drawing.Color.SandyBrown
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(221, 711)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(221, 87)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1149, 38)
+        Me.Panel1.Size = New System.Drawing.Size(1129, 32)
         Me.Panel1.TabIndex = 5
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label1.Font = New System.Drawing.Font("Garamond", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Location = New System.Drawing.Point(3, -1)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(233, 33)
+        Me.Label1.Size = New System.Drawing.Size(241, 33)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Nuestros Favoritos"
+        Me.Label1.Text = "Nuestros Productos"
         '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.AllowDrop = True
         Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(221, 487)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(558, 119)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1149, 224)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(792, 610)
         Me.FlowLayoutPanel1.TabIndex = 6
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.PictureBox1)
+        Me.Panel3.Controls.Add(Me.PictureBox3)
+        Me.Panel3.Controls.Add(Me.PcAnuncio)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel3.Location = New System.Drawing.Point(221, 119)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(351, 610)
+        Me.Panel3.TabIndex = 7
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__5___1_
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 332)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(348, 275)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
         '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Left
         Me.PictureBox3.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__5___1_
         Me.PictureBox3.Location = New System.Drawing.Point(853, 0)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(288, 364)
+        Me.PictureBox3.Size = New System.Drawing.Size(226, 364)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 7
         Me.PictureBox3.TabStop = False
         '
-        'Panel3
+        'Label2
         '
-        Me.Panel3.BackColor = System.Drawing.Color.Moccasin
-        Me.Panel3.Controls.Add(Me.PictureBox3)
-        Me.Panel3.Controls.Add(Me.PictureBox2)
-        Me.Panel3.Controls.Add(Me.PictureBox1)
-        Me.Panel3.Controls.Add(Me.PcAnuncio)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(221, 123)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1149, 364)
-        Me.Panel3.TabIndex = 7
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Garamond", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.Label2.Location = New System.Drawing.Point(33, 93)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(148, 24)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Loggeado como:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frInicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.ClientSize = New System.Drawing.Size(1350, 729)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Panel1)
@@ -319,12 +318,11 @@ Partial Class frInicio
         Me.pHeading.ResumeLayout(False)
         Me.pHeading.PerformLayout()
         CType(Me.PcAnuncio, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -347,7 +345,8 @@ Partial Class frInicio
     Friend WithEvents Panel1 As Panel
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label2 As Label
 End Class

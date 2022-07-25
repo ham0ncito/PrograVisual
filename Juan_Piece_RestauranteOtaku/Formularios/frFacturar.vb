@@ -7,7 +7,10 @@ Public Class frFacturar
 
     Private Sub frFacturar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            Me.WindowState = FormWindowState.Maximized
+
+            For i As Integer = 1 To 100 Step 1
+                cmbCantidad.Items.Add(i)
+            Next
             dato()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -105,7 +108,7 @@ Public Class frFacturar
 
     Private Sub Subttotal()
         Try
-            Dim total = (Convert.ToDouble(txtCantidad.Text) * Convert.ToDouble(lblPrecio.Text))
+            Dim total = (Convert.ToDouble(cmbCantidad.Text) * Convert.ToDouble(lblPrecio.Text))
             lblSubDetalle.Text = total.ToString
             Exit Try
         Catch ex As Exception
@@ -119,7 +122,7 @@ Public Class frFacturar
                 imagenProducto.Image = Image.FromStream(ms)
             End Using
             lblNombre.Text = dgFacturar.CurrentRow.Cells(0).Value.ToString
-            txtCantidad.Text = "1"
+            cmbCantidad.Text = "1"
             Exit Try
         Catch x As Exception
             MessageBox.Show(x.Message)
@@ -134,9 +137,8 @@ Public Class frFacturar
 
     Private Sub subPrecio()
         Try
-            Dim HoraFelizInicio As DateTime = DateTime.Parse("10:00:00 PM")
-            Dim HoraFelizFin As DateTime = DateTime.Parse("12:00:00 PM")
-            If DateTime.Now.TimeOfDay >= HoraFelizInicio.TimeOfDay And DateTime.Now.TimeOfDay < HoraFelizFin.TimeOfDay Then
+
+            If (DateTime.Parse(lblHora.Text) > DateTime.Parse("03:59:00 PM")) And (DateTime.Parse(lblHora.Text) < DateTime.Parse("09:01:00 PM")) Then
                 lblPrecio.Text = dgFacturar.CurrentRow.Cells(2).Value.ToString
             Else
                 lblPrecio.Text = dgFacturar.CurrentRow.Cells(1).Value.ToString
@@ -150,12 +152,8 @@ Public Class frFacturar
 
     End Sub
 
-    Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
-        Try
-            Subttotal()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+    Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -167,7 +165,7 @@ Public Class frFacturar
             Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
             lblNombre.Text = "Nombre del Producto"
             lblPrecio.Text = "0"
-            txtCantidad.Text = "0"
+            cmbCantidad.Text = "0"
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -203,10 +201,10 @@ Public Class frFacturar
 
     Private Sub AgregarCarrto()
         Try
-            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
+            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) And (Convert.ToInt32(cmbCantidad.SelectedValue) = 0) And (lblSubDetalle.Text = "00.00") Then
                 MessageBox.Show("Detalle vacio, agregue productos", "No hay productos")
             Else
-                dgDetalle.Rows.Add(txtCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
+                dgDetalle.Rows.Add(cmbCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -252,9 +250,11 @@ Public Class frFacturar
     Private Sub btnNuevoCliente_Click(sender As Object, e As EventArgs) Handles btnNuevoCliente.Click
         Try
             Dim frCliente As New frNuevoCliente()
+
             AddOwnedForm(frCliente)
 
             frCliente.Show()
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -280,20 +280,20 @@ Public Class frFacturar
     End Sub
 
     Private Sub btnFactura_Click(sender As Object, e As EventArgs) Handles btnFactura.Click
-
+        MostrarFactura()
     End Sub
 
     Private Sub Imprimir_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles Imprimir.PrintPage
         Dim fuente = New Font("Arial", 12)
         Dim Titulo = New Font("Arial", 24, FontStyle.Bold)
-        Dim ubicacion = 460
+        Dim ubicacion = 500
         e.Graphics.DrawImage(PictureBox1.Image, 350, 60, 150, 150)
-        e.Graphics.DrawString(" Restaurante Juan Piece  ", Titulo, Brushes.Black, 260, 220)
+        e.Graphics.DrawString(" Restaurante Juan Piece  ", Titulo, Brushes.Black, 210, 220)
         e.Graphics.DrawString(" Boulevard Morazan  3 Calle  2 Avenida  96751362 ", fuente, Brushes.Black, 230, 300)
-        e.Graphics.DrawString(String.Concat("   " + lblHora.Text + "   "), fuente, Brushes.Black, 260, 320)
-        e.Graphics.DrawString(String.Concat("Factura #  " + lblNumeroFactura.Text), fuente, Brushes.Black, 260, 340)
-        e.Graphics.DrawString(String.Concat("Cliente  " + cmbNombres.Text), fuente, Brushes.Black, 200, 380)
-        e.Graphics.DrawString("Listado de productos: ", fuente, Brushes.Black, 200, 420)
+        e.Graphics.DrawString(String.Concat("   " + lblHora.Text + "   "), fuente, Brushes.Black, 320, 340)
+        e.Graphics.DrawString(String.Concat("Factura #  " + lblNumeroFactura.Text), fuente, Brushes.Black, 370, 380)
+        e.Graphics.DrawString(String.Concat("Cliente  " + cmbNombres.Text), fuente, Brushes.Black, 200, 420)
+        e.Graphics.DrawString("Listado de productos: ", fuente, Brushes.Black, 200, 460)
         For Each fila As DataGridViewRow In dgDetalle.Rows
 
             e.Graphics.DrawString(fila.Cells(0).Value + "      " + fila.Cells(1).Value + "       " + fila.Cells(2).Value + "       " + fila.Cells(3).Value, fuente, Brushes.Black, 200, ubicacion)
@@ -315,6 +315,15 @@ Public Class frFacturar
     Private Sub MostrarFactura()
 
         ImprimirPreview.Document = Imprimir
+        ImprimirPreview.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         ImprimirPreview.ShowDialog()
+    End Sub
+
+    Private Sub cmbCantidad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCantidad.SelectedIndexChanged
+        Try
+            Subttotal()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 End Class
