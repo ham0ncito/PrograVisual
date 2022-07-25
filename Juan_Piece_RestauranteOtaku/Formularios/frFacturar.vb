@@ -213,7 +213,7 @@ Public Class frFacturar
         Dim existeEnCarrito = False
         Dim posicion = 0
         Try
-            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) And (Convert.ToInt32(cmbCantidad.Text) = 0) And (lblSubDetalle.Text = "0") And (StrComp(lblPrecio.Text, "0") = 0) And (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
+            If (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Or (Convert.ToInt32(cmbCantidad.Text) = 0) Or (lblSubDetalle.Text = "0") Or (StrComp(lblPrecio.Text, "0") = 0) Or (StrComp(lblNombre.Text, "Nombre del Producto") = 0) Then
                 MessageBox.Show("Detalle vacio, agregue productos", "No hay productos")
             Else
                 For Each row As DataGridViewRow In dgDetalle.Rows
