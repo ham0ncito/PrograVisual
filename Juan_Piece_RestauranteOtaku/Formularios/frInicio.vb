@@ -1,4 +1,15 @@
 ﻿Public Class frInicio
+    Private lbl As String
+
+    Public Property Lbl1 As String
+        Get
+            Return lbl
+        End Get
+        Set(value As String)
+            lbl = lblNombreUsuario.Text
+        End Set
+    End Property
+
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
 
     End Sub

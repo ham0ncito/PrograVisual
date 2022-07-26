@@ -13,6 +13,7 @@ Public Class frPlatillos
         Dim frAg As New frAgregarPlatillo()
         AddOwnedForm(frAg)
         frAg.ShowDialog()
+        clPlatillos.LlenarPlatilos(dgPlatillos)
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -50,8 +51,8 @@ Public Class frPlatillos
                 lblPrecioH.Text = "L " + item.Cells(4).Value.ToString()
                 lblTipo.Text = item.Cells(5).Value.ToString()
                 lblDescripcion.Text = item.Cells(7).Value.ToString
-                lblPesoOnz.Text = item.Cells(8).Value.ToString() + " onz"
-                lblPesoGra.Text = item.Cells(9).Value.ToString() + " g"
+                lblPesoOnz.Text = item.Cells(9).Value.ToString() + " onz"
+                lblPesoGra.Text = item.Cells(8).Value.ToString() + " g"
             Else
                 visibilidad(False)
             End If
@@ -91,5 +92,8 @@ Public Class frPlatillos
         dgIngredientes.Columns.Clear()
     End Sub
 
-
+    Private Sub btnCancelarVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarVenta.Click
+        Dim cancelar As New frEliminarPlatillo()
+        cancelar.ShowDialog()
+    End Sub
 End Class

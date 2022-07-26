@@ -45,6 +45,7 @@
                cmbTipos.Text, imagenProducto)
             MessageBox.Show("Platillo Agregado")
             limpiarText()
+
         Else
             MessageBox.Show("No se puede agregar el producto")
         End If
