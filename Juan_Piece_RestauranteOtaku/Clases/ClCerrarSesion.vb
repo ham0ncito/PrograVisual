@@ -25,4 +25,25 @@ Public Class ClCerrarSesion
         Return False
     End Function
 
+    Public Function contraseñaCorrecta(usuario As String, contrasena As String) As Boolean
+        Try
+            Dim cmd As New SqlCommand(" exec LogOut '" + usuario + "' , '" + contrasena + "';", con)
+            con.Open()
+            cmd.ExecuteNonQuery()
+            Dim registro As SqlDataReader = cmd.ExecuteReader()
+            If registro.Read Then
+                MessageBox.Show("Credenciales Verificadas ", "Verificacion")
+                Return True
+            Else
+                MessageBox.Show(" Datos incorrectos ", "Error en verificacion de credenciales")
+                Return False
+            End If
+            Exit Try
+        Catch x As SqlException
+            MessageBox.Show(x.Message)
+
+        End Try
+        Return False
+    End Function
+
 End Class

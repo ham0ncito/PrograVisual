@@ -22,19 +22,22 @@ Partial Class frEliminarPlatillo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frEliminarPlatillo))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbPlatillosActivos = New System.Windows.Forms.ComboBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.imagenPlatillo = New System.Windows.Forms.PictureBox()
+        Me.lblNombre = New System.Windows.Forms.Label()
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtContraseña = New System.Windows.Forms.TextBox()
+        Me.errorcito = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imagenPlatillo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.errorcito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -70,26 +73,26 @@ Partial Class frEliminarPlatillo
         Me.cmbPlatillosActivos.Size = New System.Drawing.Size(272, 26)
         Me.cmbPlatillosActivos.TabIndex = 2
         '
-        'PictureBox2
+        'imagenPlatillo
         '
-        Me.PictureBox2.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
-        Me.PictureBox2.Location = New System.Drawing.Point(41, 112)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(272, 126)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 3
-        Me.PictureBox2.TabStop = False
+        Me.imagenPlatillo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        Me.imagenPlatillo.Location = New System.Drawing.Point(41, 112)
+        Me.imagenPlatillo.Name = "imagenPlatillo"
+        Me.imagenPlatillo.Size = New System.Drawing.Size(272, 126)
+        Me.imagenPlatillo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.imagenPlatillo.TabIndex = 3
+        Me.imagenPlatillo.TabStop = False
         '
-        'Label2
+        'lblNombre
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.ForeColor = System.Drawing.Color.Brown
-        Me.Label2.Location = New System.Drawing.Point(41, 254)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 21)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Descripcion"
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblNombre.ForeColor = System.Drawing.Color.Brown
+        Me.lblNombre.Location = New System.Drawing.Point(41, 254)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(127, 21)
+        Me.lblNombre.TabIndex = 4
+        Me.lblNombre.Text = "Nombre Platillo"
         '
         'lblDescripcion
         '
@@ -105,21 +108,13 @@ Partial Class frEliminarPlatillo
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtContraseña)
         Me.GroupBox1.Location = New System.Drawing.Point(353, 254)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(272, 157)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Ingrese su contraseña para continuar"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(23, 47)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox1.Size = New System.Drawing.Size(228, 23)
-        Me.TextBox1.TabIndex = 0
         '
         'Button1
         '
@@ -130,6 +125,18 @@ Partial Class frEliminarPlatillo
         Me.Button1.Text = "Eliminar Platillo"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'txtContraseña
+        '
+        Me.txtContraseña.Location = New System.Drawing.Point(23, 47)
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContraseña.Size = New System.Drawing.Size(228, 23)
+        Me.txtContraseña.TabIndex = 0
+        '
+        'errorcito
+        '
+        Me.errorcito.ContainerControl = Me
+        '
         'frEliminarPlatillo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -137,8 +144,8 @@ Partial Class frEliminarPlatillo
         Me.ClientSize = New System.Drawing.Size(656, 439)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.lblDescripcion)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.lblNombre)
+        Me.Controls.Add(Me.imagenPlatillo)
         Me.Controls.Add(Me.cmbPlatillosActivos)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -147,9 +154,10 @@ Partial Class frEliminarPlatillo
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Eliminar Platillo"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imagenPlatillo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.errorcito, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -158,10 +166,11 @@ Partial Class frEliminarPlatillo
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents cmbPlatillosActivos As ComboBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents imagenPlatillo As PictureBox
+    Friend WithEvents lblNombre As Label
     Friend WithEvents lblDescripcion As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtContraseña As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents errorcito As ErrorProvider
 End Class

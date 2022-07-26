@@ -191,6 +191,29 @@ Public Class ClPlatillos
         End Try
     End Sub
 
+
+    Public Sub DataEliminacion(id As Int64, nombre As Label, descripcion As Label, imagen As PictureBox)
+        Try
+            con.Open()
+            Dim img As Byte()
+            Dim sql As String = "exec InfoEliminar " + Convert.ToString(id)
+            Dim cmd As New SqlCommand(sql, con)
+            cmd.CommandType = CommandType.Text
+            Dim lector As SqlDataReader = cmd.ExecuteReader()
+            If lector.Read() Then
+                nombre.Text = Convert.ToString(lector.GetValue(0))
+                descripcion.Text = Convert.ToString(lector.GetValue(1))
+                img = lector.GetValue(2)
+                Using ms As New MemoryStream(img)
+                    imagen.Image = Image.FromStream(ms)
+                End Using
+            End If
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
     Public Sub UpdateData()
         Try
             'Dim sql As String
