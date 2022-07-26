@@ -96,4 +96,10 @@ Public Class frPlatillos
         Dim cancelar As New frEliminarPlatillo()
         cancelar.ShowDialog()
     End Sub
+
+    Private Sub btnFactura_Click(sender As Object, e As EventArgs) Handles btnFactura.Click
+        Dim fredit As New frEditarPlatillo()
+        AddOwnedForm(fredit)
+        fredit.ShowDialog()
+    End Sub
 End Class

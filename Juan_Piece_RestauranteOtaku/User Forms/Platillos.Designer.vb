@@ -23,14 +23,14 @@ Partial Class Platillos
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.lblHoraFeliz = New System.Windows.Forms.Label()
         Me.pcbImagenPlatillo = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.lblPrecio = New System.Windows.Forms.Label()
         Me.lblNombreProducto = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.pcbImagenPlatillo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,8 +50,28 @@ Partial Class Platillos
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(232, 302)
+        Me.Panel2.Size = New System.Drawing.Size(229, 354)
         Me.Panel2.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(13, 185)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 21)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Precio Feliz"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(13, 164)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(119, 21)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Precio Normal"
         '
         'lblHoraFeliz
         '
@@ -90,9 +110,9 @@ Partial Class Platillos
         '
         Me.lblDescripcion.AutoEllipsis = True
         Me.lblDescripcion.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.lblDescripcion.Location = New System.Drawing.Point(3, 249)
+        Me.lblDescripcion.Location = New System.Drawing.Point(0, 249)
         Me.lblDescripcion.Name = "lblDescripcion"
-        Me.lblDescripcion.Size = New System.Drawing.Size(224, 53)
+        Me.lblDescripcion.Size = New System.Drawing.Size(224, 105)
         Me.lblDescripcion.TabIndex = 2
         Me.lblDescripcion.Text = "Descripcion"
         Me.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -120,26 +140,6 @@ Partial Class Platillos
         Me.lblNombreProducto.Text = "Nombre del producto"
         Me.lblNombreProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(13, 164)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(119, 21)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Precio Normal"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(13, 185)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 21)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Precio Feliz"
-        '
         'Platillos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -150,7 +150,7 @@ Partial Class Platillos
         Me.ForeColor = System.Drawing.Color.Black
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Platillos"
-        Me.Size = New System.Drawing.Size(230, 302)
+        Me.Size = New System.Drawing.Size(229, 354)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.pcbImagenPlatillo, System.ComponentModel.ISupportInitialize).EndInit()
