@@ -10,7 +10,9 @@
     Private Sub btnCerrarSesion_Click(sender As Object, e As EventArgs) Handles btnCerrarSesion.Click
         Dim frCerrarSesion As New frCerrarSesion()
         AddOwnedForm(frCerrarSesion)
-        frCerrarSesion.Show()
+        frCerrarSesion.nombreUsuario = lblNombreUsuario.Text
+        frCerrarSesion.ShowDialog()
+
     End Sub
 
     Private Sub btnPlatillos_Click(sender As Object, e As EventArgs) Handles btnPlatillos.Click

@@ -1,5 +1,5 @@
 is_global = true
-build_property.ApplicationManifest = 
+build_property.ApplicationManifest = My Project\app.manifest
 build_property.StartupObject = Juan_Piece_RestauranteOtaku.frLogin
 build_property.ApplicationDefaultFont = 
 build_property.ApplicationHighDpiMode = 

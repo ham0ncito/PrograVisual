@@ -11,7 +11,7 @@
     Public Sub errorProvider()
         If (String.IsNullOrEmpty(txtDirec.Text) And String.IsNullOrEmpty(txtNombre.Text) And String.IsNullOrEmpty(txtTelefono.Text)) Then
             ErrorProvider1.SetError(btnAgCliente, "Ingrese todos los datos para continuar")
-        ElseIf (IsNumeric(txtTelefono.Text)) And (Len(txtTelefono.Text) = 8) And (Len(txtNombre.Text) > 5) And (Len(txtDirec.Text) > 10) And (repite(txtNombre.Text)) And (repite(txtDirec.Text)) Then
+        ElseIf (IsNumeric(txtTelefono.Text)) And (Len(txtTelefono.Text) = 8) And ((StrComp((txtTelefono.Text.Substring(0, 1)), "2") = 0) Or (StrComp((txtTelefono.Text.Substring(0, 1)), "3") = 0) Or (StrComp((txtTelefono.Text.Substring(0, 1)), "8") = 0) Or (StrComp((txtTelefono.Text.Substring(0, 1)), "9") = 0)) And (Len(txtNombre.Text) > 5) And (Len(txtDirec.Text) > 10) And (repite(txtNombre.Text)) And (repite(txtDirec.Text)) Then
             ErrorProvider1.SetError(btnAgCliente, "")
             agregarCliente()
             limpiar()
@@ -62,6 +62,10 @@
     End Sub
 
     Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+
+    End Sub
+
+    Private Sub txtTelefono_TextChanged(sender As Object, e As EventArgs) Handles txtTelefono.TextChanged
 
     End Sub
 End Class

@@ -284,7 +284,7 @@ Public Class frFacturar
 
             AddOwnedForm(frCliente)
 
-            frCliente.Show()
+            frCliente.ShowDialog()
             ventas.Clientes(cmbNombres, "exec nombresCliente")
 
         Catch ex As Exception

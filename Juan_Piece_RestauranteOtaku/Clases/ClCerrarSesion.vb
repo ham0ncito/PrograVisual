@@ -5,19 +5,24 @@ Public Class ClCerrarSesion
     Inherits Conexion
 
 
-    Public Sub VerificarCerrarSesion(usuario As String, contrasena As String)
+    Public Function VerificarCerrarSesion(usuario As String, contrasena As String) As Boolean
         Try
-            Dim cmd As New SqlCommand("exec LogOut '" + usuario + "' , ' " + contrasena + "';", con)
+            Dim cmd As New SqlCommand("Use JuanPieceDB; exec LogOut '" + usuario + "' , '" + contrasena + "';", con)
             con.Open()
+            cmd.ExecuteNonQuery()
             Dim registro As SqlDataReader = cmd.ExecuteReader()
-            If registro.Read() Then
+            If registro.Read Then
                 MessageBox.Show(" Sesion Cerrada ", "Nos vemos")
+                Return True
+            Else
+                MessageBox.Show(" Datos incorrectos ", "Error")
             End If
             Exit Try
         Catch x As SqlException
             MessageBox.Show(x.Message)
-        End Try
 
-    End Sub
+        End Try
+        Return False
+    End Function
 
 End Class

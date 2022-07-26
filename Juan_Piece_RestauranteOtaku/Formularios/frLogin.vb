@@ -2,6 +2,18 @@
 Imports System.IO
 
 Public Class frLogin
+    Private form As frInicio
+    Private fr As New frInicio()
+
+    Public Property Form1 As frInicio
+        Get
+            Return fr
+        End Get
+        Set(value As frInicio)
+            frInicio = value
+        End Set
+    End Property
+
     Private Sub btnlog_Click(sender As Object, e As EventArgs) Handles btnlog.Click
 
         If (Not (String.IsNullOrEmpty(txtContrasena.Text)) And Not (String.IsNullOrEmpty(txtUsername.Text))) Then
@@ -18,7 +30,7 @@ Public Class frLogin
                 If (dr.Read) Then
                     MessageBox.Show("Bienvenido/a de nuevo " + dr.GetString(1), "Login Exitoso")
                     bytes = dr.GetValue(2)
-                    Dim fr As frInicio = New frInicio()
+
                     Me.Hide()
                     AddOwnedForm(fr)
                     fr.lblNombreUsuario.Text = txtUsername.Text
@@ -29,7 +41,7 @@ Public Class frLogin
                     fr.Show()
                 Else
                     MessageBox.Show("Usuario no existe", "Error de login")
-                    End If
+                End If
 
 
 
@@ -47,7 +59,10 @@ Public Class frLogin
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
-        Me.Close()
+        If (MessageBox.Show("¿Desea continuar?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes) Then
+            Me.Close()
+        End If
+
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles cbmostrar.CheckedChanged
