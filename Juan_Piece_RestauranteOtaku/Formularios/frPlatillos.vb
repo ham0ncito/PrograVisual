@@ -101,5 +101,6 @@ Public Class frPlatillos
         Dim fredit As New frEditarPlatillo()
         AddOwnedForm(fredit)
         fredit.ShowDialog()
+        clPlatillos.LlenarPlatilos(dgPlatillos)
     End Sub
 End Class

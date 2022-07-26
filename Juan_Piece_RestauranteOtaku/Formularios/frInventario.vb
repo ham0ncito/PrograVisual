@@ -22,4 +22,8 @@
     Private Sub dgInventario_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgInventario.CellContentClick
 
     End Sub
+
+    Private Sub btnMod_Click(sender As Object, e As EventArgs) Handles btnMod.Click
+
+    End Sub
 End Class
