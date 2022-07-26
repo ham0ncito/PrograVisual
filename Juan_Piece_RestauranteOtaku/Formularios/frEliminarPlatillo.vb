@@ -23,9 +23,10 @@
         Else
             errorcito.SetError(txtContraseña, "")
             Try
-                If (clConexion.contraseñaCorrecta(frInicio.Lbl1, txtContraseña.Text)) Then
+                If (clConexion.contraseñaCorrecta("ham0ncito", txtContraseña.Text)) Then
                     MessageBox.Show("Producto eliminado", "Producto ya no se encuentra en inventario activo")
                     Me.Close()
+
                 Else
                     MessageBox.Show("No pudimos encontrar su usuario", "Error de verificacion")
                 End If

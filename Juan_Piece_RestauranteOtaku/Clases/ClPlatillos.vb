@@ -191,6 +191,9 @@ Public Class ClPlatillos
         End Try
     End Sub
 
+    Public Sub eliminar()
+
+    End Sub
 
     Public Sub DataEliminacion(id As Int64, nombre As Label, descripcion As Label, imagen As PictureBox)
         Try
