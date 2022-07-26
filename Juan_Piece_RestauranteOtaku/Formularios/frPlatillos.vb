@@ -10,7 +10,9 @@ Public Class frPlatillos
     End Sub
 
     Private Sub btnGenerar_Click(sender As Object, e As EventArgs) Handles btnGenerar.Click
-
+        Dim frAg As New frAgregarPlatillo()
+        AddOwnedForm(frAg)
+        frAg.ShowDialog()
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click

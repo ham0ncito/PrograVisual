@@ -131,3 +131,6 @@ C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\bin\Deb
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\bin\Debug\net6.0-windows\tr\CrystalDecisions.Shared.resources.dll
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\bin\Debug\net6.0-windows\zh-CHS\CrystalDecisions.Shared.resources.dll
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\bin\Debug\net6.0-windows\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frAgregarPlatillo.resources
+C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frEditarPlatillo.resources
+C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frEliminarPlatillo.resources
