@@ -48,6 +48,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Crystal.Reports.Essentials": {
+              "target": "Package",
+              "version": "[13.0.20.2399, )"
+            },
+            "CrystalDecisions.CrystalReports.Engine": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "CrystalReports.Engine": {
               "target": "Package",
               "version": "[13.0.4001, )"
@@ -59,22 +67,6 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[4.1.0, )"
-            },
-            "Microsoft.ReportViewer.2015": {
-              "target": "Package",
-              "version": "[12.0.2.2403, )"
-            },
-            "Microsoft.ReportViewer.Common": {
-              "target": "Package",
-              "version": "[10.0.40219.1, )"
-            },
-            "Microsoft.ReportViewer.WinForms": {
-              "target": "Package",
-              "version": "[10.0.40219.1, )"
-            },
-            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
-              "target": "Package",
-              "version": "[150.1484.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -146,30 +138,6 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[4.1.0, )"
-            },
-            "Microsoft.ReportViewer.2015": {
-              "target": "Package",
-              "version": "[12.0.2.2403, )"
-            },
-            "Microsoft.ReportViewer.Common": {
-              "target": "Package",
-              "version": "[10.0.40219.1, )"
-            },
-            "Microsoft.ReportViewer.WebForms": {
-              "target": "Package",
-              "version": "[10.0.40219.1, )"
-            },
-            "Microsoft.ReportViewer.WinForms": {
-              "target": "Package",
-              "version": "[10.0.40219.1, )"
-            },
-            "Microsoft.ReportingServices.ReportViewerControl.WebForms": {
-              "target": "Package",
-              "version": "[150.1484.0, )"
-            },
-            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
-              "target": "Package",
-              "version": "[150.1484.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
