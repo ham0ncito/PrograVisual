@@ -248,7 +248,7 @@ Partial Class frFacturar
         Me.btnOtros.Name = "btnOtros"
         Me.btnOtros.Size = New System.Drawing.Size(155, 56)
         Me.btnOtros.TabIndex = 8
-        Me.btnOtros.Text = "Otros"
+        Me.btnOtros.Text = "Sodas"
         Me.btnOtros.UseVisualStyleBackColor = False
         '
         'btnPasteles

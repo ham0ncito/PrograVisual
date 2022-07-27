@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-Imports Libreria_Clases
 
 Public Class frPlatillos
     Dim clPlatillos As New ClPlatillos
@@ -95,6 +94,7 @@ Public Class frPlatillos
     Private Sub btnCancelarVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarVenta.Click
         Dim cancelar As New frEliminarPlatillo()
         cancelar.ShowDialog()
+        clPlatillos.LlenarPlatilos(dgPlatillos)
     End Sub
 
     Private Sub btnFactura_Click(sender As Object, e As EventArgs) Handles btnFactura.Click

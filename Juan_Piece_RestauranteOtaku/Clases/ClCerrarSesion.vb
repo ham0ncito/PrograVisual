@@ -1,5 +1,5 @@
-﻿Imports Libreria_Clases
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
+Imports Libreria_Clases
 
 Public Class ClCerrarSesion
     Inherits Conexion
@@ -18,7 +18,9 @@ Public Class ClCerrarSesion
             Else
                 MessageBox.Show(" Datos incorrectos ", "Error")
             End If
+            con.Close()
             Exit Try
+
         Catch x As SqlException
             MessageBox.Show(x.Message)
 
@@ -39,6 +41,7 @@ Public Class ClCerrarSesion
                 MessageBox.Show(" Datos incorrectos ", "Error en verificacion de credenciales")
                 Return False
             End If
+            con.Close()
             Exit Try
         Catch x As SqlException
             MessageBox.Show(x.Message)

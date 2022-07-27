@@ -134,4 +134,6 @@ C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\bin\Deb
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frAgregarPlatillo.resources
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frEditarPlatillo.resources
 C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frEliminarPlatillo.resources
-C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.Reporte.resources
+C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frAggIngrediente.resources
+C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frModificarIngrediente.resources
+C:\Users\HP\source\PrograVisual\PrograVisual\Juan_Piece_RestauranteOtaku\obj\Debug\net6.0-windows\Juan_Piece_RestauranteOtaku.frRegistrarIngrediente.resources

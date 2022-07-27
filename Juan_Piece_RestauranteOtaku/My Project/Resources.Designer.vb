@@ -173,6 +173,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property ramen_de_pollo_receta_facil_f_1_PhotoRoom() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("ramen-de-pollo-receta-facil-f-1-PhotoRoom", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property toppng_com_five_star_rating_623x124() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("toppng.com-five-star-rating-623x124", resourceCulture)

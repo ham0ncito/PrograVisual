@@ -25,7 +25,7 @@ Partial Class frInventario
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frInventario))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.btnElim = New System.Windows.Forms.Button()
         Me.btnReporte = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -50,7 +50,7 @@ Partial Class frInventario
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.btnRegistrar)
         Me.Panel1.Controls.Add(Me.btnElim)
         Me.Panel1.Controls.Add(Me.btnReporte)
         Me.Panel1.Controls.Add(Me.PictureBox1)
@@ -63,17 +63,17 @@ Partial Class frInventario
         Me.Panel1.Size = New System.Drawing.Size(1350, 90)
         Me.Panel1.TabIndex = 0
         '
-        'Button3
+        'btnRegistrar
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Button3.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.Location = New System.Drawing.Point(912, 0)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(143, 90)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Eliminar Ingredientes"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnRegistrar.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnRegistrar.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnRegistrar.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnRegistrar.Location = New System.Drawing.Point(912, 0)
+        Me.btnRegistrar.Name = "btnRegistrar"
+        Me.btnRegistrar.Size = New System.Drawing.Size(143, 90)
+        Me.btnRegistrar.TabIndex = 6
+        Me.btnRegistrar.Text = "Registrar Ingredientes"
+        Me.btnRegistrar.UseVisualStyleBackColor = False
         '
         'btnElim
         '
@@ -81,7 +81,7 @@ Partial Class frInventario
         Me.btnElim.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnElim.Location = New System.Drawing.Point(1055, 0)
         Me.btnElim.Name = "btnElim"
-        Me.btnElim.Size = New System.Drawing.Size(151, 90)
+        Me.btnElim.Size = New System.Drawing.Size(141, 90)
         Me.btnElim.TabIndex = 5
         Me.btnElim.Text = "Salir"
         Me.btnElim.UseVisualStyleBackColor = False
@@ -130,7 +130,7 @@ Partial Class frInventario
         Me.btnag.Name = "btnag"
         Me.btnag.Size = New System.Drawing.Size(143, 90)
         Me.btnag.TabIndex = 1
-        Me.btnag.Text = "Agregar Ingrediente"
+        Me.btnag.Text = "Agregar Ingrediente a Platillo"
         Me.btnag.UseVisualStyleBackColor = False
         '
         'Panel2
@@ -269,7 +269,7 @@ Partial Class frInventario
     Friend WithEvents Tiempo As Timer
     Friend WithEvents Imprimir As Printing.PrintDocument
     Friend WithEvents ImprimirPreview As PrintPreviewDialog
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnRegistrar As Button
     Friend WithEvents lblListadoingredientes As Label
     Friend WithEvents dgIngresos As DataGridView
     Friend WithEvents lblIngresos As Label

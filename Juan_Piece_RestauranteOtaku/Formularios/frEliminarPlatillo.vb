@@ -15,24 +15,29 @@
 
     Private Sub frEliminarPlatillo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         clPlato.idPlatillos(cmbPlatillosActivos)
+        cmbPlatillosActivos.SelectedIndex = 0
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim posicion As Integer = cmbPlatillosActivos.SelectedIndex()
         If (String.IsNullOrEmpty(txtContraseña.Text)) Then
             errorcito.SetError(txtContraseña, "Ingrese su contraseña")
         Else
             errorcito.SetError(txtContraseña, "")
             Try
-                If (clConexion.contraseñaCorrecta("ham0ncito", txtContraseña.Text)) Then
-                    MessageBox.Show("Producto eliminado", "Producto ya no se encuentra en inventario activo")
-                    Me.Close()
+                If (clConexion.contraseñaCorrecta(ClStaticUsuarios.user, txtContraseña.Text)) Then
+                    clPlato.eliminar(cmbPlatillosActivos.SelectedItem)
+                    MessageBox.Show(ClStaticUsuarios.user + " El producto seleccionado fue suspendido", "Producto ya no se encuentra en inventario activo")
+                    cmbPlatillosActivos.Items.RemoveAt(posicion)
+                    cmbPlatillosActivos.SelectedIndex = 0
+
 
                 Else
                     MessageBox.Show("No pudimos encontrar su usuario", "Error de verificacion")
                 End If
 
             Catch ex As Exception
-
+                MessageBox.Show(ex.Message)
             End Try
         End If
 

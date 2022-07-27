@@ -233,7 +233,7 @@ Public Class frFacturar
                         MessageBox.Show("Producto no fue agregado")
                     End If
                 Else
-                        dgDetalle.Rows.Add(cmbCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
+                    dgDetalle.Rows.Add(cmbCantidad.Text, lblNombre.Text, lblPrecio.Text, lblSubDetalle.Text)
                 End If
 
             End If

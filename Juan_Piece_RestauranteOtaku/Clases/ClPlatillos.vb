@@ -57,11 +57,12 @@ Public Class ClPlatillos
             Else
                 MessageBox.Show("Este producto no tiene ingredientes agregados", "Inventario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
             End If
-            con.Close()
+
             Exit Try
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        con.Close()
     End Sub
 
     Public Sub tipos(combo As ComboBox)
@@ -191,8 +192,17 @@ Public Class ClPlatillos
         End Try
     End Sub
 
-    Public Sub eliminar()
+    Public Sub eliminar(id As Integer)
+        Try
 
+            con.Open()
+            Dim sql As String = "exec dataEliminar " + Convert.ToString(id)
+            Dim cmd As New SqlCommand(sql, con)
+            cmd.ExecuteReader()
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Public Sub DataEliminacion(id As Int64, nombre As Label, descripcion As Label, imagen As PictureBox)
@@ -217,20 +227,4 @@ Public Class ClPlatillos
         End Try
     End Sub
 
-    Public Sub UpdateData()
-        Try
-            'Dim sql As String
-            'Dim cmd As New SqlCommand(sql, con)
-            'cmd.Parameters.AddWithValue("@nombre", nombre)
-            'cmd.Parameters.AddWithValue("@precioEstandar", precioEstandar)
-            'cmd.Parameters.AddWithValue("@precioDescuento", precioDescuento)
-            'cmd.Parameters.AddWithValue("@precioFeliz", precioFeliz)
-            'cmd.Parameters.AddWithValue("@descripcion", descripcion)
-            'cmd.Parameters.AddWithValue("@pesoGramos", pesoGramos)
-            'cmd.Parameters.AddWithValue("@pesoOnzas", pesoOnzas)
-            'cmd.Parameters.AddWithValue("@tipo", tipo)
-        Catch ex As Exception
-
-        End Try
-    End Sub
 End Class

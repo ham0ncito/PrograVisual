@@ -103,7 +103,7 @@ Public Class ClVentas
                 MessageBox.Show(x.Message)
             End Try
         Catch x As Exception
-                MessageBox.Show(x.Message)
+            MessageBox.Show(x.Message)
         End Try
     End Sub
 End Class

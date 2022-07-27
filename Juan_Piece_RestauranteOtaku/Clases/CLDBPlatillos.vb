@@ -1,8 +1,6 @@
 ﻿Imports System.Data.SqlClient
-Imports Microsoft.SqlServer.Server
-Imports Libreria_Clases
-Imports System.Data
 Imports System.IO
+Imports Libreria_Clases
 
 Public Class CLDBPlatillos
     Inherits Conexion

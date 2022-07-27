@@ -36,7 +36,9 @@ Public Class frLogin
                     fr.lblNombreUsuario.Text = txtUsername.Text
                     Using ms As New MemoryStream(bytes)
                         fr.pcUsuario.Image = Image.FromStream(ms)
+
                     End Using
+                    ClStaticUsuarios.user = txtUsername.Text
                     fr.lblUsuario.Text = "Bienvenido/a " + dr.GetString(1)
                     fr.Show()
                 Else

@@ -24,6 +24,20 @@
     End Sub
 
     Private Sub btnMod_Click(sender As Object, e As EventArgs) Handles btnMod.Click
+        Dim frag As New frModificarIngrediente()
+        AddOwnedForm(frag)
+        frag.ShowDialog()
+    End Sub
 
+    Private Sub btnag_Click(sender As Object, e As EventArgs) Handles btnag.Click
+        Dim frag As New frAggIngrediente()
+        AddOwnedForm(frag)
+        frag.ShowDialog()
+    End Sub
+
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+        Dim frag As New frRegistrarIngrediente()
+        AddOwnedForm(frag)
+        frag.ShowDialog()
     End Sub
 End Class
