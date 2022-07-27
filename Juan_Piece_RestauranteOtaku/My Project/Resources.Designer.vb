@@ -103,6 +103,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property fee12db2b0320572b129bc0ae71e05f51() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fee12db2b0320572b129bc0ae71e05f51", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property five_star_rating_11549726812abjskp8qz8() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("five-star-rating-11549726812abjskp8qz8", resourceCulture)
@@ -146,6 +156,16 @@ Namespace My.Resources
         Public ReadOnly Property menu__5___1_() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("menu (5) (1)", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property noExiste() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("noExiste", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

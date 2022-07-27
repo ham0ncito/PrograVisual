@@ -42,8 +42,9 @@ Public Class ClPlatillos
         End Try
     End Sub
 
-    Public Sub datosDgIngredientes(id, dgIngredientes)
+    Public Sub datosDgIngredientes(id, dgIngredientes, pictureBox)
         Try
+            pictureBox.Visible = False
             dgIngredientes.Columns.Clear()
             con.Open()
             Dim sql As String = "exec todosIngredientes '" + id + "';"
@@ -55,7 +56,7 @@ Public Class ClPlatillos
             If (ds.Tables("Ingredientes").Rows.Count > 0) Then
                 dgIngredientes.DataSource = ds.Tables("Ingredientes")
             Else
-                MessageBox.Show("Este producto no tiene ingredientes agregados", "Inventario", MessageBoxButtons.OK, MessageBoxIcon.Hand)
+                pictureBox.Visible = True
             End If
 
             Exit Try

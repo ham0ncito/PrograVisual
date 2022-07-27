@@ -33,7 +33,7 @@ Public Class frPlatillos
     Private Sub dgPlatillos_Click(sender As Object, e As EventArgs) Handles dgPlatillos.Click
         visibilidad(True)
         PlatillosC()
-        clPlatillos.datosDgIngredientes(dgPlatillos.CurrentRow.Cells(0).Value.ToString, dgIngredientes)
+        clPlatillos.datosDgIngredientes(dgPlatillos.CurrentRow.Cells(0).Value.ToString, dgIngredientes, pictureNoIngredientes)
 
     End Sub
 
@@ -89,6 +89,7 @@ Public Class frPlatillos
         lblTipo.Text = "Tipo de Platillo"
         pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
         dgIngredientes.Columns.Clear()
+        pictureNoIngredientes.Visible = False
     End Sub
 
     Private Sub btnCancelarVenta_Click(sender As Object, e As EventArgs) Handles btnCancelarVenta.Click
