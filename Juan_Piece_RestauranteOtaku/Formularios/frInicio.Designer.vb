@@ -100,7 +100,7 @@ Partial Class frInicio
         'pcUsuario
         '
         Me.pcUsuario.BackColor = System.Drawing.Color.Transparent
-        Me.pcUsuario.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.user__5___1_
+        'Me.pcUsuario.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.user__5___1_
         Me.pcUsuario.Location = New System.Drawing.Point(67, 13)
         Me.pcUsuario.Name = "pcUsuario"
         Me.pcUsuario.Size = New System.Drawing.Size(75, 77)
@@ -172,7 +172,7 @@ Partial Class frInicio
         '
         Me.pcLogo.BackColor = System.Drawing.Color.Transparent
         Me.pcLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pcLogo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
+        ' Me.pcLogo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.pcLogo.Location = New System.Drawing.Point(0, 0)
         Me.pcLogo.Name = "pcLogo"
         Me.pcLogo.Size = New System.Drawing.Size(221, 163)
@@ -215,7 +215,7 @@ Partial Class frInicio
         '
         Me.PcAnuncio.BackColor = System.Drawing.Color.Transparent
         Me.PcAnuncio.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PcAnuncio.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__3_
+        ' Me.PcAnuncio.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__3_
         Me.PcAnuncio.Location = New System.Drawing.Point(0, 0)
         Me.PcAnuncio.Name = "PcAnuncio"
         Me.PcAnuncio.Size = New System.Drawing.Size(351, 326)
@@ -273,7 +273,7 @@ Partial Class frInicio
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__5___1_
+        'Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__5___1_
         Me.PictureBox1.Location = New System.Drawing.Point(3, 332)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(348, 275)
@@ -284,7 +284,7 @@ Partial Class frInicio
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox3.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__5___1_
+        'Me.PictureBox3.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.menu__5___1_
         Me.PictureBox3.Location = New System.Drawing.Point(853, 0)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(226, 364)

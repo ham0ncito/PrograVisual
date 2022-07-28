@@ -88,7 +88,7 @@ Partial Class Platillos
         'pcbImagenPlatillo
         '
         Me.pcbImagenPlatillo.BackColor = System.Drawing.Color.White
-        Me.pcbImagenPlatillo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        ''Me.pcbImagenPlatillo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
         Me.pcbImagenPlatillo.Location = New System.Drawing.Point(27, 60)
         Me.pcbImagenPlatillo.Name = "pcbImagenPlatillo"
         Me.pcbImagenPlatillo.Size = New System.Drawing.Size(167, 95)
@@ -98,7 +98,7 @@ Partial Class Platillos
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.toppng_com_five_star_rating_623x124
+        ' Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.toppng_com_five_star_rating_623x124
         Me.PictureBox1.Location = New System.Drawing.Point(13, 209)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(100, 37)

@@ -59,7 +59,7 @@
         txtPrecioN.Clear()
         txtPrecioD.Text = "Este valor lo genera el sistema"
         txtPrecioF.Text = "Este valor lo genera el sistema"
-        imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        'imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         limpiarTx()

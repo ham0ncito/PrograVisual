@@ -165,7 +165,7 @@ Public Class frFacturar
 
     Private Sub CancelarDetalle()
         Try
-            Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+            ' Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
             lblNombre.Text = "Nombre del Producto"
             lblPrecio.Text = "0"
             lblSubDetalle.Text = "0"

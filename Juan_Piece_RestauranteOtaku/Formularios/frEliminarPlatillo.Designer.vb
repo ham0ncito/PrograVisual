@@ -44,7 +44,7 @@ Partial Class frEliminarPlatillo
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
+        'Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(656, 88)
@@ -75,7 +75,7 @@ Partial Class frEliminarPlatillo
         '
         'imagenPlatillo
         '
-        Me.imagenPlatillo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        'Me.imagenPlatillo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
         Me.imagenPlatillo.Location = New System.Drawing.Point(41, 112)
         Me.imagenPlatillo.Name = "imagenPlatillo"
         Me.imagenPlatillo.Size = New System.Drawing.Size(272, 126)

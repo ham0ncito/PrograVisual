@@ -105,7 +105,7 @@ Partial Class frPlatillos
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
+        ''Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.PictureBox1.Location = New System.Drawing.Point(682, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(204, 90)
@@ -356,7 +356,7 @@ Partial Class frPlatillos
         '
         'pcImagen
         '
-        Me.pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        '' Me.pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
         Me.pcImagen.Location = New System.Drawing.Point(27, 37)
         Me.pcImagen.Name = "pcImagen"
         Me.pcImagen.Size = New System.Drawing.Size(222, 196)
@@ -380,7 +380,7 @@ Partial Class frPlatillos
         '
         'pictureNoIngredientes
         '
-        Me.pictureNoIngredientes.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.noExiste
+        '' Me.pictureNoIngredientes.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.noExiste
         Me.pictureNoIngredientes.Location = New System.Drawing.Point(23, 271)
         Me.pictureNoIngredientes.Name = "pictureNoIngredientes"
         Me.pictureNoIngredientes.Size = New System.Drawing.Size(494, 275)

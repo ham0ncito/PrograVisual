@@ -63,8 +63,8 @@ Partial Class frAgregarPlatillo
         'pcLogo
         '
         Me.pcLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pcLogo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
-        Me.pcLogo.InitialImage = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
+        'Me.pcLogo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
+        ' Me.pcLogo.InitialImage = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.pcLogo.Location = New System.Drawing.Point(0, 0)
         Me.pcLogo.Name = "pcLogo"
         Me.pcLogo.Size = New System.Drawing.Size(849, 97)
@@ -84,7 +84,7 @@ Partial Class frAgregarPlatillo
         '
         'imagenProducto
         '
-        Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        'Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
         Me.imagenProducto.Location = New System.Drawing.Point(28, 120)
         Me.imagenProducto.Name = "imagenProducto"
         Me.imagenProducto.Size = New System.Drawing.Size(355, 186)
