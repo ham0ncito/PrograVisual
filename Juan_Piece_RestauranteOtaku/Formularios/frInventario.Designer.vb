@@ -29,10 +29,10 @@ Partial Class frInventario
         Me.btnRegistrar = New System.Windows.Forms.Button()
         Me.btnElim = New System.Windows.Forms.Button()
         Me.btnReporte = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.btnMod = New System.Windows.Forms.Button()
         Me.btnag = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnMod = New System.Windows.Forms.Button()
         Me.lblHora = New System.Windows.Forms.Label()
         Me.dgInventario = New System.Windows.Forms.DataGridView()
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
@@ -44,8 +44,8 @@ Partial Class frInventario
         Me.ImprimirIngresos = New System.Drawing.Printing.PrintDocument()
         Me.ImpIngresos = New System.Windows.Forms.PrintPreviewDialog()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgIngresos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -82,9 +82,9 @@ Partial Class frInventario
         '
         Me.btnRegistrar.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnRegistrar.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnRegistrar.Location = New System.Drawing.Point(838, 0)
+        Me.btnRegistrar.Location = New System.Drawing.Point(847, 0)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(143, 90)
+        Me.btnRegistrar.Size = New System.Drawing.Size(134, 90)
         Me.btnRegistrar.TabIndex = 6
         Me.btnRegistrar.Text = "Registrar Ingredientes"
         Me.btnRegistrar.UseVisualStyleBackColor = False
@@ -111,6 +111,26 @@ Partial Class frInventario
         Me.btnReporte.Text = "Reporte Ingredientes"
         Me.btnReporte.UseVisualStyleBackColor = False
         '
+        'btnag
+        '
+        Me.btnag.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnag.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnag.Location = New System.Drawing.Point(700, 0)
+        Me.btnag.Name = "btnag"
+        Me.btnag.Size = New System.Drawing.Size(149, 90)
+        Me.btnag.TabIndex = 1
+        Me.btnag.Text = "Agregar Ingrediente a Platillo"
+        Me.btnag.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(279, 90)
+        Me.Panel2.TabIndex = 0
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
@@ -131,26 +151,6 @@ Partial Class frInventario
         Me.btnMod.TabIndex = 2
         Me.btnMod.Text = "Modificar Ingrediente"
         Me.btnMod.UseVisualStyleBackColor = False
-        '
-        'btnag
-        '
-        Me.btnag.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnag.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnag.Location = New System.Drawing.Point(698, 0)
-        Me.btnag.Name = "btnag"
-        Me.btnag.Size = New System.Drawing.Size(143, 90)
-        Me.btnag.TabIndex = 1
-        Me.btnag.Text = "Agregar Ingrediente a Platillo"
-        Me.btnag.UseVisualStyleBackColor = False
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.PictureBox1)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(279, 90)
-        Me.Panel2.TabIndex = 0
         '
         'lblHora
         '
@@ -269,8 +269,8 @@ Partial Class frInventario
         Me.Text = "Inventario"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgInventario, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgIngresos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
