@@ -116,16 +116,17 @@ Partial Class frAggIngrediente
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(492, 133)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 15)
+        Me.Label1.Size = New System.Drawing.Size(134, 18)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Nombre ingrediente"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(45, 124)
+        Me.Label2.Location = New System.Drawing.Point(45, 135)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(90, 15)
         Me.Label2.TabIndex = 10
@@ -134,18 +135,20 @@ Partial Class frAggIngrediente
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(492, 233)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 15)
+        Me.Label3.Size = New System.Drawing.Size(110, 18)
         Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Cantidad"
+        Me.Label3.Text = "Cantidad de uso"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(492, 298)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(32, 15)
+        Me.Label4.Size = New System.Drawing.Size(38, 18)
         Me.Label4.TabIndex = 12
         Me.Label4.Text = "Peso"
         '
