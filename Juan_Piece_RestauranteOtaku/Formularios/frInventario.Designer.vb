@@ -71,7 +71,7 @@ Partial Class frInventario
         '
         Me.btnReporteIngresos.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnReporteIngresos.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnReporteIngresos.Location = New System.Drawing.Point(416, 0)
+        Me.btnReporteIngresos.Location = New System.Drawing.Point(422, 0)
         Me.btnReporteIngresos.Name = "btnReporteIngresos"
         Me.btnReporteIngresos.Size = New System.Drawing.Size(143, 90)
         Me.btnReporteIngresos.TabIndex = 7
@@ -82,7 +82,7 @@ Partial Class frInventario
         '
         Me.btnRegistrar.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnRegistrar.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnRegistrar.Location = New System.Drawing.Point(847, 0)
+        Me.btnRegistrar.Location = New System.Drawing.Point(846, 0)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(134, 90)
         Me.btnRegistrar.TabIndex = 6
@@ -93,7 +93,7 @@ Partial Class frInventario
         '
         Me.btnElim.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnElim.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnElim.Location = New System.Drawing.Point(977, 0)
+        Me.btnElim.Location = New System.Drawing.Point(974, 0)
         Me.btnElim.Name = "btnElim"
         Me.btnElim.Size = New System.Drawing.Size(139, 90)
         Me.btnElim.TabIndex = 5
@@ -104,7 +104,7 @@ Partial Class frInventario
         '
         Me.btnReporte.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnReporte.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnReporte.Location = New System.Drawing.Point(273, 0)
+        Me.btnReporte.Location = New System.Drawing.Point(282, 0)
         Me.btnReporte.Name = "btnReporte"
         Me.btnReporte.Size = New System.Drawing.Size(143, 90)
         Me.btnReporte.TabIndex = 4
@@ -133,7 +133,7 @@ Partial Class frInventario
         '
         'PictureBox1
         '
-        'Me.PictureBox1.Image =
+        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.PictureBox1.Location = New System.Drawing.Point(76, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(200, 90)
