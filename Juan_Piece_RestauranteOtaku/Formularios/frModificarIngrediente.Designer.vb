@@ -33,8 +33,8 @@ Partial Class frModificarIngrediente
         Me.grpPesos = New System.Windows.Forms.GroupBox()
         Me.btnPesos = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtGramos = New System.Windows.Forms.TextBox()
-        Me.txtOnzass = New System.Windows.Forms.TextBox()
+        Me.txtPesoG = New System.Windows.Forms.TextBox()
+        Me.txtPesoOnz = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
@@ -58,10 +58,11 @@ Partial Class frModificarIngrediente
         'cmbNombre
         '
         Me.cmbNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbNombre.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbNombre.FormattingEnabled = True
-        Me.cmbNombre.Location = New System.Drawing.Point(32, 142)
+        Me.cmbNombre.Location = New System.Drawing.Point(33, 150)
         Me.cmbNombre.Name = "cmbNombre"
-        Me.cmbNombre.Size = New System.Drawing.Size(316, 23)
+        Me.cmbNombre.Size = New System.Drawing.Size(316, 29)
         Me.cmbNombre.TabIndex = 2
         '
         'Label1
@@ -78,11 +79,11 @@ Partial Class frModificarIngrediente
         '
         Me.lblCodigo.AutoSize = True
         Me.lblCodigo.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblCodigo.Location = New System.Drawing.Point(186, 109)
+        Me.lblCodigo.Location = New System.Drawing.Point(282, 109)
         Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(51, 18)
+        Me.lblCodigo.Size = New System.Drawing.Size(53, 18)
         Me.lblCodigo.TabIndex = 4
-        Me.lblCodigo.Text = "Label2"
+        Me.lblCodigo.Text = "Codigo"
         '
         'gpIngrediente
         '
@@ -118,8 +119,8 @@ Partial Class frModificarIngrediente
         '
         Me.grpPesos.Controls.Add(Me.btnPesos)
         Me.grpPesos.Controls.Add(Me.Label4)
-        Me.grpPesos.Controls.Add(Me.txtGramos)
-        Me.grpPesos.Controls.Add(Me.txtOnzass)
+        Me.grpPesos.Controls.Add(Me.txtPesoG)
+        Me.grpPesos.Controls.Add(Me.txtPesoOnz)
         Me.grpPesos.Controls.Add(Me.Label3)
         Me.grpPesos.Location = New System.Drawing.Point(26, 119)
         Me.grpPesos.Name = "grpPesos"
@@ -147,19 +148,19 @@ Partial Class frModificarIngrediente
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Peso Gramos"
         '
-        'txtGramos
+        'txtPesoG
         '
-        Me.txtGramos.Location = New System.Drawing.Point(132, 39)
-        Me.txtGramos.Name = "txtGramos"
-        Me.txtGramos.Size = New System.Drawing.Size(242, 25)
-        Me.txtGramos.TabIndex = 1
+        Me.txtPesoG.Location = New System.Drawing.Point(132, 39)
+        Me.txtPesoG.Name = "txtPesoG"
+        Me.txtPesoG.Size = New System.Drawing.Size(242, 25)
+        Me.txtPesoG.TabIndex = 1
         '
-        'txtOnzass
+        'txtPesoOnz
         '
-        Me.txtOnzass.Location = New System.Drawing.Point(132, 99)
-        Me.txtOnzass.Name = "txtOnzass"
-        Me.txtOnzass.Size = New System.Drawing.Size(242, 25)
-        Me.txtOnzass.TabIndex = 2
+        Me.txtPesoOnz.Location = New System.Drawing.Point(132, 99)
+        Me.txtPesoOnz.Name = "txtPesoOnz"
+        Me.txtPesoOnz.Size = New System.Drawing.Size(242, 25)
+        Me.txtPesoOnz.TabIndex = 2
         '
         'Label3
         '
@@ -173,7 +174,7 @@ Partial Class frModificarIngrediente
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(45, 215)
+        Me.btnLimpiar.Location = New System.Drawing.Point(45, 238)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(146, 50)
         Me.btnLimpiar.TabIndex = 10
@@ -182,7 +183,7 @@ Partial Class frModificarIngrediente
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(45, 298)
+        Me.btnActualizar.Location = New System.Drawing.Point(45, 327)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(146, 54)
         Me.btnActualizar.TabIndex = 11
@@ -221,8 +222,8 @@ Partial Class frModificarIngrediente
     Friend WithEvents lblCodigo As Label
     Friend WithEvents gpIngrediente As GroupBox
     Friend WithEvents txtNombre As TextBox
-    Friend WithEvents txtGramos As TextBox
-    Friend WithEvents txtOnzass As TextBox
+    Friend WithEvents txtPesoG As TextBox
+    Friend WithEvents txtPesoOnz As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
