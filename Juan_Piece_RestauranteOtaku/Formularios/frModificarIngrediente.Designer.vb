@@ -22,6 +22,7 @@ Partial Class frModificarIngrediente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frModificarIngrediente))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.cmbNombre = New System.Windows.Forms.ComboBox()
@@ -38,9 +39,13 @@ Partial Class frModificarIngrediente
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
+        Me.errorcito = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.cmbCantidad = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gpIngrediente.SuspendLayout()
         Me.grpPesos.SuspendLayout()
+        CType(Me.errorcito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -50,7 +55,7 @@ Partial Class frModificarIngrediente
         Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(895, 83)
+        Me.PictureBox1.Size = New System.Drawing.Size(862, 83)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
@@ -60,7 +65,7 @@ Partial Class frModificarIngrediente
         Me.cmbNombre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbNombre.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbNombre.FormattingEnabled = True
-        Me.cmbNombre.Location = New System.Drawing.Point(33, 150)
+        Me.cmbNombre.Location = New System.Drawing.Point(33, 173)
         Me.cmbNombre.Name = "cmbNombre"
         Me.cmbNombre.Size = New System.Drawing.Size(316, 29)
         Me.cmbNombre.TabIndex = 2
@@ -69,7 +74,7 @@ Partial Class frModificarIngrediente
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(33, 109)
+        Me.Label1.Location = New System.Drawing.Point(33, 135)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(127, 18)
         Me.Label1.TabIndex = 3
@@ -79,7 +84,7 @@ Partial Class frModificarIngrediente
         '
         Me.lblCodigo.AutoSize = True
         Me.lblCodigo.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblCodigo.Location = New System.Drawing.Point(282, 109)
+        Me.lblCodigo.Location = New System.Drawing.Point(287, 135)
         Me.lblCodigo.Name = "lblCodigo"
         Me.lblCodigo.Size = New System.Drawing.Size(53, 18)
         Me.lblCodigo.TabIndex = 4
@@ -93,7 +98,7 @@ Partial Class frModificarIngrediente
         Me.gpIngrediente.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.gpIngrediente.Location = New System.Drawing.Point(371, 109)
         Me.gpIngrediente.Name = "gpIngrediente"
-        Me.gpIngrediente.Size = New System.Drawing.Size(507, 316)
+        Me.gpIngrediente.Size = New System.Drawing.Size(477, 316)
         Me.gpIngrediente.TabIndex = 5
         Me.gpIngrediente.TabStop = False
         Me.gpIngrediente.Text = "Informacion del ingrediente"
@@ -124,14 +129,14 @@ Partial Class frModificarIngrediente
         Me.grpPesos.Controls.Add(Me.Label3)
         Me.grpPesos.Location = New System.Drawing.Point(26, 119)
         Me.grpPesos.Name = "grpPesos"
-        Me.grpPesos.Size = New System.Drawing.Size(427, 176)
+        Me.grpPesos.Size = New System.Drawing.Size(427, 191)
         Me.grpPesos.TabIndex = 9
         Me.grpPesos.TabStop = False
         Me.grpPesos.Text = "Peso"
         '
         'btnPesos
         '
-        Me.btnPesos.Location = New System.Drawing.Point(132, 141)
+        Me.btnPesos.Location = New System.Drawing.Point(132, 145)
         Me.btnPesos.Name = "btnPesos"
         Me.btnPesos.Size = New System.Drawing.Size(146, 29)
         Me.btnPesos.TabIndex = 9
@@ -174,7 +179,7 @@ Partial Class frModificarIngrediente
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(45, 238)
+        Me.btnLimpiar.Location = New System.Drawing.Point(203, 373)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(146, 50)
         Me.btnLimpiar.TabIndex = 10
@@ -183,18 +188,44 @@ Partial Class frModificarIngrediente
         '
         'btnActualizar
         '
-        Me.btnActualizar.Location = New System.Drawing.Point(45, 327)
+        Me.btnActualizar.Location = New System.Drawing.Point(33, 373)
         Me.btnActualizar.Name = "btnActualizar"
         Me.btnActualizar.Size = New System.Drawing.Size(146, 54)
         Me.btnActualizar.TabIndex = 11
         Me.btnActualizar.Text = "Actualizar Informacion"
         Me.btnActualizar.UseVisualStyleBackColor = True
         '
+        'errorcito
+        '
+        Me.errorcito.ContainerControl = Me
+        '
+        'cmbCantidad
+        '
+        Me.cmbCantidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbCantidad.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.cmbCantidad.FormattingEnabled = True
+        Me.cmbCantidad.Location = New System.Drawing.Point(33, 259)
+        Me.cmbCantidad.Name = "cmbCantidad"
+        Me.cmbCantidad.Size = New System.Drawing.Size(316, 29)
+        Me.cmbCantidad.TabIndex = 12
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(33, 228)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(138, 18)
+        Me.Label5.TabIndex = 13
+        Me.Label5.Text = "Cantidad Disponible"
+        '
         'frModificarIngrediente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(895, 471)
+        Me.ClientSize = New System.Drawing.Size(862, 471)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.cmbCantidad)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.gpIngrediente)
@@ -211,6 +242,7 @@ Partial Class frModificarIngrediente
         Me.gpIngrediente.PerformLayout()
         Me.grpPesos.ResumeLayout(False)
         Me.grpPesos.PerformLayout()
+        CType(Me.errorcito, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -231,4 +263,7 @@ Partial Class frModificarIngrediente
     Friend WithEvents btnPesos As Button
     Friend WithEvents btnLimpiar As Button
     Friend WithEvents btnActualizar As Button
+    Friend WithEvents errorcito As ErrorProvider
+    Friend WithEvents cmbCantidad As ComboBox
+    Friend WithEvents Label5 As Label
 End Class

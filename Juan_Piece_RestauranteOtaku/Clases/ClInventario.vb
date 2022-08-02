@@ -97,5 +97,44 @@ Public Class ClInventario
         End Try
     End Sub
 
+    Public Sub modificarInfo(comando As String)
+        Try
+            con.Open()
+            Dim cmd As New SqlCommand(comando, con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+            MessageBox.Show("Modificacion realizada", "Ingrediente modificado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 
+    Public Sub infoIng(busqueda As String, combo As ComboBox, nombre As TextBox, pesog As TextBox, pesoonz As TextBox)
+
+        Try
+            con.Open()
+
+
+
+            Dim comando As New SqlCommand(busqueda, con)
+            comando.CommandType = CommandType.Text
+            Dim lector As SqlDataReader = comando.ExecuteReader()
+            If lector.Read() Then
+                Dim xcantidad As Integer = lector.GetValue(1).ToString
+                combo.Items.Clear()
+                For x As Integer = 1 To 1000
+                    combo.Items.Add(x)
+                Next
+                combo.SelectedItem = xcantidad
+                nombre.Text = lector.GetValue(0).ToString
+                pesog.Text = lector.GetValue(3).ToString
+                pesoonz.Text = lector.GetValue(2).ToString
+
+            End If
+            con.Close()
+            Exit Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class

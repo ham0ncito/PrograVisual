@@ -1,6 +1,10 @@
 ﻿Public Class frModificarIngrediente
     Dim cl As New ClInventario()
     Private Sub frModificarIngrediente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For posicion As Integer = 1 To 100
+            cmbCantidad.Items.Add(posicion)
+        Next
+        cmbCantidad.SelectedIndex = 0
         cl.llenarData("select nombreIngrediente from Ingredientes", cmbNombre)
         cmbNombre.SelectedIndex = 0
     End Sub
@@ -19,7 +23,12 @@
     End Sub
 
     Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
-
+        If (String.IsNullOrEmpty(txtNombre.Text) Or txtNombre.TextLength < 5 Or String.IsNullOrEmpty(txtPesoG.Text) Or String.IsNullOrEmpty(txtPesoOnz.Text)) Then
+            MessageBox.Show("Ingrese datos", "Datos insuficientes")
+        Else
+            Dim sql As String = ""
+            cl.modificarInfo(sql)
+        End If
     End Sub
 
     Private Sub btnPesos_Click(sender As Object, e As EventArgs) Handles btnPesos.Click
@@ -28,5 +37,17 @@
 
     Private Sub cmbNombre_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbNombre.SelectedIndexChanged
         cl.ingInfo(" exec  infoIngrediente '" + cmbNombre.SelectedItem + "'; ", lblCodigo)
+        cl.infoIng("exec infoIng " + lblCodigo.Text + ";", cmbCantidad, txtNombre, txtPesoG, txtPesoOnz)
     End Sub
+
+    Private Sub limpiar()
+        txtNombre.Clear()
+        txtPesoOnz.Clear()
+        txtPesoG.Clear()
+        cmbNombre.SelectedIndex = 0
+
+    End Sub
+
+
+
 End Class

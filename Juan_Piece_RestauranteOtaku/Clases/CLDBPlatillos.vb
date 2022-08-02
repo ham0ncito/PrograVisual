@@ -69,7 +69,7 @@ Public Class CLDBPlatillos
     Public Function LlenarFlowLayout(FlowLayoutPanel)
         Try
             con.Open()
-            Dim sql As String = "Select * from Platillos order by nombrePlatillo ASC; "
+            Dim sql As String = "Select * from Platillos where estadoPlatillo = 1 order by nombrePlatillo ASC; "
             Dim comando As New SqlCommand(sql, con)
             comando.CommandType = CommandType.Text
             Dim lector As SqlDataReader = comando.ExecuteReader()
