@@ -236,8 +236,8 @@ Partial Class frEditarPlatillo
         '
         'imagenProducto
         '
-        'Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
-        Me.imagenProducto.Location = New System.Drawing.Point(25, 116)
+        Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.Presione_el_boton_de_escanear__2_
+        Me.imagenProducto.Location = New System.Drawing.Point(68, 115)
         Me.imagenProducto.Name = "imagenProducto"
         Me.imagenProducto.Size = New System.Drawing.Size(289, 169)
         Me.imagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -322,7 +322,6 @@ Partial Class frEditarPlatillo
         '
         Me.logo.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.logo.Dock = System.Windows.Forms.DockStyle.Top
-        ' Me.logo.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.logo.Location = New System.Drawing.Point(0, 0)
         Me.logo.Name = "logo"
         Me.logo.Size = New System.Drawing.Size(917, 68)

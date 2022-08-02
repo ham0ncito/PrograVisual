@@ -22,6 +22,7 @@ Partial Class frAggIngrediente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frAggIngrediente))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.cmbPlatilo = New System.Windows.Forms.ComboBox()
@@ -36,12 +37,14 @@ Partial Class frAggIngrediente
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblCodigo = New System.Windows.Forms.Label()
+        Me.lblCodigoIngrediente = New System.Windows.Forms.Label()
         Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblcodigoPlatillo = New System.Windows.Forms.Label()
+        Me.errorcito = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.errorcito, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -162,7 +165,7 @@ Partial Class frAggIngrediente
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.lblCodigo)
+        Me.GroupBox1.Controls.Add(Me.lblCodigoIngrediente)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.cmbNombreIngrediente)
@@ -176,16 +179,16 @@ Partial Class frAggIngrediente
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Ingrediente"
         '
-        'lblCodigo
+        'lblCodigoIngrediente
         '
-        Me.lblCodigo.AutoSize = True
-        Me.lblCodigo.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblCodigo.ForeColor = System.Drawing.Color.OrangeRed
-        Me.lblCodigo.Location = New System.Drawing.Point(310, 41)
-        Me.lblCodigo.Name = "lblCodigo"
-        Me.lblCodigo.Size = New System.Drawing.Size(53, 18)
-        Me.lblCodigo.TabIndex = 14
-        Me.lblCodigo.Text = "Codigo"
+        Me.lblCodigoIngrediente.AutoSize = True
+        Me.lblCodigoIngrediente.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblCodigoIngrediente.ForeColor = System.Drawing.Color.OrangeRed
+        Me.lblCodigoIngrediente.Location = New System.Drawing.Point(310, 41)
+        Me.lblCodigoIngrediente.Name = "lblCodigoIngrediente"
+        Me.lblCodigoIngrediente.Size = New System.Drawing.Size(53, 18)
+        Me.lblCodigoIngrediente.TabIndex = 14
+        Me.lblCodigoIngrediente.Text = "Codigo"
         '
         'btnLimpiar
         '
@@ -196,23 +199,27 @@ Partial Class frAggIngrediente
         Me.btnLimpiar.Text = "Limpiar"
         Me.btnLimpiar.UseVisualStyleBackColor = True
         '
-        'Label5
+        'lblcodigoPlatillo
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.ForeColor = System.Drawing.Color.OrangeRed
-        Me.Label5.Location = New System.Drawing.Point(350, 135)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(53, 18)
-        Me.Label5.TabIndex = 15
-        Me.Label5.Text = "Codigo"
+        Me.lblcodigoPlatillo.AutoSize = True
+        Me.lblcodigoPlatillo.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblcodigoPlatillo.ForeColor = System.Drawing.Color.OrangeRed
+        Me.lblcodigoPlatillo.Location = New System.Drawing.Point(350, 135)
+        Me.lblcodigoPlatillo.Name = "lblcodigoPlatillo"
+        Me.lblcodigoPlatillo.Size = New System.Drawing.Size(53, 18)
+        Me.lblcodigoPlatillo.TabIndex = 15
+        Me.lblcodigoPlatillo.Text = "Codigo"
+        '
+        'errorcito
+        '
+        Me.errorcito.ContainerControl = Me
         '
         'frAggIngrediente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(904, 542)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblcodigoPlatillo)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnAgg)
@@ -229,6 +236,7 @@ Partial Class frAggIngrediente
         CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.errorcito, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -247,7 +255,8 @@ Partial Class frAggIngrediente
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents lblCodigo As Label
+    Friend WithEvents lblCodigoIngrediente As Label
     Friend WithEvents btnLimpiar As Button
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblcodigoPlatillo As Label
+    Friend WithEvents errorcito As ErrorProvider
 End Class

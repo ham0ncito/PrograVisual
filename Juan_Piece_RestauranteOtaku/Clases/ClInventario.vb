@@ -65,4 +65,35 @@ Public Class ClInventario
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+
+    Public Sub ingInfo(busqueda As String, id As Label)
+        Try
+            con.Open()
+            Dim cmd As New SqlCommand(busqueda, con)
+            Dim img As Byte()
+
+            Dim comando As New SqlCommand(busqueda, con)
+            comando.CommandType = CommandType.Text
+            Dim lector As SqlDataReader = comando.ExecuteReader()
+            If lector.Read() Then
+                id.Text = lector.GetValue(0).ToString
+            End If
+            con.Close()
+            Exit Try
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub agregarIngredienteAPlatillo(comando As String)
+        Try
+            con.Open()
+            Dim cmd As New SqlCommand(comando, con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+            MessageBox.Show("Ingredientes agregado", "Ingrediente agregado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 End Class

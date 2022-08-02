@@ -28,14 +28,14 @@ Partial Class frModificarIngrediente
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblCodigo = New System.Windows.Forms.Label()
         Me.gpIngrediente = New System.Windows.Forms.GroupBox()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtGramos = New System.Windows.Forms.TextBox()
-        Me.txtOnzass = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.grpPesos = New System.Windows.Forms.GroupBox()
         Me.btnPesos = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtGramos = New System.Windows.Forms.TextBox()
+        Me.txtOnzass = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnActualizar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,7 +50,7 @@ Partial Class frModificarIngrediente
         Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(914, 83)
+        Me.PictureBox1.Size = New System.Drawing.Size(895, 83)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
@@ -97,27 +97,6 @@ Partial Class frModificarIngrediente
         Me.gpIngrediente.TabStop = False
         Me.gpIngrediente.Text = "Informacion del ingrediente"
         '
-        'txtNombre
-        '
-        Me.txtNombre.Location = New System.Drawing.Point(166, 64)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(242, 25)
-        Me.txtNombre.TabIndex = 0
-        '
-        'txtGramos
-        '
-        Me.txtGramos.Location = New System.Drawing.Point(132, 39)
-        Me.txtGramos.Name = "txtGramos"
-        Me.txtGramos.Size = New System.Drawing.Size(242, 25)
-        Me.txtGramos.TabIndex = 1
-        '
-        'txtOnzass
-        '
-        Me.txtOnzass.Location = New System.Drawing.Point(132, 99)
-        Me.txtOnzass.Name = "txtOnzass"
-        Me.txtOnzass.Size = New System.Drawing.Size(242, 25)
-        Me.txtOnzass.TabIndex = 2
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -128,25 +107,12 @@ Partial Class frModificarIngrediente
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Nombre ingrediente"
         '
-        'Label3
+        'txtNombre
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(22, 106)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 18)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Peso Onzas"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(22, 42)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(92, 18)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Peso Gramos"
+        Me.txtNombre.Location = New System.Drawing.Point(166, 64)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(242, 25)
+        Me.txtNombre.TabIndex = 0
         '
         'grpPesos
         '
@@ -171,6 +137,40 @@ Partial Class frModificarIngrediente
         Me.btnPesos.Text = "Calcular Pesos"
         Me.btnPesos.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(22, 42)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(92, 18)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Peso Gramos"
+        '
+        'txtGramos
+        '
+        Me.txtGramos.Location = New System.Drawing.Point(132, 39)
+        Me.txtGramos.Name = "txtGramos"
+        Me.txtGramos.Size = New System.Drawing.Size(242, 25)
+        Me.txtGramos.TabIndex = 1
+        '
+        'txtOnzass
+        '
+        Me.txtOnzass.Location = New System.Drawing.Point(132, 99)
+        Me.txtOnzass.Name = "txtOnzass"
+        Me.txtOnzass.Size = New System.Drawing.Size(242, 25)
+        Me.txtOnzass.TabIndex = 2
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(22, 106)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(83, 18)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Peso Onzas"
+        '
         'btnLimpiar
         '
         Me.btnLimpiar.Location = New System.Drawing.Point(45, 215)
@@ -193,7 +193,7 @@ Partial Class frModificarIngrediente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(914, 471)
+        Me.ClientSize = New System.Drawing.Size(895, 471)
         Me.Controls.Add(Me.btnActualizar)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.gpIngrediente)
