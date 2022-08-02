@@ -87,11 +87,11 @@ Partial Class frRegistrarIngrediente
         'cmbCantidad
         '
         Me.cmbCantidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbCantidad.Font = New System.Drawing.Font("Garamond", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.cmbCantidad.Font = New System.Drawing.Font("Garamond", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cmbCantidad.FormattingEnabled = True
         Me.cmbCantidad.Location = New System.Drawing.Point(37, 299)
         Me.cmbCantidad.Name = "cmbCantidad"
-        Me.cmbCantidad.Size = New System.Drawing.Size(157, 26)
+        Me.cmbCantidad.Size = New System.Drawing.Size(157, 29)
         Me.cmbCantidad.TabIndex = 4
         '
         'GroupBox1

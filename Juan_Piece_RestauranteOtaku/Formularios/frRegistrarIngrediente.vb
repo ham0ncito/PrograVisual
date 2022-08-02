@@ -30,13 +30,15 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            If (String.IsNullOrEmpty(txtNombreIngrediente.Text) Or txtNombreIngrediente.TextLength > 5) Then
+            If (String.IsNullOrEmpty(txtNombreIngrediente.Text) Or txtNombreIngrediente.TextLength < 5) Then
                 errorcito.SetError(txtNombreIngrediente, "Ingrese datos validos")
             ElseIf (String.IsNullOrEmpty(txtPesoG.Text) Or String.IsNullOrEmpty(txtPesoOnz.Text)) Then
                 errorcito.SetError(GroupBox1, "Ingrese datos")
             Else
                 errorcito.SetError(GroupBox1, "")
                 errorcito.SetError(txtNombreIngrediente, "")
+                Dim comando As String = String.Concat("insert into Ingredientes ([nombreIngrediente],[cantidadDisponible],[pesoOnzas],[pesoGramos]) values (", "'", txtNombreIngrediente.Text, "',", cmbCantidad.SelectedItem, ",", txtPesoOnz.Text, ",", txtPesoG.Text, ") ; ")
+                clinventario.agregarIngredienteAPlatillo(comando)
 
             End If
         Catch ex As Exception
