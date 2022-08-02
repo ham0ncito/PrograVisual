@@ -165,7 +165,7 @@ Public Class frFacturar
 
     Private Sub CancelarDetalle()
         Try
-            ' Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+            Me.imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.Presione_el_boton_de_escanear__2_
             lblNombre.Text = "Nombre del Producto"
             lblPrecio.Text = "0"
             lblSubDetalle.Text = "0"
@@ -182,6 +182,7 @@ Public Class frFacturar
             CancelarDetalle()
             dgDetalle.Columns.Clear()
             cmbNombres.Text = ""
+            imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.Presione_el_boton_de_escanear__2_
             infoDgvDetalleVenta()
         Catch ex As Exception
             MessageBox.Show(ex.Message)

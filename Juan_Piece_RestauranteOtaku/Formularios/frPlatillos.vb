@@ -87,7 +87,7 @@ Public Class frPlatillos
         lblPrecioH.Text = "L 00.00"
         lblPrecioN.Text = "L 00.00"
         lblTipo.Text = "Tipo de Platillo"
-        'pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.Presione_el_boton_de_escanear__2_
         dgIngredientes.Columns.Clear()
         pictureNoIngredientes.Visible = False
     End Sub

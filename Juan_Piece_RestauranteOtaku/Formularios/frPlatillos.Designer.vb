@@ -34,6 +34,7 @@ Partial Class frPlatillos
         Me.lblHora = New System.Windows.Forms.Label()
         Me.dgPlatillos = New System.Windows.Forms.DataGridView()
         Me.gpInformacionPlatillo = New System.Windows.Forms.GroupBox()
+        Me.pictureNoIngredientes = New System.Windows.Forms.PictureBox()
         Me.lblinfo5 = New System.Windows.Forms.Label()
         Me.lblinfo4 = New System.Windows.Forms.Label()
         Me.lblinfo3 = New System.Windows.Forms.Label()
@@ -52,15 +53,14 @@ Partial Class frPlatillos
         Me.Tiempo = New System.Windows.Forms.Timer(Me.components)
         Me.Imprimir = New System.Drawing.Printing.PrintDocument()
         Me.ImprimirPreview = New System.Windows.Forms.PrintPreviewDialog()
-        Me.pictureNoIngredientes = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.dgPlatillos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gpInformacionPlatillo.SuspendLayout()
+        CType(Me.pictureNoIngredientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgIngredientes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pictureNoIngredientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -105,7 +105,7 @@ Partial Class frPlatillos
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Left
-        ''Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
+        Me.PictureBox1.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.One_Pice__1__PhotoRoom__1_
         Me.PictureBox1.Location = New System.Drawing.Point(682, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(204, 90)
@@ -200,6 +200,17 @@ Partial Class frPlatillos
         Me.gpInformacionPlatillo.TabIndex = 5
         Me.gpInformacionPlatillo.TabStop = False
         Me.gpInformacionPlatillo.Text = "Informacion Platillo"
+        '
+        'pictureNoIngredientes
+        '
+        Me.pictureNoIngredientes.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.noExiste
+        Me.pictureNoIngredientes.Location = New System.Drawing.Point(23, 271)
+        Me.pictureNoIngredientes.Name = "pictureNoIngredientes"
+        Me.pictureNoIngredientes.Size = New System.Drawing.Size(494, 275)
+        Me.pictureNoIngredientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pictureNoIngredientes.TabIndex = 17
+        Me.pictureNoIngredientes.TabStop = False
+        Me.pictureNoIngredientes.Visible = False
         '
         'lblinfo5
         '
@@ -356,7 +367,7 @@ Partial Class frPlatillos
         '
         'pcImagen
         '
-        '' Me.pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources._149px_Picture_icon_BLACK_svg
+        Me.pcImagen.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.Presione_el_boton_de_escanear__2_
         Me.pcImagen.Location = New System.Drawing.Point(27, 37)
         Me.pcImagen.Name = "pcImagen"
         Me.pcImagen.Size = New System.Drawing.Size(222, 196)
@@ -378,17 +389,6 @@ Partial Class frPlatillos
         Me.ImprimirPreview.Name = "ImprimirPreview"
         Me.ImprimirPreview.Visible = False
         '
-        'pictureNoIngredientes
-        '
-        '' Me.pictureNoIngredientes.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.noExiste
-        Me.pictureNoIngredientes.Location = New System.Drawing.Point(23, 271)
-        Me.pictureNoIngredientes.Name = "pictureNoIngredientes"
-        Me.pictureNoIngredientes.Size = New System.Drawing.Size(494, 275)
-        Me.pictureNoIngredientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pictureNoIngredientes.TabIndex = 17
-        Me.pictureNoIngredientes.TabStop = False
-        Me.pictureNoIngredientes.Visible = False
-        '
         'frPlatillos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -408,9 +408,9 @@ Partial Class frPlatillos
         CType(Me.dgPlatillos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gpInformacionPlatillo.ResumeLayout(False)
         Me.gpInformacionPlatillo.PerformLayout()
+        CType(Me.pictureNoIngredientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgIngredientes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pcImagen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pictureNoIngredientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
