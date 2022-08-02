@@ -66,7 +66,8 @@ Public Class CLDBPlatillos
         End Set
     End Property
 
-    Public Function LlenarFlowLayout(FlowLayoutPanel)
+    Public Function LlenarFlowLayout(FlowLayoutPanel As FlowLayoutPanel)
+        FlowLayoutPanel.Controls.Clear()
         Try
             con.Open()
             Dim sql As String = "Select * from Platillos where estadoPlatillo = 1 order by nombrePlatillo ASC; "

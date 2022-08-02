@@ -170,7 +170,7 @@ Public Class frFacturar
             lblPrecio.Text = "0"
             lblSubDetalle.Text = "0"
 
-            cmbCantidad.Text = "0"
+            cmbCantidad.SelectedIndex = 0
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -182,6 +182,7 @@ Public Class frFacturar
             CancelarDetalle()
             dgDetalle.Columns.Clear()
             cmbNombres.Text = ""
+            cmbCantidad.SelectedIndex = 0
             imagenProducto.Image = Global.Juan_Piece_RestauranteOtaku.My.Resources.Resources.Presione_el_boton_de_escanear__2_
             infoDgvDetalleVenta()
         Catch ex As Exception

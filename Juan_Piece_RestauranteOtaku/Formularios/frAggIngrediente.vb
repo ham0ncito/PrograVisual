@@ -39,7 +39,7 @@
                 errorcito.SetError(txtPeso, "Ingrese valores validos")
             Else
                 errorcito.SetError(txtPeso, "")
-                Dim sql As String = String.Concat("Insert into DetallePlatillos values(", Convert.ToInt32(lblcodigoPlatillo.Text), " , ", Convert.ToInt32(lblCodigoIngrediente.Text), ", ", Convert.ToInt32(cmbCantidadUso.SelectedItem), ", ", Convert.ToInt32((Convert.ToInt32(txtPeso.Text) * 0.035274)), ", ", Convert.ToInt32(txtPeso.Text), "); ")
+                Dim sql As String = String.Concat("insert into DetallePlatillos values(", Convert.ToInt32(lblcodigoPlatillo.Text), " , ", Convert.ToInt32(lblCodigoIngrediente.Text), ", ", Convert.ToInt32(cmbCantidadUso.SelectedItem), ", ", Convert.ToInt32((Convert.ToInt32(txtPeso.Text) * 0.035274)), ", ", Convert.ToInt32(txtPeso.Text), "); ")
                 clinventario.agregarIngredienteAPlatillo(sql)
             End If
         Catch x As Exception
@@ -48,6 +48,6 @@
     End Sub
 
     Private Sub cmbNombreIngrediente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbNombreIngrediente.SelectedIndexChanged
-        clinventario.ingInfo(" exec  infoIngrediente '" + cmbNombreIngrediente.SelectedItem + "'; ", lblCodigoIngrediente)
+        clinventario.ingInfo("exec infoIngrediente '" + cmbNombreIngrediente.SelectedItem + "'; ", lblCodigoIngrediente)
     End Sub
 End Class

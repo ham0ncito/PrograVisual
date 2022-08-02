@@ -37,7 +37,7 @@
         actualizar()
     End Sub
     Private Sub actualizar()
-        clinventario.LlenarDatagrid(dgInventario, "exec Inventario", "Inventario")
+        clinventario.LlenarDatagrid(dgInventario, "Select nombreIngrediente as 'Nombre del ingrendiente', cantidadDisponible as 'Cantidad en stock', pesoOnzas as 'Peso en onzas', pesoGramos as 'Peso en gramos' from Ingredientes", "Inventario")
         clinventario.LlenarDatagrid(dgIngresos, "exec ultimosIngresos", "Ingresos")
     End Sub
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
@@ -62,10 +62,10 @@
         e.Graphics.DrawString(" Reporte de Inventario Activo ", fuente, Brushes.Black, 280, 240)
         e.Graphics.DrawString(String.Concat("   " + lblHora.Text + "   "), fuente, Brushes.Black, 300, 260)
         e.Graphics.DrawString("Listado de inventario : ", fuente, Brushes.Black, 20, 320)
-        e.Graphics.DrawString("Nombre       Cantidad        Proveedor       Telefono        Correo Electronico   ", fuente, Brushes.Black, 20, 360)
+        e.Graphics.DrawString("Nombre       Cantidad        Peso Onzas      Peso Gramos   ", fuente, Brushes.Black, 20, 360)
         For Each fila As DataGridViewRow In dgInventario.Rows
 
-            e.Graphics.DrawString(fila.Cells(0).Value.ToString + "    ||   " + fila.Cells(1).Value.ToString + "    ||   " + fila.Cells(4).Value.ToString + "    ||   " + fila.Cells(5).Value.ToString + "    ||   " + fila.Cells(6).Value.ToString + " || ", fuente, Brushes.Black, 20, ubicacion)
+            e.Graphics.DrawString(fila.Cells(0).Value.ToString + "    ||   " + fila.Cells(1).Value.ToString + "    ||   " + fila.Cells(2).Value.ToString + "    ||   " + fila.Cells(3).Value.ToString + " || ", fuente, Brushes.Black, 20, ubicacion)
             ubicacion = ubicacion + 30
         Next
 
