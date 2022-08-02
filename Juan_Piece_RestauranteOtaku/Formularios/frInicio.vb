@@ -29,13 +29,15 @@
     Private Sub btnPlatillos_Click(sender As Object, e As EventArgs) Handles btnPlatillos.Click
         Dim frPlatillos As New frPlatillos()
         AddOwnedForm(frPlatillos)
-        frPlatillos.Show()
+        frPlatillos.ShowDialog()
+        agregarControles()
     End Sub
 
     Private Sub btnPedidos_Click(sender As Object, e As EventArgs) Handles btnPedidos.Click
         Dim frInventari As New frInventario()
         AddOwnedForm(frInventari)
-        frInventari.Show()
+        frInventari.ShowDialog()
+        agregarControles()
     End Sub
 
     Private Sub frInicio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -67,7 +69,8 @@
     Private Sub btnFactura_Click(sender As Object, e As EventArgs) Handles btnFactura.Click
         Dim frfactura As New frFacturar()
         AddOwnedForm(frfactura)
-        frfactura.Show()
+        frfactura.ShowDialog()
+        agregarControles()
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint

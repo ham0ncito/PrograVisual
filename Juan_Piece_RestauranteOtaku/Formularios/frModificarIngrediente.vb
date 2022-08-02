@@ -26,8 +26,12 @@
         If (String.IsNullOrEmpty(txtNombre.Text) Or txtNombre.TextLength < 5 Or String.IsNullOrEmpty(txtPesoG.Text) Or String.IsNullOrEmpty(txtPesoOnz.Text)) Then
             MessageBox.Show("Ingrese datos", "Datos insuficientes")
         Else
-            Dim sql As String = ""
-            cl.modificarInfo(sql)
+            Try
+                Dim sql As String = String.Concat("update Ingredientes set nombreIngrediente = '", txtNombre.Text, "', cantidadDisponible = ", cmbCantidad.SelectedItem.ToString, ", pesoOnzas = ", Convert.ToString(Convert.ToInt32(txtPesoOnz.Text)), ", pesoGramos =  ", Convert.ToString(Convert.ToInt32(txtPesoOnz.Text)), " where ingredienteId = ", Convert.ToInt32(lblCodigo.Text))
+                cl.modificarInfo(sql)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
         End If
     End Sub
 

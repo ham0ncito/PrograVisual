@@ -101,6 +101,7 @@ Public Class ClInventario
         Try
             con.Open()
             Dim cmd As New SqlCommand(comando, con)
+            cmd.CommandType = CommandType.Text
             cmd.ExecuteNonQuery()
             con.Close()
             MessageBox.Show("Modificacion realizada", "Ingrediente modificado", MessageBoxButtons.OK, MessageBoxIcon.Information)
